@@ -201,8 +201,7 @@ jobs:
       #- name: Enable Developer Command Prompt
       #  uses: ilammy/msvc-dev-cmd@v1
       - name: Configure
-        run: |
-
+        run:
         cmake -S . -B build -G "Visual Studio 17 2022" \
          -DCMAKE_BUILD_TYPE=Debug -DVCPKG_BUILD_TYPE=debug \
          -DVCPKG_TARGET_ARCHITECTURE=x64 -DFREECIV_USE_VCPKG=ON \
