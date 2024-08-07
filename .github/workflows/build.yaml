@@ -215,6 +215,7 @@ jobs:
           cat build/vcpkg_installed/vcpkg/blds/pkgconf/config-x64-windows-dbg-meson-log.txt.log
           echo ""
           cat build/vcpkg_installed/vcpkg/blds/pkgconf/config-x64-windows-dbg-out.log
+      - name: Compile
         run: cmake --build build --config Debug
       #- name: Test
       #  run: cmake --build build --target test
