@@ -196,8 +196,8 @@ jobs:
           fetch-depth: 0
       - uses: lukka/run-vcpkg@v11
         name: Install dependencies
-        with:
-          vcpkgGitCommitId: f7423ee180c4b7f40d43402c2feb3859161ef625
+        #with:
+        #  vcpkgGitCommitId: f7423ee180c4b7f40d43402c2feb3859161ef625
       - name: Enable Developer Command Prompt
         uses: ilammy/msvc-dev-cmd@v1
       - name: Configure
