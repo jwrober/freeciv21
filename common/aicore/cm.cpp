@@ -8,9 +8,9 @@
  see https://www.gnu.org/licenses/.
  */
 
+#include <array>
 #include <cstdlib>
 #include <cstring>
-#include <array>
 
 // Qt
 #include <QLoggingCategory>

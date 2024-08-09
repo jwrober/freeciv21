@@ -11,11 +11,11 @@
     \_____/ /                     If not, see https://www.gnu.org/licenses/.
       \____/        ********************************************************/
 
+#include <array>
 #include <cmath> // pow, sqrt, exp
 #include <cstdlib>
 #include <cstring>
 #include <vector>
-#include <array>
 
 // utility
 #include "distribute.h"
