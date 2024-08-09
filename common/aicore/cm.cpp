@@ -10,6 +10,7 @@
 
 #include <cstdlib>
 #include <cstring>
+#include <array>
 
 // Qt
 #include <QLoggingCategory>

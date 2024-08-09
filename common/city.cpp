@@ -15,6 +15,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <vector>
+#include <array>
 
 // utility
 #include "distribute.h"
