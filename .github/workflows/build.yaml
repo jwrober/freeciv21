@@ -211,6 +211,9 @@ jobs:
     needs: clang-format
     env:
       VCPKG_BUILD_TYPE: release
+      VCPKG_DEFAULT_TRIPLET: x64-osx
+      VCPKG_DEFAULT_HOST_TRIPLET: x64-osx
+      VCPKG_TARGET_TRIPLET: x64-osx
     steps:
       - uses: actions/checkout@v4
         with:
@@ -230,9 +233,12 @@ jobs:
           brew link gettext --force
       - uses: actions/setup-python@v5  # Workaround for #2069
         with:
-          python-version: '3.11'
+          python-version: '3.13'
       - uses: lukka/run-vcpkg@v11
         name: Install dependencies
+        env:
+          VCPKG_DEFAULT_TRIPLET: x64-osx
+          VCPKG_DEFAULT_HOST_TRIPLET: x64-osx
         with:
           vcpkgGitCommitId: ce613c41372b23b1f51333815feb3edd87ef8a8b
       - name: Build
