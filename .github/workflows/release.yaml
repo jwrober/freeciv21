@@ -15,8 +15,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: git checks
-        run: which git
-        run: git --version
+        run: |
+          which git && git --version
       #git checkout -- .
       #git rev-parse --short=5 HEAD > cmake/AutoRevision.txt
       #git describe --tags `git rev-list --tags --max-count=1` >> cmake/AutoRevision.txt
