@@ -15,9 +15,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: git checks
-        run: |
-          which git
-          git --version
+        run: which git
+        run: git --version
       #git checkout -- .
       #git rev-parse --short=5 HEAD > cmake/AutoRevision.txt
       #git describe --tags `git rev-list --tags --max-count=1` >> cmake/AutoRevision.txt
@@ -99,12 +98,12 @@ jobs:
           fetch-depth: 0
       - name: Setup mirror
         run: |
-          sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
-          apt-get update
+          sudo sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
+          sudo apt-get update
       - name: Install dependencies
         run: |
-          apt-get update
-          apt-get install -y \
+          sudo apt-get update
+          sudo apt-get install -y \
             git \
             cmake \
             ninja-build \
