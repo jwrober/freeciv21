@@ -16,12 +16,12 @@ jobs:
           fetch-depth: 0
       - name: Setup mirror
         run: |
-          sudo sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
-          sudo apt-get update
+          sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
+          apt-get update
       - name: Install dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y \
+          apt-get update
+          apt-get install -y \
             git
       - name: git checks
         run: |
@@ -102,6 +102,8 @@ jobs:
   snapcraft:
     name: "Snap Package"
     runs-on: ubuntu-latest
+    container:
+      image: ubuntu:24.10
     steps:
       - uses: actions/checkout@v4
         with:
