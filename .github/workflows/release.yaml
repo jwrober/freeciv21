@@ -24,10 +24,11 @@ jobs:
           git --version
           pwd
           ls -lah
-      - name: Update AutoRevision
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Update AutoRevision
         # Make sure there are no unstaged changes
         # Was reporting changes to eol=crlf files in .gitattributes
         run: |
@@ -86,12 +87,13 @@ jobs:
           which sha256sum
           pwd
           ls -lah
-      - name: Update AutoRevision
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
         # Make sure there are no unstaged changes
         # Was reporting changes to eol=crlf files in .gitattributes
+      - name: Update AutoRevision
         run: |
           git checkout -- .
           git rev-parse --short=5 HEAD > cmake/AutoRevision.txt
