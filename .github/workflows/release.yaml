@@ -22,8 +22,6 @@ jobs:
         run: |
           which git
           git --version
-          pwd
-          ls -lah
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -32,6 +30,7 @@ jobs:
         # Make sure there are no unstaged changes
         # Was reporting changes to eol=crlf files in .gitattributes
         run: |
+          git config --global --add safe.directory ${{ github.workspace }}
           git checkout -- .
           git rev-parse --short=5 HEAD > cmake/AutoRevision.txt
           git describe --tags `git rev-list --tags --max-count=1` >> cmake/AutoRevision.txt
@@ -77,7 +76,11 @@ jobs:
       - name: Install dependencies
         run: |
           apt-get update
-          apt-get install -y git
+          apt-get install -y
+            git \
+            tar \
+            zip \
+            coreutils
       - name: Checks
         run: |
           which git
@@ -95,6 +98,7 @@ jobs:
         # Was reporting changes to eol=crlf files in .gitattributes
       - name: Update AutoRevision
         run: |
+          git config --global --add safe.directory ${{ github.workspace }}
           git checkout -- .
           git rev-parse --short=5 HEAD > cmake/AutoRevision.txt
           git describe --tags `git rev-list --tags --max-count=1` >> cmake/AutoRevision.txt
@@ -149,7 +153,8 @@ jobs:
             libkf6archive-dev \
             liblua5.3-dev \
             libsqlite3-dev \
-            libsdl2-mixer-dev
+            libsdl2-mixer-dev \
+            sudo
       - name: Configure
         run: |
           mkdir -p build/snap/local
