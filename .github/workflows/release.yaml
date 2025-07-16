@@ -8,16 +8,14 @@ jobs:
   update-autorevision:
     name: "Update AutoRevision"
     runs-on: ubuntu-latest
-    container:
-      image: ubuntu:24.10
     steps:
-      - name: Setup mirror
-        run: |
-          sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
-      - name: Install dependencies
-        run: |
-          apt-get update
-          apt-get install -y git
+      #- name: Setup mirror
+      #  run: |
+      #    sudo sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
+      #- name: Install dependencies
+      #  run: |
+      #    sudo apt-get update
+      #    sudo apt-get install -y git
       - name: Checks
         run: |
           which git
@@ -67,20 +65,18 @@ jobs:
   update-archive:
     name: "Update Source Archive"
     runs-on: ubuntu-latest
-    container:
-      image: ubuntu:24.10
     steps:
-      - name: Setup mirror
-        run: |
-          sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
-      - name: Install dependencies
-        run: |
-          apt-get update
-          apt-get install -y
-            git \
-            tar \
-            zip \
-            coreutils
+      #- name: Setup mirror
+      #  run: |
+      #    sudo sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
+      #- name: Install dependencies
+      #  run: |
+      #    sudo apt-get update
+      #    sudo apt-get install -y \
+      #      git \
+      #      tar \
+      #      zip \
+      #      coreutils
       - name: Checks
         run: |
           which git
@@ -88,8 +84,6 @@ jobs:
           which tar
           which zip
           which sha256sum
-          pwd
-          ls -lah
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -164,9 +158,9 @@ jobs:
         id: snapcraft
         with:
           path: build
-      #- uses: snapcore/action-publish@v1
-      #  env:
-      #    SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.STORE_LOGIN }}
-      #  with:
-      #    snap: ${{ steps.snapcraft.outputs.snap }}
-      #    release: beta
+      - uses: snapcore/action-publish@v1
+        env:
+          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.STORE_LOGIN }}
+        with:
+          snap: ${{ steps.snapcraft.outputs.snap }}
+          release: beta
