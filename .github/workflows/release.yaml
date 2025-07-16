@@ -14,12 +14,16 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - # Make sure there are no unstaged changes
-        # Was reporting changes to eol=crlf files in .gitattributes
-        run: git checkout -- .
-      - run: git rev-parse --short=5 HEAD > cmake/AutoRevision.txt
-      - run: git describe --tags `git rev-list --tags --max-count=1` >> cmake/AutoRevision.txt
-      - run: cat cmake/AutoRevision.txt
+      - name: git checks
+        run: |
+          which git
+          git --version
+      #git checkout -- .
+      #git rev-parse --short=5 HEAD > cmake/AutoRevision.txt
+      #git describe --tags `git rev-list --tags --max-count=1` >> cmake/AutoRevision.txt
+      #cat cmake/AutoRevision.txt
+      # Make sure there are no unstaged changes
+      # Was reporting changes to eol=crlf files in .gitattributes
       - name: Find target branch
         id: branch
         # We're running on a tag so have no direct access to the branch. Find it.
@@ -93,6 +97,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Setup mirror
+        run: |
+          sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
+          apt-get update
       - name: Install dependencies
         run: |
           apt-get update
