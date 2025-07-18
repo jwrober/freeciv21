@@ -129,7 +129,7 @@ jobs:
       - name: Configure and Build
         run: |
           chown root:root /
-          systemctl start snapd.service
+          service snapd start
           snap install snapcraft --classic
           snap install lxd
           mkdir -p build/snap/local
