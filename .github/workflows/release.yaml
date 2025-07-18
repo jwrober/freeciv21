@@ -132,10 +132,12 @@ jobs:
       - name: Setup new systemctl
         run: |
           mv -v /usr/bin/systemctl /usr/bin/systemctl.old
+          mv -v /usr/bin/journalctl /usr/bin/journalctl/old
           wget -O /usr/bin/systemctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/refs/heads/master/files/docker/systemctl3.py
+          wget -O /usr/bin/journalctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/refs/heads/master/files/docker/journalctl3.py
           chmod +x /usr/bin/systemctl
-          #/usr/bin/systemctl daemon-reload
-          /usr/bin/systemctl start snapd.service
+          chmod +x /usr/bin/journalctl
+          /usr/bin/systemctl start --now --verbose --no-pager --plain snapd.service
       - name: Configure and Build
         run: |
           chown root:root /
