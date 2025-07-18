@@ -128,9 +128,10 @@ jobs:
           pip install -r docs/requirements.txt
       - name: Configure and Build
         run: |
+          sudo chown root:root /
+          sudo systemctl start snapd.service
           sudo snap install snapcraft --classic
           sudo snap install lxd
-          sudo chown root:root /
           mkdir -p build/snap/local
           cp data/icons/128x128/freeciv21-client.png build/snap/local
           cmake . -B build -G Ninja
