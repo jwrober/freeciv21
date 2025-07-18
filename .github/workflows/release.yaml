@@ -124,7 +124,8 @@ jobs:
             libsdl2-mixer-dev \
             sudo \
             snapd \
-            wget
+            wget \
+            apparmor
           virtualenv venv
           . venv/bin/activate
           pip install -r docs/requirements.txt
@@ -137,8 +138,8 @@ jobs:
           wget -O /usr/bin/journalctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/refs/heads/master/files/docker/journalctl3.py
           chmod +x /usr/bin/systemctl
           chmod +x /usr/bin/journalctl
-          /usr/bin/systemctl enable --verbose --no-pager --plain snapd.apparmor.service
           /usr/bin/systemctl start --now --verbose --no-pager --plain snapd.service
+        #/usr/bin/systemctl enable --verbose --no-pager --plain snapd.apparmor.service
       - name: Configure and Build
         run: |
           chown root:root /
