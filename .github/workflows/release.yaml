@@ -126,10 +126,11 @@ jobs:
           virtualenv venv
           . venv/bin/activate
           pip install -r docs/requirements.txt
+          systemctl daemon-reload
+          systemctl snapd start
       - name: Configure and Build
         run: |
           chown root:root /
-          service snapd start
           snap install snapcraft --classic
           snap install lxd
           mkdir -p build/snap/local
