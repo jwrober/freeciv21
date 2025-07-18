@@ -9,17 +9,6 @@ jobs:
     name: "Update AutoRevision"
     runs-on: ubuntu-latest
     steps:
-      #- name: Setup mirror
-      #  run: |
-      #    sudo sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
-      #- name: Install dependencies
-      #  run: |
-      #    sudo apt-get update
-      #    sudo apt-get install -y git
-      - name: Checks
-        run: |
-          which git
-          git --version
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -45,45 +34,27 @@ jobs:
         # We have this problematic file that we need to remove
         run: |
           rm -f dist/windows/freeciv21-server.cmd
-      #- name: Create Pull Request
-      #  uses: peter-evans/create-pull-request@v7
-      #  with:
-      #    base: ${{ steps.branch.outputs.branch }}
-      #    commit-message: "Release update of AutoRevision.txt"
-      #    branch: release/autorevision/${{ steps.branch.outputs.branch }}
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          base: ${{ steps.branch.outputs.branch }}
+          commit-message: "Release update of AutoRevision.txt"
+          branch: release/autorevision/${{ steps.branch.outputs.branch }}
           # Ensure we only add the changed cmake/AutoRevision.txt file in the commit
-      #    add-paths: |
-      #      cmake/AutoRevision.txt
-      #    title: "Release update of AutoRevision.txt"
-      #    body: >
-      #      Automatic changes triggered by a new release.
+          add-paths: |
+            cmake/AutoRevision.txt
+          title: "Release update of AutoRevision.txt"
+          body: >
+            Automatic changes triggered by a new release.
 
-      #      This PR updates `${{ steps.branch.outputs.branch }}`.
-      #      Close and reopen this pull request to start the CI.
-      #    delete-branch: true
+            This PR updates `${{ steps.branch.outputs.branch }}`.
+            Close and reopen this pull request to start the CI.
+          delete-branch: true
 
   update-archive:
     name: "Update Source Archive"
     runs-on: ubuntu-latest
     steps:
-      #- name: Setup mirror
-      #  run: |
-      #    sudo sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
-      #- name: Install dependencies
-      #  run: |
-      #    sudo apt-get update
-      #    sudo apt-get install -y \
-      #      git \
-      #      tar \
-      #      zip \
-      #      coreutils
-      - name: Checks
-        run: |
-          which git
-          git --version
-          which tar
-          which zip
-          which sha256sum
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -132,6 +103,7 @@ jobs:
         run: |
           sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
           apt-get update
+      # Running in a docker container, have to install everything as we can't rely on base image
       - name: Install dependencies
         run: |
           apt-get install -y \
@@ -140,6 +112,7 @@ jobs:
             cmake \
             ninja-build \
             python3 \
+            python3-virtualenv \
             gettext \
             qt6-base-dev \
             qt6-multimedia-dev \
@@ -148,19 +121,28 @@ jobs:
             liblua5.3-dev \
             libsqlite3-dev \
             libsdl2-mixer-dev \
-            sudo
-      - name: Configure
+            sudo \
+            snapd
+          virtualenv venv
+          . venv/bin/activate
+          pip install -r docs/requirements.txt
+          snap install snapcraft --classic
+          snap install lxd
+      - name: Configure and Build
         run: |
+          chown root:root /
           mkdir -p build/snap/local
-          cmake . -B build -G Ninja
           cp data/icons/128x128/freeciv21-client.png build/snap/local
-      - uses: snapcore/action-build@v1
-        id: snapcraft
-        with:
-          path: build
-      - uses: snapcore/action-publish@v1
-        env:
-          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.STORE_LOGIN }}
-        with:
-          snap: ${{ steps.snapcraft.outputs.snap }}
-          release: beta
+          cmake . -B build -G Ninja
+          cd build
+          sudo snapcraft
+      #- uses: snapcore/action-build@v1
+      #  id: snapcraft
+      #  with:
+      #    path: build
+      #- uses: snapcore/action-publish@v1
+      #  env:
+      #    SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.STORE_LOGIN }}
+      #  with:
+      #    snap: ${{ steps.snapcraft.outputs.snap }}
+      #    release: beta
