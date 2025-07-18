@@ -123,18 +123,25 @@ jobs:
             libsqlite3-dev \
             libsdl2-mixer-dev \
             sudo \
-            snapd
+            snapd \
+            wget
           virtualenv venv
           . venv/bin/activate
           pip install -r docs/requirements.txt
-          systemctl daemon-reload
-          systemctl snapd start
+      # GitHub Actions running in a docker container don't have systemctl enabled.
+      - name: Setup new systemctl
+        run: |
+          mv -v /usr/bin/systemctl /usr/bin/systemctl.old
+          wget -O /usr/bin/systemctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/refs/heads/master/files/docker/systemctl3.py
+          chmod +x /usr/bin/systemctl
+          /usr/bin/systemctl daemon-reload
+          /usr/bin/systemctl snapd start
       - name: Configure and Build
         run: |
           chown root:root /
           snap install snapcraft --classic
           snap install lxd
-          mkdir -p build/snap/local
+          mkdir -vp build/snap/local
           cp data/icons/128x128/freeciv21-client.png build/snap/local
           cmake . -B build -G Ninja
           cd build
