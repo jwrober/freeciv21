@@ -126,11 +126,11 @@ jobs:
           virtualenv venv
           . venv/bin/activate
           pip install -r docs/requirements.txt
-          snap install snapcraft --classic
-          snap install lxd
       - name: Configure and Build
         run: |
-          chown root:root /
+          sudo snap install snapcraft --classic
+          sudo snap install lxd
+          sudo chown root:root /
           mkdir -p build/snap/local
           cp data/icons/128x128/freeciv21-client.png build/snap/local
           cmake . -B build -G Ninja
