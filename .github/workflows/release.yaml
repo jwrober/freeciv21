@@ -95,6 +95,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ubuntu:24.10
+      options: --privileged --entrypoint /sbin/init
     steps:
       - uses: actions/checkout@v4
         with:
