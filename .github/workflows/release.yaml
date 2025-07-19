@@ -115,7 +115,7 @@ jobs:
             libsqlite3-dev \
             libsdl2-mixer-dev \
             snapd \
-            llvm-17-dev
+            libclang-16-dev
       - name: QT Base 6.8 LTS
         run: |
           wget https://download.qt.io/official_releases/qt/6.8/6.8.3/single/qt-everywhere-src-6.8.3.tar.xz
