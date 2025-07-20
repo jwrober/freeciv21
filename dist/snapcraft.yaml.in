@@ -76,7 +76,7 @@ parts:
     # base core24 doesn't have kf6archive, so we get it from a snap
     build-snaps:
       - kf6-core24
-      #- core24
+      - core24
     # packages/libraries needed at run time
     stage-packages:
       - liblua5.3-0

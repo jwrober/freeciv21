@@ -125,18 +125,18 @@ jobs:
           rm qtbase-everywhere-src-6.8.3.tar.xz
           cd qtbase-everywhere-src-6.8.3
           ./configure
-          cmake --build . --parallel
+          cmake --build . --parallel 4
           sudo cmake --install .
           cd ..
           rm -Rf qtbase-everywhere-src-6.8.3
 
-          # Qt Multimedia (shadertools -> declarative -> multimedia)
+          # Qt Multimedia (shadertools -> declarative -> 3d -> multimedia)
           wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtshadertools-everywhere-src-6.8.3.tar.xz
           tar xf qtshadertools-everywhere-src-6.8.3.tar.xz
           rm qtshadertools-everywhere-src-6.8.3.tar.xz
           cd qtshadertools-everywhere-src-6.8.3
           /usr/local/Qt-6.8.3/bin/qt-configure-module .
-          cmake --build . --parallel
+          cmake --build . --parallel 4
           sudo cmake --install .
           cd ..
           rm -Rf qtshadertools-everywhere-src-6.8.3
@@ -146,20 +146,20 @@ jobs:
           rm qtdeclarative-everywhere-src-6.8.3.tar.xz
           cd qtdeclarative-everywhere-src-6.8.3
           /usr/local/Qt-6.8.3/bin/qt-configure-module .
-          cmake --build . --parallel
+          cmake --build . --parallel 4
           sudo cmake --install .
           cd ..
           rm -Rf qtdeclarative-everywhere-src-6.8.3
 
-          # wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qt3d-everywhere-src-6.8.3.tar.xz
-          # tar xf qt3d-everywhere-src-6.8.3.tar.xz
-          # rm qt3d-everywhere-src-6.8.3.tar.xz
-          # cd qt3d-everywhere-src-6.8.3
-          # /usr/local/Qt-6.8.3/bin/qt-configure-module .
-          # cmake --build . --parallel
-          # sudo cmake --install .
-          # cd ..
-          # rm -Rf qt3d-everywhere-src-6.8.3
+          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qt3d-everywhere-src-6.8.3.tar.xz
+          tar xf qt3d-everywhere-src-6.8.3.tar.xz
+          rm qt3d-everywhere-src-6.8.3.tar.xz
+          cd qt3d-everywhere-src-6.8.3
+          /usr/local/Qt-6.8.3/bin/qt-configure-module .
+          cmake --build . --parallel 4
+          sudo cmake --install .
+          cd ..
+          rm -Rf qt3d-everywhere-src-6.8.3
 
           # Libraries we need for ffmpeg support
           sudo apt-get install -y libssl-dev \
@@ -167,18 +167,23 @@ jobs:
             libavformat-dev libavdevice-dev \
             libavfilter-dev libavutil-dev \
             libpostproc-dev libswresample-dev \
-            libswscale-dev pulseaudio libpulse-dev
+            libswscale-dev pulseaudio libpulse-dev \
+            libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
+            gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
+            gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad \
+            libgstreamer-plugins-bad1.0-dev gstreamer1.0-pulseaudio \
+            gstreamer1.0-tools gstreamer1.0-alsa libasound2-dev
 
           # fix a bug in the find ffmpeg step
-          sudo mkdir /usr/lib/lib
-          sudo ln -s /usr/lib/x86_64-linux-gnu/pkgconfig /usr/lib/lib/pkgconfig
+          sudo mkdir -v /usr/lib/lib
+          sudo ln -sv /usr/lib/x86_64-linux-gnu/pkgconfig /usr/lib/lib/pkgconfig
 
           wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtmultimedia-everywhere-src-6.8.3.tar.xz
           tar xf qtmultimedia-everywhere-src-6.8.3.tar.xz
           rm qtmultimedia-everywhere-src-6.8.3.tar.xz
           cd qtmultimedia-everywhere-src-6.8.3
           /usr/local/Qt-6.8.3/bin/qt-configure-module .
-          cmake --build . --parallel
+          cmake --build . --parallel 4
           sudo cmake --install .
           cd ..
           rm -Rf qtmultimedia-everywhere-src-6.8.3
@@ -193,13 +198,13 @@ jobs:
           sudo cmake --install .
           cd ..
           rm -Rf qtsvg-everywhere-src-6.8.3
-      - name: KDE KfArchive
+      - name: KDE KArchive
         run: |
           wget -O ecm.tar.gz https://github.com/KDE/extra-cmake-modules/archive/refs/tags/v6.7.0.tar.gz
           tar xf ecm.tar.gz
           rm ecm.tar.gz
           cd extra-cmake-modules-6.7.0
-          cmake . -B build -G Ninja
+          cmake . -B build -G Ninja -DCMAKE_PREFIX_PATH=/usr/local/Qt-6.8.3
           cmake --build build
           sudo cmake --build build --target install
           cd ..
