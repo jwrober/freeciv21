@@ -199,14 +199,14 @@ jobs:
           mkdir -vp build/snap/local
           cp data/icons/128x128/freeciv21-client.png build/snap/local
           cmake . -B build -G Ninja -DCMAKE_PREFIX_PATH=/usr/local/Qt-6.8.3
-      - name: Build
-      - uses: snapcore/action-build@v1
-        id: snapcraft
-        with:
-          path: build
-      #- uses: snapcore/action-publish@v1
-      #  env:
-      #    SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.STORE_LOGIN }}
-      #  with:
-      #    snap: ${{ steps.snapcraft.outputs.snap }}
-      #    release: edge
+      - name: Build and Upload
+        uses: snapcore/action-build@v1
+         id: snapcraft
+         with:
+           path: build
+      # uses: snapcore/action-publish@v1
+      #   env:
+      #     SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.STORE_LOGIN }}
+      #   with:
+      #     snap: ${{ steps.snapcraft.outputs.snap }}
+      #     release: edge
