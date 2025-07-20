@@ -59,10 +59,10 @@ parts:
       - "-DCMAKE_INSTALL_PREFIX=/usr"
       - "-DCMAKE_BUILD_TYPE=Release"
     build-packages:
+      - g++
       - git
       - cmake
       - ninja-build
-      - g++
       - python3
       - gettext
       - liblua5.3-dev
@@ -74,7 +74,7 @@ parts:
       - qt6-svg-dev
     # base core24 doesn't have kf6archive, so we get it from a snap
     build-snaps:
-      - core24
+      #- core24
       - kf6-core24
     # packages/libraries needed at run time
     stage-packages:

@@ -104,13 +104,12 @@ jobs:
       - name: Install base dependencies
         run: |
           sudo apt-get install -y \
-            build-essential \
+            g++ \
             git \
             cmake \
             ninja-build \
             python3 \
             gettext \
-            gstreamer1.0-plugins-base \
             liblua5.3-dev \
             libsqlite3-dev \
             libsdl2-mixer-dev \
@@ -120,7 +119,7 @@ jobs:
             libclang-16-dev \
             snapd
       # snaps can't be built inside of a docker container, so we have to manually install our required dependencies
-      - name: QT 6.8 LTS
+      - name: Qt 6.8 LTS
         run: |
           # Qt Base
           wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtbase-everywhere-src-6.8.3.tar.xz
@@ -143,6 +142,8 @@ jobs:
           sudo cmake --install .
           cd ..
           rm -Rf qtshadertools-everywhere-src-6.8.3
+
+          # insert manual ffmpeg compile here to /usr/local/ffmpeg
 
           wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtmultimedia-everywhere-src-6.8.3.tar.xz
           tar xf qtmultimedia-everywhere-src-6.8.3.tar.xz
