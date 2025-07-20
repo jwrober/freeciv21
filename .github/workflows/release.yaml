@@ -101,7 +101,6 @@ jobs:
         run: |
           sudo sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
           sudo apt-get update
-      # Running in a docker container, have to install everything as we can't rely on base image
       - name: Install base dependencies
         run: |
           sudo apt-get install -y \
@@ -111,38 +110,103 @@ jobs:
             ninja-build \
             python3 \
             gettext \
+            gstreamer1.0-plugins-base \
             liblua5.3-dev \
             libsqlite3-dev \
             libsdl2-mixer-dev \
-            snapd \
-            libclang-16-dev
-      - name: QT Base 6.8 LTS
+            libzstd-dev \
+            liblzma-dev \
+            libbz2-dev \
+            snapd
+      # snaps can't be built inside of a docker container, so we have to manually install our required dependencies
+      - name: QT 6.8 LTS
         run: |
-          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/single/qt-everywhere-src-6.8.3.tar.xz
-          tar xf qt-everywhere-src-6.8.3.tar.xz
-          cd qt-everywhere-src-6.8.3
+          # Qt Base
+          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtbase-everywhere-src-6.8.3.tar.xz
+          tar xf qtbase-everywhere-src-6.8.3.tar.xz
+          rm qtbase-everywhere-src-6.8.3.tar.xz
+          cd qtbase-everywhere-src-6.8.3
           ./configure
           cmake --build . --parallel
-          cmake --install .
-          PATH=/usr/local/Qt-6.8.3/bin:$PATH
-          export PATH
-      #- name: Configure and Build
-      #  run: |
-      #    chown root:root /
-      #    snap install snapcraft --classic
-      #    snap install lxd
-      #    mkdir -vp build/snap/local
-      #    cp data/icons/128x128/freeciv21-client.png build/snap/local
-      #    cmake . -B build -G Ninja
-      #    cd build
-      #    snapcraft
-      #- uses: snapcore/action-build@v1
-      #  id: snapcraft
-      #  with:
-      #    path: build
+          sudo cmake --install .
+          cd ..
+          rm -Rf qtbase-everywhere-src-6.8.3
+
+          # Qt Multimedia
+          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtshadertools-everywhere-src-6.8.3.tar.xz
+          tar xf qtshadertools-everywhere-src-6.8.3.tar.xz
+          rm qtshadertools-everywhere-src-6.8.3.tar.xz
+          cd qtshadertools-everywhere-src-6.8.3
+          /usr/local/Qt-6.8.3/bin/qt-configure-module .
+          cmake --build . --parallel
+          sudo cmake --install .
+          cd ..
+          rm -Rf qtshadertools-everywhere-src-6.8.3
+
+          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtmultimedia-everywhere-src-6.8.3.tar.xz
+          tar xf qtmultimedia-everywhere-src-6.8.3.tar.xz
+          rm qtmultimedia-everywhere-src-6.8.3.tar.xz
+          cd qtmultimedia-everywhere-src-6.8.3
+          /usr/local/Qt-6.8.3/bin/qt-configure-module .
+          cmake --build . --parallel
+          sudo cmake --install .
+          cd ..
+          rm -Rf qtmultimedia-everywhere-src-6.8.3
+
+          # Qt SVG
+          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtsvg-everywhere-src-6.8.3.tar.xz
+          tar xf qtsvg-everywhere-src-6.8.3.tar.xz
+          rm qtsvg-everywhere-src-6.8.3.tar.xz
+          cd qtsvg-everywhere-src-6.8.3
+          /usr/local/Qt-6.8.3/bin/qt-configure-module .
+          cmake --build . --parallel
+          sudo cmake --install .
+          cd ..
+          rm -Rf qtsvg-everywhere-src-6.8.3
+      - name: KDE ECM
+        run: |
+          wget -O ecm.tar.gz https://github.com/KDE/extra-cmake-modules/archive/refs/tags/v6.7.0.tar.gz
+          tar xf ecm.tar.gz
+          rm ecm.tar.gz
+          cd extra-cmake-modules-6.7.0
+          cmake . -B build -G Ninja
+          cmake --build build
+          sudo cmake --build build --target install
+          cd ..
+          rm -Rf extra-cmake-modules-6.7.0
+      - name: KDE KfArchive
+        run: |
+          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qttools-everywhere-src-6.8.3.tar.xz
+          tar xf qttools-everywhere-src-6.8.3.tar.xz
+          rm qttools-everywhere-src-6.8.3.tar.xz
+          cd qttools-everywhere-src-6.8.3
+          /usr/local/Qt-6.8.3/bin/qt-configure-module .
+          cmake --build . --parallel
+          sudo cmake --install .
+          cd ..
+          rm -Rf qttools-everywhere-src-6.8.3
+
+          wget -O kfa.tar.gz https://github.com/KDE/karchive/archive/refs/tags/v6.7.0.tar.gz
+          tar xf kfa.tar.gz
+          cd karchive-6.7.0
+          cmake . -B build -G Ninja -DCMAKE_PREFIX_PATH=/usr/local/Qt-6.8.3
+          cmake --build build
+          sudo cmake --build build --target install
+          cd ..
+          rm -Rf karchive-6.7.0
+      - name: Configure
+        run: |
+          mkdir -vp build/snap/local
+          cp data/icons/128x128/freeciv21-client.png build/snap/local
+          cmake . -B build -G Ninja -DCMAKE_PREFIX_PATH=/usr/local/Qt-6.8.3
+      - name: Build
+      - uses: snapcore/action-build@v1
+        id: snapcraft
+        with:
+          path: build
       #- uses: snapcore/action-publish@v1
       #  env:
       #    SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.STORE_LOGIN }}
       #  with:
       #    snap: ${{ steps.snapcraft.outputs.snap }}
-      #    release: beta
+      #    release: edge
