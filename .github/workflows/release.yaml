@@ -117,6 +117,7 @@ jobs:
             libzstd-dev \
             liblzma-dev \
             libbz2-dev \
+            libclang-16-dev \
             snapd
       # snaps can't be built inside of a docker container, so we have to manually install our required dependencies
       - name: QT 6.8 LTS
