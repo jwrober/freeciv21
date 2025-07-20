@@ -113,13 +113,11 @@ jobs:
             liblua5.3-dev \
             libsqlite3-dev \
             libsdl2-mixer-dev \
-            libzstd-dev \
-            liblzma-dev \
-            libbz2-dev \
-            libclang-16-dev \
             snapd
-      # snaps can't be built inside of a docker container, so we have to manually install our required dependencies
-      - name: Qt 6.8 LTS
+      # snaps can't be built inside of a docker container, so we have to manually install our required
+      # dependencies since ubuntu 24.04 doesn't have the versions we need. Packages sourced from
+      # https://download.qt.io/official_releases/qt/
+      - name: Qt 6.8 LTS (base plus submodules)
         run: |
           # Qt Base
           wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtbase-everywhere-src-6.8.3.tar.xz
@@ -132,7 +130,7 @@ jobs:
           cd ..
           rm -Rf qtbase-everywhere-src-6.8.3
 
-          # Qt Multimedia
+          # Qt Multimedia (shadertools -> declarative -> multimedia)
           wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtshadertools-everywhere-src-6.8.3.tar.xz
           tar xf qtshadertools-everywhere-src-6.8.3.tar.xz
           rm qtshadertools-everywhere-src-6.8.3.tar.xz
@@ -143,7 +141,35 @@ jobs:
           cd ..
           rm -Rf qtshadertools-everywhere-src-6.8.3
 
-          # insert manual ffmpeg compile here to /usr/local/ffmpeg
+          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtdeclarative-everywhere-src-6.8.3.tar.xz
+          tar xf qtdeclarative-everywhere-src-6.8.3.tar.xz
+          rm qtdeclarative-everywhere-src-6.8.3.tar.xz
+          cd qtdeclarative-everywhere-src-6.8.3
+
+          cd ..
+          rm -Rf qtdeclarative-everywhere-src-6.8.3
+
+          # wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qt3d-everywhere-src-6.8.3.tar.xz
+          # tar xf qt3d-everywhere-src-6.8.3.tar.xz
+          # rm qt3d-everywhere-src-6.8.3.tar.xz
+          # cd qt3d-everywhere-src-6.8.3
+          # /usr/local/Qt-6.8.3/bin/qt-configure-module .
+          # cmake --build . --parallel
+          # sudo cmake --install .
+          # cd ..
+          # rm -Rf qt3d-everywhere-src-6.8.3
+
+          # Libraries we need for ffmpeg support
+          sudo apt-get install -y libssl-dev \
+            libva-dev ffmpeg libavcodec-dev \
+            libavformat-dev libavdevice-dev \
+            libavfilter-dev libavutil-dev \
+            libpostproc-dev libswresample-dev \
+            libswscale-dev pulseaudio libpulse-dev
+
+          # fix a bug in the find ffmpeg step
+          sudo mkdir /usr/lib/lib
+          sudo ln -s /usr/lib/x86_64-linux-gnu/pkgconfig /usr/lib/lib/pkgconfig
 
           wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtmultimedia-everywhere-src-6.8.3.tar.xz
           tar xf qtmultimedia-everywhere-src-6.8.3.tar.xz
@@ -178,6 +204,7 @@ jobs:
           rm -Rf extra-cmake-modules-6.7.0
       - name: KDE KfArchive
         run: |
+          sudo apt-get install -y libclang-16-dev
           wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qttools-everywhere-src-6.8.3.tar.xz
           tar xf qttools-everywhere-src-6.8.3.tar.xz
           rm qttools-everywhere-src-6.8.3.tar.xz
@@ -188,6 +215,7 @@ jobs:
           cd ..
           rm -Rf qttools-everywhere-src-6.8.3
 
+          sudo apt-get install -y libzstd-dev liblzma-dev libbz2-dev
           wget -O kfa.tar.gz https://github.com/KDE/karchive/archive/refs/tags/v6.7.0.tar.gz
           tar xf kfa.tar.gz
           cd karchive-6.7.0

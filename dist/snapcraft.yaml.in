@@ -6,8 +6,9 @@
 #
 # Build Steps:
 #   - sudo apt install snapd (run once to install -- fedora's dnf is similar)
-#   - sudo snap install snapcraft --classic (run once to install)
 #   - sudo snap install lxd (run once to install)
+#   - sudo lxd init --auto (run once to install)
+#   - sudo snap install snapcraft --classic (run once to install)
 #   - mkdir -p build/snap/local
 #   - cp data/icons/128x128/freeciv21-client.png build/snap/local
 #   - cmake . -B build -G Ninja
@@ -45,8 +46,8 @@ base: core24
 #  and the file was copied from <source_dir>/data/icons/128x128
 icon: snap/local/freeciv21-client.png
 
-platforms:
-  amd64:
+#platforms:
+#  amd64:
 
 parts:
   freeciv21:
@@ -74,8 +75,8 @@ parts:
       - qt6-svg-dev
     # base core24 doesn't have kf6archive, so we get it from a snap
     build-snaps:
-      #- core24
       - kf6-core24
+      #- core24
     # packages/libraries needed at run time
     stage-packages:
       - liblua5.3-0
