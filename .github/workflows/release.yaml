@@ -97,152 +97,19 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup mirror
-        run: |
-          sudo sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
-          sudo apt-get update
-      - name: Install base dependencies
-        run: |
-          sudo apt-get install -y \
-            g++ \
-            git \
-            cmake \
-            ninja-build \
-            python3 \
-            gettext \
-            liblua5.3-dev \
-            libsqlite3-dev \
-            libsdl2-mixer-dev \
-            snapd
-      # snaps can't be built inside of a docker container, so we have to manually install our required
-      # dependencies since ubuntu 24.04 doesn't have the versions we need. Packages sourced from
-      # https://download.qt.io/official_releases/qt/
-      - name: Qt 6.8 LTS
-        run: |
-          # Qt Base
-          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtbase-everywhere-src-6.8.3.tar.xz
-          tar xf qtbase-everywhere-src-6.8.3.tar.xz
-          rm qtbase-everywhere-src-6.8.3.tar.xz
-          cd qtbase-everywhere-src-6.8.3
-          ./configure
-          cmake --build . --parallel 4
-          sudo cmake --install .
-          cd ..
-          rm -Rf qtbase-everywhere-src-6.8.3
-
-          # Qt Multimedia (shadertools -> declarative -> 3d -> multimedia)
-          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtshadertools-everywhere-src-6.8.3.tar.xz
-          tar xf qtshadertools-everywhere-src-6.8.3.tar.xz
-          rm qtshadertools-everywhere-src-6.8.3.tar.xz
-          cd qtshadertools-everywhere-src-6.8.3
-          /usr/local/Qt-6.8.3/bin/qt-configure-module .
-          cmake --build . --parallel 4
-          sudo cmake --install .
-          cd ..
-          rm -Rf qtshadertools-everywhere-src-6.8.3
-
-          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtdeclarative-everywhere-src-6.8.3.tar.xz
-          tar xf qtdeclarative-everywhere-src-6.8.3.tar.xz
-          rm qtdeclarative-everywhere-src-6.8.3.tar.xz
-          cd qtdeclarative-everywhere-src-6.8.3
-          /usr/local/Qt-6.8.3/bin/qt-configure-module .
-          cmake --build . --parallel 4
-          sudo cmake --install .
-          cd ..
-          rm -Rf qtdeclarative-everywhere-src-6.8.3
-
-          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qt3d-everywhere-src-6.8.3.tar.xz
-          tar xf qt3d-everywhere-src-6.8.3.tar.xz
-          rm qt3d-everywhere-src-6.8.3.tar.xz
-          cd qt3d-everywhere-src-6.8.3
-          /usr/local/Qt-6.8.3/bin/qt-configure-module .
-          cmake --build . --parallel 4
-          sudo cmake --install .
-          cd ..
-          rm -Rf qt3d-everywhere-src-6.8.3
-
-          # Libraries we need for ffmpeg support
-          sudo apt-get install -y libssl-dev \
-            libva-dev ffmpeg libavcodec-dev \
-            libavformat-dev libavdevice-dev \
-            libavfilter-dev libavutil-dev \
-            libpostproc-dev libswresample-dev \
-            libswscale-dev pulseaudio libpulse-dev \
-            libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev \
-            gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
-            gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad \
-            libgstreamer-plugins-bad1.0-dev gstreamer1.0-pulseaudio \
-            gstreamer1.0-tools gstreamer1.0-alsa libasound2-dev
-
-          # fix a bug in the find ffmpeg step
-          sudo mkdir -v /usr/lib/lib
-          sudo ln -sv /usr/lib/x86_64-linux-gnu/pkgconfig /usr/lib/lib/pkgconfig
-
-          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtmultimedia-everywhere-src-6.8.3.tar.xz
-          tar xf qtmultimedia-everywhere-src-6.8.3.tar.xz
-          rm qtmultimedia-everywhere-src-6.8.3.tar.xz
-          cd qtmultimedia-everywhere-src-6.8.3
-          /usr/local/Qt-6.8.3/bin/qt-configure-module .
-          cmake --build . --parallel 4
-          sudo cmake --install .
-          cd ..
-          rm -Rf qtmultimedia-everywhere-src-6.8.3
-
-          # Qt SVG
-          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qtsvg-everywhere-src-6.8.3.tar.xz
-          tar xf qtsvg-everywhere-src-6.8.3.tar.xz
-          rm qtsvg-everywhere-src-6.8.3.tar.xz
-          cd qtsvg-everywhere-src-6.8.3
-          /usr/local/Qt-6.8.3/bin/qt-configure-module .
-          cmake --build . --parallel
-          sudo cmake --install .
-          cd ..
-          rm -Rf qtsvg-everywhere-src-6.8.3
-      - name: KDE KArchive
-        run: |
-          wget -O ecm.tar.gz https://github.com/KDE/extra-cmake-modules/archive/refs/tags/v6.7.0.tar.gz
-          tar xf ecm.tar.gz
-          rm ecm.tar.gz
-          cd extra-cmake-modules-6.7.0
-          cmake . -B build -G Ninja -DCMAKE_PREFIX_PATH=/usr/local/Qt-6.8.3
-          cmake --build build
-          sudo cmake --build build --target install
-          cd ..
-          rm -Rf extra-cmake-modules-6.7.0
-
-          sudo apt-get install -y libclang-16-dev
-          wget https://download.qt.io/official_releases/qt/6.8/6.8.3/submodules/qttools-everywhere-src-6.8.3.tar.xz
-          tar xf qttools-everywhere-src-6.8.3.tar.xz
-          rm qttools-everywhere-src-6.8.3.tar.xz
-          cd qttools-everywhere-src-6.8.3
-          /usr/local/Qt-6.8.3/bin/qt-configure-module .
-          cmake --build . --parallel
-          sudo cmake --install .
-          cd ..
-          rm -Rf qttools-everywhere-src-6.8.3
-
-          sudo apt-get install -y libzstd-dev liblzma-dev libbz2-dev
-          wget -O kfa.tar.gz https://github.com/KDE/karchive/archive/refs/tags/v6.7.0.tar.gz
-          tar xf kfa.tar.gz
-          cd karchive-6.7.0
-          cmake . -B build -G Ninja -DCMAKE_PREFIX_PATH=/usr/local/Qt-6.8.3
-          cmake --build build
-          sudo cmake --build build --target install
-          cd ..
-          rm -Rf karchive-6.7.0
       - name: Configure
         run: |
           mkdir -vp build/snap/local
           cp data/icons/128x128/freeciv21-client.png build/snap/local
-          cmake . -B build -G Ninja -DCMAKE_PREFIX_PATH=/usr/local/Qt-6.8.3
+          cp dist/snapcraft.yaml build
       - name: Build and Upload
         uses: snapcore/action-build@v1
         id: snapcraft
         with:
           path: build
-      # uses: snapcore/action-publish@v1
-      #   env:
-      #     SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.STORE_LOGIN }}
-      #   with:
-      #     snap: ${{ steps.snapcraft.outputs.snap }}
-      #     release: edge
+       #uses: snapcore/action-publish@v1
+       #  env:
+       #    SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.STORE_LOGIN }}
+       #  with:
+       #    snap: ${{ steps.snapcraft.outputs.snap }}
+       #    release: edge
