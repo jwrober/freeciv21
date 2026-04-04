@@ -150,6 +150,12 @@ jobs:
             mingw-w64-clang-x86_64-nsis
             mingw-w64-clang-x86_64-clang
             mingw-w64-clang-x86_64-libunwind
+      # Ensure we have the most recent copy of the repo
+      - name: Update VCPKG
+        run: |
+          cd ${{ env.VCPKG_ROOT }}
+          git fetch
+          git pull origin master
       - name: Configure
         run: |
           export PATH=/clang64/bin:${PATH}
