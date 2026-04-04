@@ -1,8 +1,7 @@
-# Win32 et al requires cmake version 3.16 because we use a newer command
-#   "file(GET_RUNTIME_DEPENDENCIES ..." that is only available at v3.16+
-# On other platforms (*nix, MacOS) we need to support older 3.12+ for the
-#   server and other components
-cmake_minimum_required(VERSION 3.21...3.22 FATAL_ERROR)
+#
+# Root CmakeLists.txt file for Freeciv21
+#
+cmake_minimum_required(VERSION 3.21...4.3 FATAL_ERROR)
 
 # Set vcpkg if exists. Used by MacOS and Visual Studio
 if(DEFINED ENV{VCPKG_ROOT} AND FREECIV_USE_VCPKG)
