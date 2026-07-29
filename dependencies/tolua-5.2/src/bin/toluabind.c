@@ -4,9 +4,9 @@
 
 #include "tolua.h"
 
-#ifndef __cplusplus
-#include <stdlib.h>
-#endif
+#include "lauxlib.h"
+#include "lua.h"
+
 #ifdef __cplusplus
  extern "C" int tolua_bnd_takeownership (lua_State* L); // from tolua_map.c
 #else

@@ -13,7 +13,9 @@
  */
 
 #include "tolua.h"
+
 #include "lauxlib.h"
+#include "lua.h"
 
 #include <stdlib.h>
 #include <string.h>

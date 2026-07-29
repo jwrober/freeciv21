@@ -15,6 +15,10 @@
 /* generated */
 $#include <fc_config.h>
 
+/* dependencies */
+$#include "lauxlib.h"
+$#include "lua.h"
+
 /* common */
 $#include "api_common_utilities.h"
 $#include "api_game_effects.h"

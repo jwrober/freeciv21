@@ -12,11 +12,12 @@
 ** enhancements, or modifications. 
 */
 
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 #include "tolua.h"
+
+#include "lua.h"
 
 #include "tolua_event.h"
 

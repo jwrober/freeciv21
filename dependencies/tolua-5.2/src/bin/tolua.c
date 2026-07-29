@@ -14,13 +14,12 @@
 
 #include "tolua.h"
 
+#include "lauxlib.h"
 #include "lua.h"
 #include "lualib.h"
-#include "lauxlib.h"
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #ifndef LUA_SOURCE
 int tolua_tolua_open(lua_State *L);

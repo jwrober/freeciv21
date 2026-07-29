@@ -12,6 +12,9 @@
   old one running.
 *****************************************************************************/
 
+/* dependencies */
+$#include "lua.h"
+
 /* Classes. */
 struct Nonexistent {
 };

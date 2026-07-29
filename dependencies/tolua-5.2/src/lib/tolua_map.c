@@ -14,12 +14,13 @@
 
 #include "tolua.h"
 #include "tolua_event.h"
+
 #include "lauxlib.h"
+#include "lua.h"
 
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
 
 int tolua_bnd_takeownership(lua_State *L);
 

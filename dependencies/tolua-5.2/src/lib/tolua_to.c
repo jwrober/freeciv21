@@ -14,7 +14,8 @@
 
 #include "tolua.h"
 
-#include <string.h>
+#include "lua.h"
+
 #include <stdlib.h>
 
 TOLUA_API double tolua_tonumber (lua_State* L, int narg, double def)
