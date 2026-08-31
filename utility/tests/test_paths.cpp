@@ -6,9 +6,9 @@
 
 // Qt
 #include <QDir>
-#include <QLatin1String> // QLatin1String
-#include <QObject>       // Q_OBJECT
-#include <QTest>
+#include <QLatin1String>  // QLatin1String
+#include <QObject>        // Q_OBJECT
+#include <QTest>          // QTEST_MAIN
 #include <qtestcase.h>    // QCOMPARE, QVERIFY
 #include <qtmetamacros.h> // Q_OBJECT
 

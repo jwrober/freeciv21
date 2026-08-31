@@ -1,6 +1,17 @@
-#include <QProcess>
+// SPDX-License-Identifier: GPL-3.0-or-later
+// SPDX-FileCopyrightText: Freeciv21 and Freeciv Contributors
+// SPDX-FileCopyrightText: Louis Moureaux <m_louis30@yahoo.com>
 
-#include <QtTest>
+// Qt
+#include <QObject> // Q_OBJECT
+#include <QProcess>
+#include <QString>
+#include <QTest>       // QTEST_MAIN
+#include <qtestcase.h> // QTest::addColumn, QTest::newRow, QFETCH, QCOMPARE
+#include <qtmetamacros.h> // Q_OBJECT
+
+// std
+#include <cstdlib> // EXIT_SUCCESS, EXIT_FAILURE
 
 // Macro values replaced by cmake
 #define DATA_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cli/"
