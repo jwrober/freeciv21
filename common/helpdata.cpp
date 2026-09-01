@@ -57,12 +57,12 @@
 #include <QList>
 #include <QString>
 #include <QStringLiteral>
+#include <QtConfig>              // QT_VERSION_STR
 #include <QtContainerFwd>        // QVector<QString>
 #include <QtGlobal>              // qUtf8Printable
 #include <QtLogging>             // qDebug, qWarning, qCritical, etc
 #include <QtPreprocessorSupport> // Q_UNUSED
 #include <QtVersion>             // qVersion
-#include <qconfig-64.h>          // QT_VERSION_STR
 
 // std
 #include <algorithm> // std::sort, std::unique
