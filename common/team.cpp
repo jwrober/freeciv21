@@ -17,6 +17,7 @@
 #include "player.h"
 
 // Qt
+#include <QString>
 #include <QStringLiteral>
 #include <QtLogging> // qDebug, qWarning, qCritical, etc
 
