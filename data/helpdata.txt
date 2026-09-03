@@ -90,26 +90,29 @@ These steps may vary depending upon the server or ruleset options, but in genera
 "), _("\
 ### 1. Choosing the first city site.\
 "), _("\
-Start the game by wandering around BRIEFLY to find a good place to build the first city. Do not feel \
+Start the game by wandering around **briefly** to find a good place to build the first city. Do not feel \
 tempted to investigate any yellow roofed villages yet, they might contain Barbarian tribes. Build the \
-city close to Resources (Fish, Wheat, Wine, or Buffalo) and perhaps close to fresh water (River or Lake). Keep \
-in mind that the first city you build will be your capital! It is advised not to place your capital on the \
-coast. That can open you up to losing it from an attack from the sea. \
+city close to [Resources](fch:1,Resources) ([Fish](fch:7,Fish), [Wheat](fch:7,Wheat), [Wine](fch:7,Wine), or \
+[Buffalo](fch:7,Buffalo)) and perhaps close to fresh water ([River](fch:7,River) or [Lake](fch:6,Lake)). \
+Keep in mind that the first city you build will be your capital! It is advised not to place your capital on \
+the coast. That can open you up to losing it from an attack from the sea. \
 "), _("\
 The idea is to balance the quality of the site you find against getting your first city established as early \
 as possible. You will find that balance becomes a key aspect of playing Freeciv21. \
 "), _("\
 ### 2. Selecting your first five city locations.\
 "), _("\
-In the Classic ruleset, you start the game with 5 Settlers, 6 Workers, and 2 Explorers. Once you have planted \
-your first city as your capital, you need to find a place for your Settlers as quickly as possible. This \
-initial expansion phase of the game is important to establishing your base cities. Cities are everything in \
-Freeciv21. The more cities you have, the more of every type of resource you can produce. Winning in Freeciv21 \
-is a factor of your nation's ability to out-produce your opponents.\
+In the Classic ruleset, you start the game with 5 [Settlers](fch:2,Settlers), 6 [Workers](fch:2,Workers), \
+and 2 [Explorers](fch:2,Explorer). Once you have planted your first city as your capital, you need to find a \
+place for your Settlers as quickly as possible. This initial expansion phase of the game is important to \
+establishing your base cities. Cities are everything in Freeciv21. The more cities you have, the more of \
+every type of resource you can produce. Winning in Freeciv21 is a factor of your nation's ability to \
+out-produce your opponents.\
 "), _("\
-As mentioned in *1. Choosing the First City Site* above, you want to try and place your Settlers so you \
-can create cities that have Resources available to them. These tile enhancements give bonuses to help your \
-nation grow. Refer to *Terrain → Resources* for more information.\
+As mentioned in *1. Choosing the First City Site* above, you want to try and place your \
+[Settlers](fch:2,Settlers) so you can create cities that have Resources available to them. These tile \
+enhancements give bonuses to help your nation grow. Refer to [Terrain → Resources](fch:0%2CResources) for \
+more information.\
 "), _("\
 ### 3. Selecting your technological advance.\
 "), _("\
@@ -118,36 +121,42 @@ to study technological advances. As your nation learns new technologies, new uni
 wonders become available to build in your cities. \
 "), _("\
 There are too many scenarios of which technological advance path to take, so make your best judgement. You \
-will probably want to learn a new form of government. You start the game in Despotism in the Classic ruleset. \
-Monarchy or The Republic are good early targets. As soon as you have researched a new government type, start \
-a revolution (See the menu *Civilization → Government → Revolution*) and change over to it. Cities operate \
-much better under Republic than they do under Despotism, but note that it is much harder to keep military units \
-outside of city limits under a Republic. Also, do not forget to recheck your national budget after you have changed \
-governments, as the maximums vary for each type.\
+will probably want to learn a new form of government. You start the game in [Despotism](fch:10,Despotism) in \
+the Classic ruleset. [Monarchy](fch:10,Monarchy) or [The Republic](fch:5,The%20Republic) are good early \
+targets. As soon as you have researched a new government type, start a revolution (See the menu \
+*Civilization → Government → Revolution*) and change over to it. Cities operate much better under \
+[Republic](fch:10,Republic) than they do under [Despotism](fch:10,Despotism), but note that it is much \
+harder to keep military units outside of city limits under a [Republic](fch:10,Republic). Also, do not \
+forget to recheck your national budget after you have changed governments, as the maximums vary for each \
+type.\
 "), _("\
-Depending on the amount of fresh water you have available, you might need to make a push for Construction so \
-you can get your cities larger than size 8. If you are on an island (see *4. Mapping the countryside*), you \
-might need to expand. Learning Map Making will give you the Trireme unit that can set sail to find new lands \
-(see *11. Exploring the world*).\
+Depending on the amount of fresh water you have available, you might need to make a push for \
+[Construction](fch:5,Construction) so you can get your cities larger than size 8. If you are on an island \
+(see *4. Mapping the countryside*), you might need to expand. Learning [Map Making](fch:5,Map Making) will \
+give you the [Trireme](fch:2,Trireme) unit that can set sail to find new lands (see *11. Exploring the \
+world*).\
 "), _("\
 ### 4. Mapping the countryside.\
 "), _("\
-After the capital city has been built, it will start producing a Warrior unit by default. These units can be \
-used to walk around exploring the countryside. However, the Classic ruleset gives you an excellent unit \
-to explore with. Aptly named the Explorer. Remember, it is risky to leave a city undefended, so perhaps keep \
-the first Warrior in the city, and use the Explorer to explore.\
+After the capital city has been built, it will start producing a [Warrior](fch:2,Warriors) unit by default. \
+These units can be used to walk around exploring the countryside. However, the Classic ruleset gives you an \
+excellent unit to explore with. Aptly named the [Explorer](fch:2,Explorer). Remember, it is risky to leave a \
+city undefended, so perhaps keep the first [Warrior](fch:2,Warriors) in the city, and use the \
+[Explorer](fch:2,Explorer) to explore.\
 "), _("\
-You will come across Huts on the game map. There is a risk / reward with walking your Explorer into one of \
-these Huts. The rewards can be great: gold, free units, free Settlers, and even free technology advances. \
-However, the risk is that you loose Barbarian hordes that swoop through your new, undefended cities like a \
-hot knife through butter. You have been warned.\
+You will come across [Huts](fch:7,Minor%20Tribe%20Village) on the game map. There is a risk / reward with \
+walking your [Explorer](fch:2,Explorer) into one of these [Huts](fch:7,Minor%20Tribe%20Village). The rewards \
+can be great: gold, free units, free [Settlers](fch:2,Settlers), and even free technology advances. However, \
+the risk is that you loose Barbarian hordes that swoop through your new, undefended cities like a hot knife \
+through butter. You have been warned.\
 "), _("\
 ### 5. Defending the cities.\
 "), _("\
-At this point, defend your cities by always leaving a Warrior unit in them. As your civilization develops and \
-new units become available, replace the obsolete units with new ones to ensure your cities have sufficient \
-defense. The units most often used for defense are (in order of strength): Warrior, Phalanx, Pikemen, \
-Musketeers, Riflemen, and Mechanized Infantry.\
+At this point, defend your cities by always leaving a [Warrior](fch:2,Warriors) unit in them. As your \
+civilization develops and new units become available, replace the obsolete units with new ones to ensure \
+your cities have sufficient defense. The units most often used for defense are (in order of strength): \
+[Warrior](fch:2,Warriors), [Phalanx](fch:2,Phalanx), [Pikemen](fch:2,Pikemen), \
+[Musketeers](fch:2,Musketeers), [Riflemen](fch:2,Riflemen), and [Mechanized Infantry](fch:2,Mech.%20Inf.).\
 "), _("\
 Keep in mind that with some types of government, military units inside or outside cities can reduce or create \
 unhappiness. Also remember that when a land unit is inside a city, it gets a 50% defensive bonus, as if \
@@ -156,35 +165,39 @@ defensive unit from the above list by default.\
 "), _("\
 ### 6. Deciding which units to build first.\
 "), _("\
-After building one or two Warrior units, start building Settlers. Settlers take city population, but if you \
-picked a good city site, your city should be big enough by now. The amount of population that it takes to \
-build a Settler is ruleset dependent. In the Classic ruleset it takes 1 population to build Settlers. \
-Settlers are best put to use building new cities, while they can also build infrastructure improvements (see \
-the next section), it is better to use Workers for this when available. You start the game with 6 Workers \
-in the Classic ruleset. It should be noted that unlike Settlers, Workers do not consume food from their parent \
-city. Keep in mind that a large population increases both the amount of productivity and your civilization's \
-research rate, not to mention that cities secure land for your empire, so building new cities should be a \
-high priority in the early game.\
+After building one or two [Warrior](fch:2,Warriors) units, start building [Settlers](fch:2,Settlers). \
+[Settlers](fch:2,Settlers) take city population, but if you picked a good city site, your city should be big \
+enough by now. The amount of population that it takes to build a [Settler](fch:2,Settlers) is ruleset \
+dependent. In the Classic ruleset it takes 1 population to build [Settlers](fch:2,Settlers). \
+[Settlers](fch:2,Settlers) are best put to use building new cities, while they can also build infrastructure \
+improvements (see the next section), it is better to use [Workers](fch:2,Workers) for this when available. \
+You start the game with 6 [Workers](fch:2,Workers) in the Classic ruleset. It should be noted that unlike \
+[Settlers](fch:2,Settlers), [Workers](fch:2,Workers) do not consume food from their parent city. Keep in \
+mind that a large population increases both the amount of productivity and your civilization's research \
+rate, not to mention that cities secure land for your empire, so building new cities should be a high \
+priority in the early game.\
 "), _("\
 ### 7. Improving the land.\
 "), _("\
 Each city has an area of land around it that can be used for growing food, producing goods, and generating \
-trade. This area is called the \"Working Radius\". This output can be increased by using Workers (or \
-Settlers) to improve the land close to your cities. The land can be improved with Irrigation \
-(increasing food output), Roads (allowing units to move faster and in some cases increasing trade), and Mines \
-(increasing production), among other improvements. The ability to do some improvements on some tiles may \
-require a technology advance to be learned by your scientists.\
+trade. This area is called the \"Working Radius\". This output can be increased by using \
+[Workers](fch:2,Workers) (or [Settlers](fch:2,Settlers)) to improve the land close to your cities. The land \
+can be improved with [Irrigation](fch:7,Irrigation) (increasing food output), [Roads](fch:7,Road) (allowing \
+units to move faster and in some cases increasing trade), and [Mines](fch:7,Mine) (increasing production), \
+among other improvements. The ability to do some improvements on some tiles may require a technology advance \
+to be learned by your scientists.\
 "), _("\
 ### 8. Deciding where to build cities.\
 "), _("\
 The best location for a city is a matter of taste. A city which is placed near the sea is easier to spot by \
-opponents, but can also serve as a port for seagoing units. They also usually need a Coastal Defense city \
-improvement later on for defense against an attacking navy. The best strategy is to build a few of both, but \
-keep in mind that your opponents will find it harder to locate your city if you do not build it by the sea. \
-Another thing to consider is the land around the city in its \"Vision Radius\". The vision radius is the the \
-map tiles that the city's population can manage as it grows. Many land tiles will have resources on them \
-(called Resources) that give food, production, or trade bonuses. Use the middle-click on your mouse to see. \
-The more Resources a city can utilize the better.\
+opponents, but can also serve as a port for seagoing units. They also usually need a \
+[Coastal Defense](fch:3,Coastal%20Defense) city improvement later on for defense against an attacking navy. \
+The best strategy is to build a few of both, but keep in mind that your opponents will find it harder to \
+locate your city if you do not build it by the sea. Another thing to consider is the land around the city in \
+its \"Vision Radius\". The vision radius is the map tiles that the city's population can manage as it grows. \
+Many land tiles will have resources on them (called [Resources](fch:1,Resources)) that give food, \
+production, or trade bonuses. Use the middle-click on your mouse to see. The more \
+[Resources](fch:1,Resources) a city can utilize the better.\
 "), _("\
 *NOTE:* The [online version of this page](https://longturn.readthedocs.io/en/latest/Playing/how-to-play.html) \
 has a lot of images showing different ways to plan city placement.\
@@ -198,19 +211,21 @@ the start of the game, care should be taken to ensure that the citizens are empl
 food, trade, and then production.\
 "), _("\
 If too much food is being generated, a citizen can be taken off the land by clicking on the occupied land \
-tile. This citizen can then be transferred to a specialist. There are three specialists: Taxmen (collect \
-gold), Entertainers (create happiness), or Scientist (create bulbs). By default, Freeciv21 will add an \
-Entertainer when you take a citizen off the land.\
+tile. This citizen can then be transferred to a specialist. There are three specialists: \
+[Taxmen](fch:9,Taxmen) (collect gold), [Entertainers](fch:9,Entertainers) (create happiness), or \
+[Scientist](fch:9,Scientists) (create bulbs). By default, Freeciv21 will add an \
+[Entertainer](fch:9,Entertainers) when you take a citizen off the land.\
 "), _("\
 If you click on the central tile of the land (the \"City Center\"), the citizens will be rearranged to maximize \
-food production. You will also want to look at the level of food in the Granary and the amount of surplus food \
-the city is producing each turn. The city will lose excess food at turn change. For example: The Granary in \
-the city has 18/20 food (needs two food to grow to next city size) and the city is currently producing +4 food \
-surplus each turn. This means that at turn change you will lose 2 food as waste at turn change. This is a good \
-opportunity to move the citizens around to get food to +2 surplus. This could be accomplished by taking a \
-citizen off a tile producing 2 food and turn it into a Taxman for a turn to get gold. At turn change, open the \
-city and restore the citizen to farming. This kind of individual city management style is called \
-\"micro-management\" and is a very powerful mechanism of game play.\
+food production. You will also want to look at the level of food in the [Granary](fch:3,Granary) and the \
+amount of surplus food the city is producing each turn. The city will lose excess food at turn change. For \
+example: The [Granary](fch:3,Granary) in the city has 18/20 food (needs two food to grow to next city size) \
+and the city is currently producing +4 food surplus each turn. This means that at turn change you will lose \
+2 food as waste at turn change. This is a good opportunity to move the citizens around to get food to +2 \
+surplus. This could be accomplished by taking a citizen off a tile producing 2 food and turn it into a \
+Taxman for a turn to get gold. At turn change, open the city and restore the citizen to farming. This kind \
+of individual city management style is called \"micro-management\" and is a very powerful mechanism of game \
+play.\
 "), _("\
 The golden rule of taking care of a city is that there should be at least as many happy citizens as unhappy \
 citizens. A city where this is not the case falls into disorder. Such cities are labeled with a raised fist or \
@@ -239,11 +254,12 @@ gold, you can consider this buying and selling. Each player builds a list of off
 item from the list, double-click on it. When both players indicate satisfaction, the pact is concluded.\
 "), _("\
 Pacts affect where your units can go and what they can do, and a pact with one nation can affect your \
-relations with others. Under authoritarian governments such as Monarchy you can break a pact at any time, \
-but the representative governments (Republic and Democracy) have a senate which will block the unprovoked \
-cancellation of a treaty, unless a foreign Diplomat or Spy sparks a diplomatic incident. The only way to \
-dissolve a pact in this situation is to dissolve your government by going into Anarchy. The details of pacts \
-are described in the Diplomacy section.\
+relations with others. Under authoritarian governments such as [Monarchy](fch:10,Monarchy) you can break a \
+pact at any time, but the representative governments ([Republic](fch:10,Republic) and \
+[Democracy](fch:10,Democracy)) have a senate which will block the unprovoked cancellation of a treaty, \
+unless a foreign [Diplomat](fch:2,Diplomat) or [Spy](fch:2,Spy) sparks a diplomatic incident. The only way \
+to dissolve a pact in this situation is to dissolve your government by going into Anarchy. The details of \
+pacts are described in the [Diplomacy](fch:1,Diplomacy) section.\
 "), _("\
 A few notes:\n\
   1. You cannot give away your capital.\n\
@@ -257,11 +273,11 @@ getting a better deal than you expect.\
 "), _("\
 ### 11. Exploring the world.\
 "), _("\
-After you have fortified your cities with troops, build Triremes in the cities near the sea. Use the \
-Triremes to map the world in search of your opponents and new lands. If you are on an island, you should \
-spend less on military and more on expansion. Or if you are located close to an opponent, it is truly a good \
-idea to make a Peace treaty and share the advances you have made. Diplomatic units are very useful here, and \
-WILL pay off later.\
+After you have fortified your cities with troops, build [Triremes](fch:2,Trireme) in the cities near the \
+sea. Use the [Triremes](fch:2,Trireme) to map the world in search of your opponents and new lands. If you \
+are on an island, you should spend less on military and more on expansion. Or if you are located close to an \
+opponent, it is truly a good idea to make a Peace treaty and share the advances you have made. Diplomatic \
+units are very useful here, and **will** pay off later.\
 "), _("\
 ### 12. Things to keep in mind.\
 "), _("\
@@ -273,10 +289,12 @@ WILL pay off later.\
 ### 13. Production phase.\
 "), _("\
 At some point you will have a large number of cities and your nation has learned many technologies. As you \
-move into the industrial age you can build Factories and Power Plants in your cities. You want to get as much \
-production as possible out of each city. Pollution becomes a problem. As soon as you can, try to research \
-Mass Production for Mass Transits, and Recycling so you can build Recycling Centers. Once you have got all \
-your cities going strong, you must build military units.\
+move into the industrial age you can build [Factories](fch:3,Factory) and [Power Plants](fch:3,Power%20Plant) \
+in your cities. You want to get as much production as possible out of each city. Pollution becomes a problem. \
+As soon as you can, try to research [Mass Production](fch:5,Mass%20Production) for \
+[Mass Transits](fch:3,Mass%20Transit), and [Recycling](fch:5,Recycling) so you can build \
+[Recycling Centers](fch:3,Recycling%20Center). Once you have got all your cities going strong, you must build \
+military units.\
 "), _("\
 *NOTE:* If you come into contact with another player, you should immediately build a few attack units, and at \
 least one defense unit per city.\
