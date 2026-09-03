@@ -66,7 +66,20 @@ void popup_help_dialog_typed(const char *item, enum help_page_type htype)
   topic = get_help_item_spec(item, htype, &pos);
   if (pos >= 0) {
     help_dlg->set_topic(topic);
+  } else {
+    QString t = QString(_("The help topic for \"%1(%2)\" was not found."))
+                    .arg(item)
+                    .arg(htype);
+
+    auto info = new hud_message_box(king()->central_wdg);
+    info->setAttribute(Qt::WA_DeleteOnClose);
+    info->set_text_title(t, _("Help topic not found"));
+    info->setStandardButtons(QMessageBox::Ok);
+    info->setDefaultButton(QMessageBox::Ok);
+    info->show();
+    return;
   }
+
   help_dlg->setVisible(true);
   help_dlg->activateWindow();
 }
