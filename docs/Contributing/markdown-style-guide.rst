@@ -36,11 +36,52 @@ Although the dash (``-``) might feel more natural, programmatic generated help t
 Links and References
 ====================
 
+Links to External Resources
+---------------------------
+
 The help text can contain external links, like the "Strategy and Tactics" help, that links to a prettier formatted online version.
 
-Links to anchors in the help text itself or other items in the help browser are not supported.
-When referencing other help sections or items, we use emphasized text.
-The emphasized text should be the heading of the relevant section or the name of the referenced help item.
+Links to other Help Topics
+--------------------------
+
+It is possible to link to other help topics using a custom URL scheme (``fch:<helptype>,<topic>``).
+``topic`` is the title of the topic as displayed in the help browser with spaces replaced by ``%20``.
+``helptype`` is a numeric value describing the type of help, see the table below.
+
+As an example, you link to the help about Mechanized Infantery, "Mech. Inf." in the help browser, using ``fch:2,Mech.%20Inf.``.
+Look at the "Strategy and Tactics" help for further examples, it contains a variety of links to different topics.
+
+.. _Numeric helptype values:
+.. table:: Numeric values for help types
+
+  ============  =============
+  Type of help  Numeric value
+  ============  =============
+  Any           0
+  Text          1
+  Unit          2
+  Improvement   3
+  Wonder        4
+  Technology    5
+  Terrain       6
+  Extras        7
+  Goods         8
+  Specialist    9
+  Government    10
+  Ruleset       11
+  Tileset       12
+  Nations       13
+  Multiplier    14
+  Effect        15
+  ============  =============
+
+Internal References in a Help Topic
+-----------------------------------
+
+Internal links to anchors in the help text itself are not supported.
+Fortunately most help topics are rather short and work well without internal references.
+
+The notable exception is the "Strategy and Tactics" help, where we use emphasized text to reference the different sections.
 
 Admonitions
 ===========
