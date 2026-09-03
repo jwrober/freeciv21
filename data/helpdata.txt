@@ -85,8 +85,8 @@ These steps may vary depending upon the server or ruleset options, but in genera
  10. Interacting with other players (diplomacy).\n\
  11. Exploring the world.\n\
  12. Things to keep in mind.\n\
- 13 Production phase.\n\
- 14 Annihilation of your opponents.\
+ 13. Production phase.\n\
+ 14. Annihilation of your opponents.\
 "), _("\
 ### 1. Choosing the first city site.\
 "), _("\
