@@ -126,6 +126,7 @@ private:
   QString link_me(const char *str, help_page_type hpt);
 
 public slots:
+  void anchor_clicked(const QUrl &);
   void set_topic(const help_item *item);
 
 public:
