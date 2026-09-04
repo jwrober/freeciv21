@@ -39,8 +39,9 @@ Freeciv21 is a turn-based strategy game, in which each player becomes the leader
 compete against several opponents to build cities, use them to support a military and economy, and finally \
 to complete an empire that survives all encounters with its neighbors to emerge victorious. Each opponent \
 may be either another human or controlled by the computer. All players begin at the dawn of history in 4,000 \
-BCE with a handful of units. Depending on the ruleset selected this is typically an Explorer and a couple of \
-Settlers. The race then begins to expand outward from those humble beginnings.\
+BCE with a handful of units. Depending on the ruleset selected this is typically an \
+[Explorer](fch:2,Explorer) and a couple [Settlers](fch:2,Settlers). The race then begins to expand outward \
+from those humble beginnings.\
 "), _("\
 Achieving success requires a balance between economic expansion, military strength, and technological \
 development. Not only must you develop all three in concert to both expand and successfully defend your \
@@ -49,7 +50,7 @@ empire, but any of these four items may provide victory over your opponents:\
  * As in other games of conquest and expansion, you are declared the winner by default once the last city \
 and unit of every other civilization is destroyed.\n\
  * Once technological progress has brought you into the space age, you may launch a spaceship destined for \
-Alpha Centauri. The first civilization whose spaceship reaches the system wins. NOTE: Spacerace Victory is \
+Alpha Centauri. The first civilization whose spaceship reaches the system wins. *NOTE:* Spacerace Victory is \
 set by the ruleset and thereby may not be not enabled for all games.\n\
  * In the absence of other means to determine victory, the game will end after 5,000 turns if no spaceships \
 have been launched. The surviving civilizations are then rated, and the one with the highest score is \
@@ -325,29 +326,29 @@ details.\
 "), _("\
 Terrain affects combat very simply: when a unit is attacked, its defense strength is multiplied by the \
 defense factor (\"Bonus\") of the terrain beneath it. Some types of units do not enjoy this bonus. In the \
-classic ruleset, only land units do. See the help section on combat for further details.\
+classic ruleset, only land units do. See the help section on [combat](fch:1,Combat) for further details.\
 "), _("\
 Terrain can complicate the movement of units. For instance, in the classic ruleset, moving onto rough \
-terrain such as Mountains can cost land units more than flat terrain like Plains, although sea and air units \
-always expend one movement point to move one tile. Different rulesets will change the way and amount of \
-move points that are expended based on the terrain.\
+terrain such as [Mountains](fch:6,Mountains) can cost land units more than flat terrain like \
+[Plains](fch:6,Plains), although sea and air units always expend one movement point to move one tile. \
+Different rulesets will change the way and amount of move points that are expended based on the terrain.\
 "), _("\
 Tiles within range of a city may be managed by that city to produce food, production, and trade points. The \
 quantity of each produced depends on the terrain. These three products are so important that we specify \
-the output of a tile simply by listing them with slashes in between: for example, \"`1/2/0`\" describes a tile \
+the output of a tile simply by listing them with slashes in between: for example, `1/2/0` describes a tile \
 that each turn when it is being managed by a city citizen produces one food point, two production points, \
 and no trade points. In addition to the characteristic output of the terrain, some tiles have an additional \
-special resource that boosts one or two of the products. See the Economy section for more information on the \
-use of these products.\
+special resource that boosts one or two of the products. See the [Economy](fch:1,Economy) section for more \
+information on the use of these products.\
 "), _("\
 The net benefit of a tile for your city depends on your form of government as well as city improvements, \
 tile improvements, and wonders. *NOTE:* If you middle-click on a tile and see a negative value (for example: \
-\"`3(-1)/1/4(-1)`\") this means you are in a form of government that cannot utilize all of the resources. \
+`3(-1)/1/4(-1)`) this means you are in a form of government that cannot utilize all of the resources. \
 This is often called the \"Despotism Penalty\". Learn a new form of government or look for any wonders that \
 get rid of the penalty.\
 "), _("\
-It is possible for your units to change the terrain and hence its effects. See the section on Terrain \
-Alterations for more details.\
+It is possible for your units to change the terrain and hence its effects. See the section on \
+[Terrain Alterations](fch:1,Terrain%20Alterations) for more details.\
 ")
 
 [help_gen_terrain]
@@ -375,10 +376,10 @@ categories = "Resource"
 name = _(" Terrain Alterations")
 text = _("\
 Certain units have the ability to alter terrain tiles in several ways: they may add or remove tile \
-alterations, remove unwanted features such as *Pollution*, or change the base terrain type entirely.\
+alterations, remove unwanted features such as [Pollution](fch:7,Pollution), or change the base terrain type entirely.\
 "), _("\
 Tile alterations typically provide some lasting bonus for as long as they are present, such as a production \
-bonus when a city citizen manages the tile. *Roads* or paths typically ease movement if they connect to a \
+bonus when a city citizen manages the tile. [Roads](fch:7,Road) or paths typically ease movement if they connect to a \
 similar road on an adjacent tile. Bases often provide protection and refueling. The available tile \
 alterations are described in the following sections.\
 "), _("\
@@ -405,8 +406,8 @@ Units may also be able to destroy terrain alterations, by \"Pillaging\". Typical
 pillage an alteration than could build it in the first place. Some tile features can only be removed by \
 specialized units, such as the \"Clean Pollution\" or \"Clean Nuclear Fallout\" orders.\
 "), _("\
-Terrain conversions cannot be undone in this way. For example, in the classic ruleset, if a Forest tile has \
-been irrigated to convert it into Plains, you cannot convert it back into a Forest by pillaging. To do so, \
+Terrain conversions cannot be undone in this way. For example, in the classic ruleset, if a [Forest](fch:6,Forest) tile has \
+been irrigated to convert it into [Plains](fch:6,Plains), you cannot convert it back into a [Forest](fch:6,Forest) by pillaging. To do so, \
 you would have to convert the tile again with a suitable unit.\
 "), _("\
 The time it takes a unit to alter terrain depends on its movement points. The following table shows the \
@@ -434,8 +435,9 @@ name = _(" National Borders")
 text = _("\
 If enabled on the server, each nation has borders, which can be seen as dotted lines on the map. Borders \
 determine what land your citizens can manage, where you can build new cities, and whether your units are \
-considered to be aggressively deployed by your citizens (see the section on *Happiness*). Borders also come \
-into play when there is a diplomatic relationship pact between nations (see the section on *Diplomacy*).\
+considered to be aggressively deployed by your citizens (see the section on [Happiness](fch:1,Happiness)). \
+Borders also come into play when there is a diplomatic relationship pact between nations (see the section on \
+[Diplomacy](fch:1,Diplomacy)).\
 "), _("\
 Building a city establishes a claim on an area of land around the city. In the classic ruleset, once \
 claimed, a tile that can be directly managed by a city cannot change ownership unless the city does (or is \
@@ -448,7 +450,8 @@ inland lakes can usually be claimed. Some rulesets may allow water tiles to be c
 tiles in some circumstances, although the classic ruleset does not. Border claims can never extend to remote \
 islands.\
 "), _("\
-Bases can also extend national borders. See the help on *Terrain Alterations* for more details.\
+Bases can also extend national borders. See the help on [Terrain Alterations](fch:1,Terrain%20Alterations) \
+for more details.\
 ")
 
 [help_economy]
@@ -464,18 +467,20 @@ following sections describe each of these resources along with its properties, u
 name = _(" Food")
 text = _("\
 Your population needs food to survive. Each citizen requires two food points per turn. In addition, some \
-units (such as Settlers in the classic ruleset) may require food points from the city supporting them.\
+units (such as [Settlers](fch:2,Settlers) in the classic ruleset) may require food points from the city \
+supporting them.\
 "), _("\
-Every city has a Granary for storing good points (the building called a Granary in the classic ruleset only \
-enhances this capability). Cities producing more food than they require accumulate the surplus in their \
-Granary. Those producing less than they require deplete their Granary. When food is needed but none \
-remains, the city population starves, killing units that consume food first, followed by citizens, until the \
-food deficit ends.\
+Every city has a Granary for storing good points (the building called a [Granary](fch:3,Granary) in the \
+classic ruleset only enhances this capability). Cities producing more food than they require accumulate the \
+surplus in their Granary. Those producing less than they require deplete their Granary. When food is needed \
+but none remains, the city population starves, killing units that consume food first, followed by citizens, \
+until the food deficit ends.\
 "), _("\
 Excess food can increase the population. The city Granary has a limited capacity, and once full the city \
 grows by one citizen and the Granary starts again at empty. Since Granary capacity increases with \
 population, each citizen is more costly than the last, making this mode of growth important only for small \
-cities. An alternative way for cities to grow is \"Rapture\", described in the section on Happiness.\
+cities. An alternative way for cities to grow is \"Rapture\", described in the section on \
+[Happiness](fch:1,Happiness).\
 ")
 
 [help_production]
@@ -495,11 +500,11 @@ been achieved. City improvement and wonder projects appear in their city's list 
 units appear on the map and can be kept inside a city. Any leftover production points remain available to be \
 applied towards the next project in the city work list.\
 "), _("\
-Some units, such as Settlers, are built from city population as well as production points. The city size \
-will reduce when the unit is finished. By default, a city will not finish building a unit that would take all \
-of the city's remaining population. In this case, production points will continue to accumulate until the \
-city is of sufficient size. You can allow a city to be disbanded from the city dialog. However, you cannot \
-disband your last city this way.\
+Some units, such as [Settlers](fch:2,Settlers), are built from city population as well as production points. \
+The city size will reduce when the unit is finished. By default, a city will not finish building a unit that \
+would take all of the city's remaining population. In this case, production points will continue to \
+accumulate until the city is of sufficient size. You can allow a city to be disbanded from the city dialog. \
+However, you cannot disband your last city this way.\
 "), _("\
 In the classic ruleset, a city can build at most one project per turn, regardless of its production surplus. \
 However, in some rulesets, factors such as city size and technology may enable a single city to produce more \
@@ -519,7 +524,8 @@ turn, but if a different kind of item is reached, production pauses until the fo
 used to limit the number of units produced by highly productive cities.\
 "), _("\
 Each player is free to build any projects that their technology has made available, with a few restrictions. \
-See the sections on Units, City Improvements, and Wonders of the World for more information. Be careful, the \
+See the sections on [Units](fch:1,Units), [City Improvements](fch:1,City%20Improvements), and \
+[Wonders of the World](fch:1,Wonders%20of%20the%20World) for more information. Be careful, the \
 game even gives you the freedom to produce units you cannot support and buildings whose upkeep you cannot \
 afford, both of which will be disbanded immediately after completion.\
 "), _("\
@@ -531,8 +537,8 @@ dialog if you have enough surplus gold in your national treasury.\
 Some production points may be lost to waste, although there is no waste in the classic rules. Waste can \
 result in your cities not building anything.\
 "), _("\
-Cities with a large production output contribute to Pollution, which affects the tiles around the city. See \
-the Terrain help.\
+Cities with a large production output contribute to [Pollution](fch:7,Pollution), which affects the tiles \
+around the city. See the [Terrain](fch:1,Terrain) help.\
 ")
 
 [help_trade]
@@ -554,21 +560,21 @@ empire wide tallies. Luxury goods are more problematic, however, because its eff
 the city producing it. Thus, while it would be convenient for unhappy cities to invest all their trade in \
 luxury goods, while others invested in science or taxes instead, you will instead have to compromise among \
 the needs of all your cities. There are ways to make local adjustments, such as assigning citizens as \
-Entertainers. See the section on Happiness for more details on the effect of luxury goods.\
+[Entertainers](fch:9,Entertainers). See the section on [Happiness](fch:1,Happiness) for more details on the effect of luxury goods.\
 "), _("\
-Besides managing terrain gifted with rare commodities, or logistical benefits such as waterways or Roads, \
-you can increase trade by using units to establish permanent trade routes between two cities, if the ruleset \
-allows it.\
+Besides managing terrain gifted with rare commodities, or logistical benefits such as waterways or \
+[Roads](fch:7,Road), you can increase trade by using units to establish permanent trade routes between two \
+cities, if the ruleset allows it.\
 "), _("\
 The ruleset may limit the ability to trade or the yield from doing so depending on whether the two cities \
 are on different continents and/or in different nations. For international trade routes, on the diplomatic \
 status of the two trade partners, and for domestic routes, there must be a minimum distance between the two \
-cities, controlled by the 'trademindist' server option. The default is nine tiles in the classic ruleset.\
+cities, controlled by the `trademindist` server option. The default is nine tiles in the classic ruleset.\
 "), _("\
-A trade route is established when a suitable unit (in the classic ruleset, a Caravan or Freight unit) enters \
-an eligible city. For your own or allied cities, you need to issue the \"Establish Trade Route\" command. \
-This creates a trade route between the unit's home city, which might be different from the city that \
-originally produced it and the destination.\
+A trade route is established when a suitable unit (in the classic ruleset, a [Caravan](fch:2,Caravan) or \
+[Freight](fch:2,Freight) unit) enters an eligible city. For your own or allied cities, you need to issue the \
+\"Establish Trade Route\" command. This creates a trade route between the unit's home city, which might be \
+different from the city that originally produced it and the destination.\
 "), _("\
 The origin civilization of the unit gains immediate revenue in gold and science from selling its trade goods \
 in the destination city. The initial revenue depends on the trade already produced by the two cities \
@@ -590,8 +596,8 @@ initial revenue by entering the marketplace and selling trade goods, but it is r
 This limit is enforced only when attempting to establish a new trade route. If you temporarily lose the \
 ability to establish as many trade routes as a city already has, existing ones are not affected.\
 "), _("\
-Beware: in rulesets where Plague is enabled, it can travel along trade routes. See the Plague page in the \
-Cities section for more details.\
+Beware: in rulesets where Plague is enabled, it can travel along trade routes. See the \
+[Plague](fch:1,Plague) page in the [Cities](fch:1,Cities) section for more details.\
 "), _("\
 To view the current trade routes of a city, hold your mouse over the \"Trade:\" line on the general tab \
 in the city dialog.\
@@ -613,15 +619,17 @@ text = _("\
 Cities are your sole instrument for developing natural resources and channeling them toward expansion, \
 technological progress, and warfare.\
 "), _("\
-A city is created when Settlers are given the \"Build City\" command on suitable terrain, removing the unit \
-from play to provide the city with its first citizen. A city may grow to include dozens of citizens, some \
-working within the city while others are dispatched as new Settlers. Famine, War, and Plague kill citizens \
-and reduce population. With the loss of its last citizen a city disappears. In the classic ruleset, this can \
-leave Ruins, although these have no effect on game play.\
+A city is created when [Settlers](fch:2,Settlers) are given the \"Build City\" command on suitable terrain, \
+removing the unit from play to provide the city with its first citizen. A city may grow to include dozens of \
+citizens, some working within the city while others are dispatched as new [Settlers](fch:2,Settlers). Famine, \
+War, and [Plague](fch:1,Plague) kill citizens and reduce population. With the loss of its last citizen a city \
+disappears. In the classic ruleset, this can leave [Ruins](fch:7,Ruins), although these have no effect on \
+game play.\
 "), _("\
-While city growth should usually be your goal, it comes with challenges. As cities grow, managing happiness \
-becomes a problem. This is described in its own section. Depending on the ruleset, Pollution (described in \
-the Terrain help), Plague, and Migration can also be issues.\
+While city growth should usually be your goal, it comes with challenges. As cities grow, managing \
+[happiness](fch:1,Happiness) becomes a problem. This is described in its own section. Depending on the \
+ruleset, [Pollution](fch:7,Pollution) (described in the [Terrain](fch:1,Terrain) help), \
+[Plague](fch:1,Plague), and [Migration](fch:1,Migration) can also be issues.\
 "), _("\
 Each city may manage the terrain tiles within its reach. In the classic ruleset, this is a fixed radius of \
 approximately three tiles, giving access to 20 tiles on rectangular maps, or 18 tiles on hexagonal ones, in \
@@ -632,41 +640,43 @@ To extract resources from a tile, you must have a citizen managing it. You canno
 which a neighboring city is already managing, nor can you manage terrain upon which an enemy unit is \
 standing, or terrain inside another player's borders. Thus you can simulate conditions of siege by \
 stationing your units on top of valuable resources around an enemy city. Units can also be ordered to \
-\"Pillage\", which can be used to remove terrain alterations. Worker units could even transform the terrain \
-to make the tile less productive.\
+\"Pillage\", which can be used to remove terrain alterations. [Worker](fch:2,Workers) units could even \
+transform the terrain to make the tile less productive.\
 "), _("\
-The section on Terrain describes how the output of each tile is affected by the terrain, the presence of \
-special resources such as game (Pheasant) or minerals (Gold, Coal), and tile alterations built by units. \
-Note that the tile on which the city itself rests -- the \"City Center\" -- gets managed for free, without \
-being assigned a citizen. Think of this as \"Citizen Zero\". The city's center tile may also receive other \
-benefits.\
+The section on [Terrain](fch:1,Terrain) describes how the output of each tile is affected by the terrain, the \
+presence of special resources such as game ([Pheasant](fch:7,Pheasant)) or minerals ([Gold](fch:7,Gold), \
+[Coal](fch:7,Coal)), and tile alterations built by units. Note that the tile on which the city itself rests \
+-- the \"City Center\" -- gets managed for free, without being assigned a citizen. Think of this as \
+\"Citizen Zero\". The city's center tile may also receive other benefits.\
 "), _("\
 In the classic ruleset, the city center always produces:\n\
-  - at least one food point.\n\
-  - one production point regardless of terrain.\n\
-  - gains whatever advantages the terrain offers with an irrigation system (cities come with a water system \
+  * at least one food point.\n\
+  * one production point regardless of terrain.\n\
+  * gains whatever advantages the terrain offers with an irrigation system (cities come with a water system \
 built-in).\n\
-  - is usually developed with Roads and automatically upgraded to better transport systems as they are \
+  * is usually developed with Roads and automatically upgraded to better transport systems as they are \
 discovered.\
 "), _("\
 The roles of citizens are controlled from the city dialog. Citizens managing the land are represented by \
 three numbers showing their output on the tile they are managing. Clicking on these numbers will remove the \
-citizen from the tile, turning it into a specialist (see the section on Specialists for more details). \
-This can be seen in the row of citizen icons at the top of the city dialog. You can click another tile to \
-assign the citizen to manage it, or click on the specialist icon to change the specialist's role.\
+citizen from the tile, turning it into a specialist (see the section on [Specialists](fch:1,Specialists) for \
+more details). This can be seen in the row of citizen icons at the top of the city dialog. You can click \
+another tile to assign the citizen to manage it, or click on the specialist icon to change the specialist's \
+role.\
 "), _("\
 Clicking on the city center tile in city dialog will automatically choose citizen roles and tiles to manage, \
 with an emphasis on food production and hence growth. Citizen roles are also automatically assigned when a \
 city grows, which means you may want to inspect cities that have just grown and adjust the role in which the \
-new citizen has been placed. You can set different priorities for a city with the Citizen Governor.\
-"), ;_("\
+new citizen has been placed. You can set different priorities for a city with the \
+[Citizen Governor](fch:1,Citizen%20Governor).\
+"), _("<!-- \
 ; TODO: See issue #653\
 ; You can also request tile alterations from the city map, as an alternative to explicitly instructing units \
 ; to make them. Right-clicking on a city map tile gives a menu of changes which can be made to that tile, such \
 ; as irrigation and building roads. Refer to the section on Terrain Alterations. You can select one \
 ; alteration per tile at a time. These \"Worker Tasks\" will be carried out by any units capable of them \
 ; that are in \"Auto Worker\" mode.\
-; "),
+; -->"),
 _("\
 Citizens have a nationality distinct from that of the state they inhabit. When a city grows due to food \
 surplus new citizens take the nationality of the city's current owner, but when a city is conquered or \
@@ -684,8 +694,9 @@ of their home city. If nationality is enabled, you can see the cultural makeup o
 consequent effects on happiness in the city dialog, on the citizens tab.\
 "), _("\
 Cities may be enhanced with a wide variety of buildings, which can improve their productivity, their \
-military strength, or give them new abilities. See the sections on City Improvements and Wonders of the \
-World for more information.\
+military strength, or give them new abilities. See the sections on \
+[City Improvements](fch:1,City%20Improvements) and [Wonders of the World](fch:1,Wonders%20of%20the%20World) \
+for more information.\
 ")
 
 [help_specialists]
@@ -714,7 +725,7 @@ Keeping your citizens happy (or at least content) is one of the most important o
 your citizens become unhappy your cities will fall into disorder, which disrupts production. When your \
 citizens are happy your cities will celebrate and your output will increase greatly depending on the ruleset \
 and government. If migration is enabled, happiness also affects the relative desirability of cities. See the \
-section on Migration for details.\
+section on [Migration](fch:1,Migration) for details.\
 "), _("\
 Each citizen managing the land is either Happy, Content, Unhappy, or Angry. The normal state of a citizen is \
 contentment. However, as your cities grow larger, crowding causes citizens to become unhappy. In the classic \
@@ -724,14 +735,14 @@ If the number of unhappy citizens in a city exceeds the number of happy citizens
 disorder. A city in disorder produces no food, production, science, or trade. Only luxury goods production \
 remains. Cities which are in disorder are also easier for enemy agents to incite to revolt. Prolonged \
 disorder under certain governments can lead to a spontaneous national revolution, overthrowing your \
-government (Anarchy). Obviously this is an extremely undesirable event, so do your best to manage your \
-cities as best you can. In some rulesets, when a city is celebrating, you get additional luxury goods \
-bonuses, which greatly impacts your civilization's ability to generate gold and science output.\
+government ([Anarchy](fch:10,Anarchy)). Obviously this is an extremely undesirable event, so do your best to \
+manage your cities as best you can. In some rulesets, when a city is celebrating, you get additional luxury \
+goods bonuses, which greatly impacts your civWoilization's ability to generate gold and science output.\
 "), _("\
 It should be stressed that only citizens managing the land vary in morale. Specialists enjoy enough privilege \
-to remain perpetually content (see the section on Specialists). Thus one solution to the problem of an \
-unhappy citizen is simply to assign that citizen to the role of a specialist. If cities are ever to manage \
-more than four tiles at once, the problem of morale must be confronted more directly.\
+to remain perpetually content (see the section on [Specialists](fch:1,Specialists)). Thus one solution to the \
+problem of an unhappy citizen is simply to assign that citizen to the role of a specialist. If cities are \
+ever to manage more than four tiles at once, the problem of morale must be confronted more directly.\
 "), _("\
 There are many ways of making unhappy citizens content, which does prevent disorder but is without further \
 benefit. Producing happy citizens can balance the effect of unhappy citizens and also bring other benefits.\
@@ -739,19 +750,22 @@ benefit. Producing happy citizens can balance the effect of unhappy citizens and
 Cities that are sufficiently large celebrate when at least half their citizens are happy and none remain \
 unhappy. The effects of celebration vary. In the classic ruleset, they depend on your form of government:\
 "), _("\
-- Under Anarchy or Despotism, you will not suffer the normal production penalty for tiles which produce \
-more than 2 points of any resource (food, production, or trade).\n\
-- Under Monarchy or Communism, your city will gain the trade bonus of Republican/Democratic governments: \
+* Under [Anarchy](fch:10,Anarchy) or [Despotism](fch:10,Despotism), you will not suffer the normal production \
+penalty for tiles which produce more than 2 points of any resource (food, production, or trade).\n\
+* Under [Monarchy](fch:10,Monarchy) or [Communism](fch:10,Communism), your city will gain the trade bonus of \
+Republican/Democratic governments: \
 1 bonus trade point on any tile which already produces at least 1 trade.\n\
-- Under a Republic or a Democracy, your city will enter \"Rapture\": its population will increase by 1 each \
-turn until there is no excess food or until the number of happy citizens is no longer sufficient for \
-celebration. Without rapture, large cities can grow only by struggling to produce a food surplus, which can \
-be difficult enough, and then waiting dozens of turns for their Granary to fill. It should be noted that \
-rapture is ruleset defined and disabled for many player vs player online multiplayer games.\
+* Under a [Republic](fch:10,Republic) or a [Democracy](fch:10,Democracy), your city will enter \"Rapture\": \
+its population will increase by 1 each turn until there is no excess food or until the number of happy \
+citizens is no longer sufficient for celebration. Without rapture, large cities can grow only by struggling \
+to produce a food surplus, which can be difficult enough, and then waiting dozens of turns for their Granary \
+to fill. It should be noted that rapture is ruleset defined and disabled for many player vs player online \
+multiplayer games.\
 "), _("\
 In small empires, as already stated, the fifth citizen in each city is the first unhappy one. As you gain \
 more cities, this limit actually decreases, to simulate the difficulty of imposing order upon a large \
-empire. The precise thresholds depend on the form of government. See the section on Government for details.\
+empire. The precise thresholds depend on the form of government. See the section on \
+[Government](fch:1,Government) for details.\
 "), _("\
 Thus, you may find that building or conquering a city triggers widespread disorder across your empire. \
 Continued empire growth may lead to further penalty steps. In empires that grow beyond the point where no \
@@ -761,12 +775,13 @@ unhappy citizens can be made content, but in all other respects behave as unhapp
 Luxury goods make citizens happy. For every two luxury goods points a city produces, one content citizen is \
 made happy. If there are no content citizens left, unhappy citizens become content then happy. Each city \
 receives back some of the trade points it produces as luxury goods points according to your empire's tax \
-rates. See the section on Trade. Luxury goods points may also be produced by other means, such as Entertainer \
-specialists in the classic ruleset.\
+rates. See the section on [Trade](fch:1,Trade). Luxury goods points may also be produced by other means, such \
+as [Entertainer](fch:9,Entertainers) specialists in the classic ruleset.\
 "), _("\
 There are several city improvements that will make content those remaining citizens that are unhappy due to \
-crowding, such as Temple and Colosseum in the classic rules. Some wonders of the world can also have this \
-effect. See the appropriate sections for details.\
+crowding, such as [Temple](fch:3,Temple) and [Colosseum](fch:3,Colosseum) in the classic rules. Some \
+[wonders of the world](fch:1,Wonders%20of%20the%20World) can also have this effect. See the appropriate \
+sections for details.\
 "), _("\
 Military units can affect city happiness. Under authoritarian regimes this is helpful, as military units \
 stationed in a city can prevent unhappiness by imposing Martial Law. However, under representative \
@@ -779,9 +794,11 @@ If you are at War with a civilization and some of your citizens are of that nati
 also become unhappy.\
 "), _("\
 These forms of unhappiness are distinct from that caused by overcrowding, and cannot be offset by luxury \
-goods, or by most city improvements. In the classic ruleset, Police Stations and the Women's Suffrage wonder \
-can offset unhappiness caused by units, and only a few wonders, such as J.S. Bach's Cathedral, can offset any \
-kind of unhappiness, even that caused by military or diplomatic tensions.\
+goods, or by most [city improvements](fch:1,City%20Improvements). In the classic ruleset, \
+[Police Stations](fch:3,Police%20Station) and the [Women's Suffrage](fch:4,Women's%20Suffrage) wonder \
+can offset unhappiness caused by units, and only a few wonders, such as \
+[J.S. Bach's Cathedral](fch:4,J.S.%20Bach's%20Cathedral), can offset any kind ogf unhappiness, even that \
+caused by military or diplomatic tensions.\
 "), _("\
 The citizens tab in the city dialog will give detailed insight into the mood of the citizenry and its causes.\
 ")
@@ -796,12 +813,12 @@ When Plague strikes a city, its population is reduced by one. Unless action is t
 Plague, this tends to act as a natural limit on city's size. Rulesets which enable plague will typically have \
 city improvements or other means to reduce the risk of Plague.\
 "), _("\
-The risk of Plague depends on city size (overcrowding leads to unsanitary conditions) and on the Pollution \
-generated by a city. Also, Plague can spread via trade routes (without regard for nationality). After a city \
-has been struck by Plague, it will remain infectious to its trade partners for several turns, increasing the \
-risk of Plague in those cities by a factor depending on the size of both cities.\
+The risk of Plague depends on city size (overcrowding leads to unsanitary conditions) and on the \
+[Pollution](fch:7,Pollution) generated by a city. Also, Plague can spread via trade routes (without regard \
+for nationality). After a city has been struck by Plague, it will remain infectious to its trade partners for \
+several turns, increasing the risk of Plague in those cities by a factor depending on the size of both cities.\
 "), _("\
-If migration is enabled, citizens will tend to prefer cities with a lower risk of Plague.\
+If [migration](fch:1,Migration) is enabled, citizens will tend to prefer cities with a lower risk of Plague.\
 ")
 
 [help_migration]
@@ -809,7 +826,7 @@ If migration is enabled, citizens will tend to prefer cities with a lower risk o
 name = _(" Migration")
 text = _("\
 Migration is the movement of citizens from one city to another based on the relative attractions of living \
-conditions in each city. It is controlled by the server option \"migration\". It \
+conditions in each city. It is controlled by the server option `migration`. It \
 is disabled by default in the classic ruleset.\
 "), _("\
 When migration is enabled, every few turns a citizen of each city in the game may migrate to a nearby, more \
@@ -821,35 +838,36 @@ attractiveness of your cities. The following factors affect the perceived desira
 approximately decreasing order of importance. Each factor counts for much more in the citizen's current \
 city, as they prefer not to move without a compelling reason.\
 "), _("\
-- City size.\n\
-- The number of happy citizens. To a lesser extent, unhappy and angry citizens reduce the desirability of a \
+* City size.\n\
+* The number of happy citizens. To a lesser extent, unhappy and angry citizens reduce the desirability of a \
 city.\n\
-- In rulesets where nationality is enabled, citizens have a strong preference to move to cities of their \
+* In rulesets where nationality is enabled, citizens have a strong preference to move to cities of their \
 own nationality.\n\
-- The presence of any wonder in a city will greatly increase its desirability. Further wonders do not \
+* The presence of any wonder in a city will greatly increase its desirability. Further wonders do not \
 contribute except by the lesser effect of their build cost.\n\
-- Capital cities are more attractive than other cities, all other factors being equal. In addition, \
+* Capital cities are more attractive than other cities, all other factors being equal. In addition, \
 citizens will never migrate out of a capital city.\n\
-- A high risk of Plague reduces a city's attractiveness.\n\
-- Food surplus. A food deficit reduces the desirability of a city.\n\
-- Cities that are further away are less desirable. The absolute maximum distance that a citizen is prepared \
-to migrate is controlled by the server option \"mgr_dist\".\n\
-- Trade surplus.\n\
-- Luxury goods and science output.\n\
-- The total cost of city improvements and wonders in the city.\n\
-- Depending on the ruleset, a number of other factors such as government type and city improvements may \
-increase or decrease the desirability of cities. These are noted in other sections of the help. The classic \
-ruleset contains no such effects.\
+* A high risk of [Plague}(fch:1,Plague) reduces a city's attractiveness.\n\
+* Food surplus. A food deficit reduces the desirability of a city.\n\
+* Cities that are further away are less desirable. The absolute maximum distance that a citizen is prepared \
+to migrate is controlled by the server option `mgr_dist`.\n\
+* [Trade](fch:1,Trade) surplus.\n\
+* Luxury goods and science output.\n\
+* The total cost of [city improvements](fch:1,City%20Improvements) and \
+[wonders](fch:1,Wonders%20of%20the%20World) in the city.\n\
+* Depending on the ruleset, a number of other factors such as [government type](fch:1,Government) and \
+[city improvements](fch:1,City%20Improvements) may increase or decrease the desirability of cities. These are \
+noted in other sections of the help. The classic ruleset contains no such effects.\
 "), _("\
 Citizens will not migrate to cities which cannot increase in size to support them, for instance due to lack \
-of a city improvement such as an Aqueduct. If the server option \"mgr_foodneeded\" is set, they will not \
-migrate to cities which would not have enough food to support them.\
+of a city improvement such as an [Aqueduct](fch:3,Aqueduct). If the server option `mgr_foodneeded` is set, \
+they will not migrate to cities which would not have enough food to support them.\
 "), _("\
 Migration can even cause cities to be completely abandoned with ownership of any units being transferred to \
 your nearest remaining city. However, cities with wonders will never be disbanded, so the wonder will not be \
 destroyed, and the last citizen from your only remaining city will never migrate to another nation.\
 "), _("\
-Several of the details of migration can be changed with the \"mgr_*\" server options.\
+Several of the details of migration can be changed with the `mgr_*` server options.\
 ")
 
 [help_city_improvements]
@@ -865,8 +883,8 @@ turn comes on which you cannot pay the upkeep on all of your improvements, some 
 sold. Obviously this should be avoided as the improvements chosen might not be ones you would have preferred \
 to sell.\
 "), _("\
-Most city improvements become available only when you discover certain technologies. This can also cause \
-other improvements to become obsolete.\
+Most city improvements become available only when you discover certain [technologies](fch:1,Technology). This \
+can also cause other improvements to become obsolete.\
 ")
 
 [help_gen_improvements]
