@@ -543,16 +543,17 @@ void help_widget::setup_ui()
 
   text_browser = new QTextBrowser(this);
   text_browser->setProperty(fonts::help_text, "true");
-  text_browser->setOpenExternalLinks(false);
+  // With setOpenLinks enabled, QTextBrowser loads local file contents when a
+  // link points there. We don't want that so we force calling
+  // QDesktopServices instead.
   text_browser->setOpenLinks(false);
+  connect(text_browser, &QTextBrowser::anchorClicked,
+          &QDesktopServices::openUrl);
   layout->addWidget(text_browser);
   main_widget = text_browser;
 
   update_fonts();
   splitter_sizes << 200 << 400;
-
-  connect(text_browser, &QTextBrowser::anchorClicked, this,
-          &help_widget::anchor_clicked);
 }
 
 /**
@@ -815,19 +816,6 @@ void help_widget::add_info_separator()
    Called when everything needed has been added to the information panel.
  */
 void help_widget::info_panel_done() { info_layout->addStretch(); }
-
-/**
- Handles clicked urls.
-*/
-void help_widget::anchor_clicked(const QUrl &url)
-{
-  if (url.scheme() == QString("fch")) {
-    follow_help_link(url.path());
-    return;
-  }
-
-  QDesktopServices::openUrl(url);
-}
 
 /**
    Shows the given help page.

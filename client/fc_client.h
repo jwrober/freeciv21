@@ -130,6 +130,7 @@ public:
   trade_generator trade_gen;
 
 private slots:
+  void handle(const QUrl &url) const;
   void server_input();
   void clear_status_bar();
 

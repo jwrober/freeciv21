@@ -11,6 +11,7 @@
 #include "fc_client.h"
 // Qt
 #include <QApplication>
+#include <QDesktopServices>
 #include <QDirIterator>
 #include <QProcess>
 #include <QSettings>
@@ -32,6 +33,7 @@
 #include "connectdlg_common.h"
 #include "fonts.h"
 #include "gui_main.h"
+#include "helpdlg.h"
 #include "icons.h"
 #include "messagewin.h"
 #include "minimap.h"
@@ -120,6 +122,8 @@ fc_client::fc_client() : QMainWindow(), current_file(QLatin1String(""))
   resize(pages[PAGE_MAIN]->minimumSizeHint());
   setVisible(true);
   QPixmapCache::setCacheLimit(80000);
+
+  QDesktopServices::setUrlHandler(QStringLiteral("fch"), this, "handle");
 }
 
 /**
@@ -132,6 +136,8 @@ fc_client::~fc_client()
     delete fc_shortcuts::sc();
   }
   delete_cursors();
+
+  QDesktopServices::unsetUrlHandler("fch");
 }
 
 /**
@@ -293,6 +299,14 @@ void fc_client::closeEvent(QCloseEvent *event)
   } else {
     event->accept();
   }
+}
+
+/**
+ * Opens a help link (fch://).
+ */
+void fc_client::handle(const QUrl &url) const
+{
+  follow_help_link(url.path());
 }
 
 /**
