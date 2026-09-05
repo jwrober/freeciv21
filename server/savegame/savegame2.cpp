@@ -3816,8 +3816,13 @@ static bool sg_load_player_unit(struct loaddata *loading, struct player *plr,
   sg_warn_ret_val(
       secfile_lookup_int(loading->file, &ei, "%s.activity", unitstr), false,
       "%s", secfile_error());
-  activity =
-      unit_activity_by_name(loading->activities.order[ei], fc_strcasecmp);
+  if (ei >= 0 && ei < loading->activities.size) {
+    activity =
+        unit_activity_by_name(loading->activities.order[ei], fc_strcasecmp);
+  } else {
+    log_sg("Invalid activity id for unit %d", punit->id);
+    activity = ACTIVITY_IDLE;
+  }
 
   punit->server.birth_turn = secfile_lookup_int_default(
       loading->file, game.info.turn, "%s.born", unitstr);
