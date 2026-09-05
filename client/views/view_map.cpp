@@ -629,13 +629,13 @@ info_tile::info_tile(struct tile *ptile, QWidget *parent) : QMenu(parent)
   label->setTextFormat(Qt::RichText);
   label->setTextInteractionFlags(Qt::TextBrowserInteraction);
   label->setText(popup_info_text(ptile, true));
+  label->setOpenExternalLinks(true);
   label->setWordWrap(true);
 
   auto action = new QWidgetAction(this);
   action->setDefaultWidget(widget);
   addAction(action);
 
-  connect(label, &QLabel::linkActivated, follow_help_link);
   connect(label, &QLabel::linkActivated, this, &info_tile::close);
 
   // Setup map deco
