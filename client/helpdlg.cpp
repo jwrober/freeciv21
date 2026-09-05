@@ -127,12 +127,12 @@ QString create_help_link(const char *name, const char *entry,
                          help_page_type hpt)
 {
   if (!QString(name).isEmpty()) {
+    QString t = QString(help_page_type_name(hpt));
     QString d = QString(name).toHtmlEscaped().replace(
         QStringLiteral(" "), QStringLiteral("&nbsp;"));
     QString a =
         QString::fromUtf8(QString(entry).toUtf8().toPercentEncoding());
-    return "<a href=fch:" + QString::number(hpt) + "," + a + ">" + d
-           + "</a>";
+    return QString("<a href=fch:%1/%2>%3</a>").arg(t).arg(a).arg(d);
   } else {
     return QStringLiteral();
   }
@@ -146,10 +146,11 @@ QString create_help_link(const char *name, const char *entry,
  */
 void follow_help_link(const QString &link)
 {
-  QStringList sl = link.split(QStringLiteral(","));
+  QStringList sl = link.split(QStringLiteral("/"));
   fc_assert_ret(sl.size() == 2);
   int n = sl.at(0).toInt();
-  enum help_page_type type = static_cast<help_page_type>(n);
+  enum help_page_type type =
+      help_page_type_by_name(qUtf8Printable(sl.at(0)), fc_strcasecmp);
   QString st =
       QString::fromUtf8(QByteArray::fromPercentEncoding(sl.at(1).toUtf8()));
 
