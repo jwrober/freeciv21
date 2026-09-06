@@ -49,16 +49,6 @@ editor_tool_tile::editor_tool_tile(QWidget *parent)
 
   connect(ui.tbut_select_tile, &QAbstractButton::clicked, this,
           &editor_tool_tile::select_tile);
-
-  // links to help for tile properties
-  connect(ui.value_terrain, &QLabel::linkActivated, follow_help_link);
-  connect(ui.value_owner, &QLabel::linkActivated, follow_help_link);
-  connect(ui.value_resource, &QLabel::linkActivated, follow_help_link);
-  connect(ui.value_road, &QLabel::linkActivated, follow_help_link);
-  connect(ui.value_infra, &QLabel::linkActivated, follow_help_link);
-  connect(ui.value_base, &QLabel::linkActivated, follow_help_link);
-  connect(ui.value_hut, &QLabel::linkActivated, follow_help_link);
-  connect(ui.value_nuisance, &QLabel::linkActivated, follow_help_link);
 }
 
 /**

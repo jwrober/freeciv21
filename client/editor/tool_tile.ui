@@ -105,12 +105,18 @@
       <property name="text">
        <string>value_base</string>
       </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item row="4" column="1">
      <widget class="QLabel" name="value_owner">
       <property name="text">
        <string>value_owner</string>
+      </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -231,6 +237,9 @@
       <property name="wordWrap">
        <bool>true</bool>
       </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item row="9" column="1">
@@ -252,6 +261,9 @@
       <property name="text">
        <string>value_hut</string>
       </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item row="2" column="1">
@@ -266,6 +278,9 @@
       <property name="text">
        <string>value_nuisance</string>
       </property>
+      <property name="openExternalLinks">
+       <bool>true</bool>
+      </property>
      </widget>
     </item>
     <item row="12" column="1">
@@ -274,6 +289,9 @@
        <string>value_infra</string>
       </property>
       <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="openExternalLinks">
        <bool>true</bool>
       </property>
      </widget>
@@ -304,6 +322,9 @@
        <enum>Qt::TextFormat::RichText</enum>
       </property>
       <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="openExternalLinks">
        <bool>true</bool>
       </property>
       <property name="textInteractionFlags">
@@ -344,6 +365,9 @@
        <enum>Qt::TextFormat::RichText</enum>
       </property>
       <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="openExternalLinks">
        <bool>true</bool>
       </property>
       <property name="textInteractionFlags">
