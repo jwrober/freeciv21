@@ -148,7 +148,6 @@ void follow_help_link(const QString &link)
 {
   QStringList sl = link.split(QStringLiteral("/"));
   fc_assert_ret(sl.size() == 2);
-  int n = sl.at(0).toInt();
   enum help_page_type type =
       help_page_type_by_name(qUtf8Printable(sl.at(0)), fc_strcasecmp);
   QString st =
