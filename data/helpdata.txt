@@ -50,8 +50,9 @@ empire, but any of these four items may provide victory over your opponents:\
  * As in other games of conquest and expansion, you are declared the winner by default once the last city \
 and unit of every other civilization is destroyed.\n\
  * Once technological progress has brought you into the space age, you may launch a spaceship destined for \
-Alpha Centauri. The first civilization whose spaceship reaches the system wins. *NOTE:* Spacerace Victory is \
-set by the ruleset and thereby may not be not enabled for all games.\n\
+Alpha Centauri. The first civilization whose spaceship reaches the system wins. *NOTE:* \
+[Spacerace](fch:Text/Space%20Race) Victory is set by the ruleset and thereby may not be not enabled for all \
+games.\n\
  * In the absence of other means to determine victory, the game will end after 5,000 turns if no spaceships \
 have been launched. The surviving civilizations are then rated, and the one with the highest score is \
 the winner.\n\
@@ -315,7 +316,7 @@ to build more units to take out the rest of them with. Show no quarter! To the d
 Repeat as often as necessary!\
 "), _("\
 *For pacifists:* Freeciv21 also allows a player to win by building and launching a spaceship which arrives at \
-Alpha Centauri before anyone else. It is known as the Space Race victory.\
+Alpha Centauri before anyone else. It is known as the [Space Race](fch:Text/Space%20Race) victory.\
 ")
 
 [help_terrain]
@@ -900,10 +901,11 @@ generate = " Improvements"
 name = _("Wonders of the World")
 text = _("\
 Great Wonders are special buildings which can each be completed by only one player each game, and which \
-often enhance the owning player's entire civilization. Unlike ordinary city improvements, which must be \
-built with local production points, certain special units built in one city (Caravans and Freight in the \
-classic ruleset) can contribute their full cost in production points towards the construction of a Great \
-Wonder in another City.\
+often enhance the owning player's entire civilization. Unlike ordinary \
+[city improvements](fch:Text/City%20Improvements), which must be built with local production points, certain \
+special units built in one city ([Caravans](fch:Unit/Caravan) and [Freight](fch:Unit/Freight) in the classic \
+ruleset) can contribute their full cost in production points towards the construction of a Great Wonder in \
+another City.\
 "), _("\
 Once built, a Great Wonder is placed in the city that constructed it and cannot be sold or destroyed unless \
 the entire city is destroyed. However, some Great Wonders are made obsolete under certain ruleset dependent \
@@ -913,8 +915,8 @@ obsoleting advance.\
 "), _("\
 Some rulesets will offer Small Wonders. Small Wonders operate very much like Great Wonders in their often \
 empire-wide effect. Unlike Great Wonders, each player can build a single Small Wonder regardless of whether \
-other players have built one. The production carrying units (Caravan and Freight in the classic ruleset) can \
-also be used to build Small Wonders.\
+other players have built one. The production carrying units ([Caravan](fch:Unit/Caravan) and \
+[Freight](fch:Unit/Freight) in the classic ruleset) can also be used to build Small Wonders.\
 ")
 
 [help_gen_wonders]
@@ -942,12 +944,12 @@ the firepower value.\
 Units are usually built in cities using production points. Once built, units are owned by the city that \
 built them. They can later be re-homed while visiting a different city and demand support from that city. \
 Unit upkeep will be one of your major expenses. Most units require upkeep such as production points from \
-their home city every turn, although some autocratic styles of government can force cities to support \
-several units for free depending on the ruleset. If the upkeep of a unit outweighs its benefit, you can \
-disband it. See the section on Production. A few units, particularly those that you start the game with, \
-have no home city and thus require no upkeep.\
+their home city every turn, although some autocratic [styles of government](fch:Text/Government) can force \
+cities to support several units for free depending on the ruleset. If the upkeep of a unit outweighs its \
+benefit, you can disband it. See the section on [Production](fch:Text/Production). A few units, particularly \
+those that you start the game with, have no home city and thus require no upkeep.\
 "), _("\
-TIP: If you need or want to disband a unit to eliminate its cost, do so inside a city. The city will receive \
+*TIP:* If you need or want to disband a unit to eliminate its cost, do so inside a city. The city will receive \
 50% of the original production cost and apply it to whatever project is being built in the city at the time \
 of disbandment. This also works for your units disbanded in an allied player's city.\
 "), _("\
@@ -956,14 +958,15 @@ movement points.\
 "), _("\
 The most basic action is movement. Units can move into any of the tiles surrounding their current location, \
 subject to restrictions imposed by their physical nature (e.g. the terrain they are 'native' to), by \
-diplomatic obligations (see the section on Diplomacy), and by enemy units (see the section on Zones of \
-Control). The number of movement points consumed may depend on the type of terrain and ruleset definitions \
-(see the Terrain help).\
+diplomatic obligations (see the section on [Diplomacy](fch:Text/Diplomacy)), and by enemy units (see the \
+section on [Zones of Control](fch:Text/Zones%20of%20Control)). The number of movement points consumed may \
+depend on the type of terrain and ruleset definitions (see the [Terrain](fch:Text/Terrain) help).\
 "), _("\
 A unit cannot move onto a tile occupied by an enemy unit, and when directed to do so will attack instead (if \
 capable of attack), locking the two units in combat until one is destroyed. The outcome depends on the \
-attributes of the units in question: hit points, attack and defense strength, and firepower. The Combat \
-section describes the process in detail, and the following sections list specific units' attributes.\
+attributes of the units in question: hit points, attack and defense strength, and firepower. The \
+[Combat](fch:Text/Combat) section describes the process in detail, and the following sections list specific \
+units' attributes.\
 "), _("\
 Units' attributes can be further boosted by veteran levels. Units may be built as veteran by means of certain \
 city improvements, wonders or other influences. Once built, units can also become veteran through experience \
@@ -977,9 +980,9 @@ Normally, a unit which has not moved will regain one hit point per turn. Units w
 extra hit point. A unit which spends a turn in a city regains one third of its base hit points, and city \
 improvements appropriate to the Unit type can improve this further. In the field, bases on tiles can improve \
 the recovery rate. For instance, Fortresses in the classic ruleset have this effect. Units must stay on the \
-tile for a whole turn to get this recovery bonus. Wonders can also boost recovery, such as the United \
-Nations in the classic ruleset. Damaged units in sentry mode will wake up when they have regained all of \
-their hit points.\
+tile for a whole turn to get this recovery bonus. Wonders can also boost recovery, such as the \
+[United Nations](fch:Wonder/United%20Nations) in the classic ruleset. Damaged units in sentry mode will wake \
+up when they have regained all of their hit points.\
 "), _("\
 As technology advances, new types of units become available which obsolete existing types. When you discover \
 such a new technology, your existing units remain intact, but you can no longer build new units of the \
@@ -1028,21 +1031,26 @@ multiplied by 1.5. This value is hard-coded.\
 "), _("\
 Now ruleset-specific bonuses are applied:\
 "), _("\
-- The defender's strength is doubled if it is a Pikeman unit defending against a mounted unit via the \
-\"DefenseMultiplier\" combat bonus flag.\n\
-- If the defender is an AEGIS Cruiser defending against airborne units (including Cruise Missiles and \
-Helicopters), the defense is quintupled via the \"DefenseMultiplier\" combat bonus flag.\n\
-- The defender's strength is doubled again if it is in a city with a SAM Battery and the attacker is an \
-air unit (other than a Helicopter or a Cruise Missile) via the \"Defend_Bonus\" effect.\n\
-- An SDI Defense doubles the defender's strength against missile attacks via the \"Defend_Bonus\" \
+- The defender's strength is doubled if it is a [Pikeman](fch:Unit/Pikemen) unit defending against a mounted \
+unit via the `DefenseMultiplier` combat bonus flag.\n\
+- If the defender is an [AEGIS Cruise](fch:Unit/AEGIS%20Cruiser) defending against airborne units (including \
+[Cruise Missiles](fch:Unit/Cruise%20Missile) and [Helicopters](fch:Unit/Helicopter)), the defense is \
+quintupled via the `DefenseMultiplier` combat bonus flag.\n\
+- The defender's strength is doubled again if it is in a city with a \
+[SAM Battery](fch:Improvement/SAM%20Battery) and the attacker is an air unit (other than a \
+[Helicopter](fch:Unit/Helicopter) or a [Cruise Missile](fch:Unit/Cruise%20Missile)) via the `Defend_Bonus` \
 effect.\n\
-- If the attacker is a ship and the defender is in a city with a Coastal Defense, the defender's strength \
-is doubled via the \"Defend_Bonus\" effect.\n\
-- Against land units (other than Howitzers) and Helicopters, defending units in a city with City Walls \
-have their strength tripled via the \"Defend_Bonus\" effect.\n\
-- If the defender is in a Fortress (and not a city), its strength is doubled.\n\
-- Finally, if the attacker is a Fighter and the defender is a Helicopter, the defender's strength is \
-halved via the \"DefenseDivider\" combat bonus.\
+- An [SDI Defense](fch:Improvement/SDI%20Defense) doubles the defender's strength against missile attacks via \
+the `Defend_Bonus` effect.\n\
+- If the attacker is a ship and the defender is in a city with a \
+[Coastal Defense](fch:Improvement/Coastal%20Defense)), the defender's strength is doubled via the \
+`Defend_Bonus` effect.\n\
+- Against land units (other than [Howitzers](fch:Unit/Howitzer)) and [Helicopters](fch:Unit/Helicopter), \
+defending units in a city with [City Walls](fch:Improvement/City%20Walls) have their strength tripled via the \
+`Defend_Bonus` effect.\n\
+- If the defender is in a [Fortress](fch:Extra/Fortress) (and not a city), its strength is doubled.\n\
+- Finally, if the attacker is a [Fighter](fch:Unit/Fighter) and the defender is a \
+[Helicopter](fch:Unit/Helicopter), the defender's strength is halved via the `DefenseDivider` combat bonus.\
 "), _("\
 If, after these modifications, the attacker has a strength of 0, it automatically loses and is destroyed. \
 Otherwise, if the defender has a strength of 0, the defender loses and is likewise destroyed. Under most \
@@ -1052,11 +1060,11 @@ single use.\
 The firepower of the attacker and defender are also modified.\
 "), _("\
 - If the defender is a ship and is inside a city the firepower of the attacker is doubled and the firepower \
-of the ship is set to 1 via the \"BadCityDefender\" unit type flag.\n\
-- If a Fighter is attacking a Helicopter, the firepower of the Helicopter is set to 1 via the \"FirePower1\" \
-combat bonus.\n\
+of the ship is set to 1 via the `BadCityDefender` unit type flag.\n\
+- If a [Fighter](fch:Unit/Fighter) is attacking a [Helicopter](fch:Unit/Helicopter), the firepower of the \
+[Helicopter](fch:Unit/Helicopter) is set to 1 via the `FirePower1` combat bonus.\n\
 - If neither unit could move to where the other is, such as a ship attacking a land unit on land, the \
-firepower of both is typically set to 1, but can be changed with the \"Fortify_Defense_Bonus\" effect. \
+firepower of both is typically set to 1, but can be changed with the `Fortify_Defense_Bonus` effect. \
 "), _("\
 After these preliminaries, combat occurs as long as both units are still alive (i.e. hit points are greater \
 than 0). Each round, a random number between 1 and the sum of the attacker's and defender's strengths \
@@ -1065,37 +1073,41 @@ hit points equal to the attacker's firepower. Otherwise, the attacker loses hit 
 defender's firepower. The first unit to reach 0 hit points (or negative hit points) loses and is destroyed.\
 "), _("\
 Whichever unit survives the fight has a chance of being promoted a veteran level. In the classic ruleset, if \
-the winner's civilization has the Sun Tzu's War Academy (and if it is not obsolete), the chance is increased \
-by half in case of land units.\
+the winner's civilization has the [Sun Tzu's War Academy](fch:Wonder/Sun%20Tzu's%20War%20Academy) (and if it \
+is not obsolete), the chance is increased by half in case of land units.\
 "), _("\
 If the attacker is a land unit and wins, and the defender is in a city without City Walls, the city is \
-reduced in size by 1 via the \"KillCitizen\" unit type flag.\
+reduced in size by 1 via the `KillCitizen` unit type flag.\
 "), _("\
-If the defender loses and is not inside a city, Fortress, or Airbase, all other units at the defender's \
-location may be destroyed along with the defender via the \"killstack\" server option.\
+If the defender loses and is not inside a city, [Fortress](fch:Extra/Fortress), or \
+[Airbase](fch:Extra/Airbase), all other units at the defender's location may be destroyed along with the \
+defender via the `killstack` server option.\
 ")
 
 [help_combat_example_1]
 ; /* TRANS: Preserve the leading space: it controls nesting */
 name = _(" Combat Example 1")
 text = _("\
-Suppose a Cannon (A:8, D:1, HP:20, FP:1) attacks a Musketeer (A:3, D:3, HP:20, FP:1) inside a city with City \
-Walls built on a Forest tile. Neither are a veteran.\
+Suppose a [Cannon](fch:Unit/Cannon) (`A:8`, `D:1`, `HP:20`, `FP:1`) attacks a \
+[Musketeer](fch:Unit/Musketeers) (`A:3`, `D:3`, `HP:20`, `FP:1`) inside a city with \
+[City Walls](fch:Improvement/City%20Walls) built on a [Forest](fch:Terrain/Forest) tile. Neither are a \
+veteran.\
 "), _("\
-The defender's base strength is 3. Since it is on a Forest tile, its strength becomes 4.5 (3 * 1.5). It is \
-behind City Walls, so its strength is tripled to 13.5 (4.5 * 3). It is a ground unit inside a City, so its \
-strength is increased to 20.25 with fortification (13.5 * 1.5).\
+The defender's base strength is `3`. Since it is on a [Forest](fch:Terrain/Forest) tile, its strength becomes \
+`4.5` (`3 * 1.5`). It is behind [City Walls](fch:Improvement/City%20Walls), so its strength is tripled to \
+`13.5` (`4.5 * 3`). It is a ground unit inside a City, so its strength is increased to `20.25` with \
+fortification (`13.5 * 1.5`).\
 "), _("\
-Strength values inside the game code are actually multiplied by 100 with fractions dropped. In this example, \
-the attacker's strength is 800 and the defender's strength is 2,025 for a total combined value of 2,825.\
+Strength values inside the game code are actually multiplied by `100` with fractions dropped. In this example, \
+the attacker's strength is `800` and the defender's strength is `2,025` for a total combined value of `2,825`.\
 "), _("\
-Both units keep their firepower of 1 unchanged so nothing else happens here.\
+Both units keep their firepower of `1` unchanged so nothing else happens here.\
 "), _("\
-Each round of combat, a random number between 1 and 2,825 is generated. If the number is greater than 2,025 \
-(about a 28% chance), the defender loses 1 hit point. Otherwise (about a 72% chance), the attacker loses 1 \
+Each round of combat, a random number between `1` and `2,825` is generated. If the number is greater than `2,025` \
+(about a 28% chance), the defender loses `1` hit point. Otherwise (about a 72% chance), the attacker loses `1` \
 hit point.\
 "), _("\
-Since both units have 20 hit points, the odds favor a victory for the defender. The defender will probably \
+Since both units have `20` hit points, the odds favor a victory for the defender. The defender will probably \
 lose somewhere around 40% of its hit points during the fight. But the outcome is never certain as long as \
 both units have non-zero strengths. The defender might emerge untouched, or it might lose most of its hit \
 points, or it might even lose the battle.\
@@ -1105,27 +1117,31 @@ points, or it might even lose the battle.\
 ; /* TRANS: Preserve the leading space: it controls nesting */
 name = _(" Combat Example 2")
 text = _("\
-Suppose a veteran Battleship (A:12, D:12, HP:40, FP:2) with 3 move points attacks a veteran Alpine \
-Troops (A:5, D:5, HP:20, FP:1) inside a city built on a Grassland tile with City Walls and a Coastal Defense.\
+Suppose a veteran [Battleship](fch:Unit/Battleship) (`A:12`, `D:12`, `HP:40`, `FP:2`) with `3` move points \
+attacks a veteran [Alpine Troops](fch:Unit/Alpine%20Troops) (`A:5`, `D:5`, `HP:20`, `FP:1`) inside a city \
+built on a [Grassland](fch:Terrain/Grassland) tile with [City Walls](fch:Improvement/City%20Walls) and a \
+[Coastal Defense](fch:Improvement/Coastal%20Defense).\
 "), _("\
-The attacker's strength is 12, raised to 18 (12 * 1.5) because of veteran status.\
+The attacker's strength is `12`, raised to `18` (`12 * 1.5`) because of veteran status.\
 "), _("\
-The defender's strength is 5, raised to 7.5 due to veteran status (5 * 1.5). The terrain's defense factor is \
-1 (no effect). The Coastal Defense doubles the defender's strength to 15 (7.5 * 2). In this case, the City \
-Walls have no effect against attacking sea units. The defender is a ground unit inside a city, so its total \
-strength is 22.5 (15 * 1.5).\
+The defender's strength is `5`, raised to `7.5` due to veteran status (`5 * 1.5`). The terrain's defense \
+factor is `1` (no effect). The Coastal Defense doubles the defender's strength to `15` (`7.5 * 2`). In this \
+case, the City Walls have no effect against attacking sea units. The defender is a ground unit inside a city, \
+so its total strength is `22.5` (`15 * 1.5`).\
 "), _("\
-Strength values inside the game code are actually multiplied by 100 with fractions dropped. In this example, \
-the attacker's strength is 1,200 and the defender's strength is 2,250 for a total combined value of 3,450.\
+Strength values inside the game code are actually multiplied by `100` with fractions dropped. In this example, \
+the attacker's strength is `1,200` and the defender's strength is `2,250` for a total combined value of `3,450`.\
 "), _("\
-The firepower of the Battleship is set from 2 to 1 because it is almost out of moves (e.g. tired attack).\
+The firepower of the [Battleship](fch:Unit/Battleship) is set from `2` to `1` because it is almost out of \
+moves (e.g. tired attack).\
 "), _("\
-Each round, a random number from 1 to 3450 is generated. If it is greater than 2,250 (about a 44% chance) the \
-defender loses 1 hit point. Otherwise (about a 66% chance), the attacker loses 1 hit point.\
+Each round, a random number from `1` to `3450` is generated. If it is greater than `2,250` (about a 44% \
+chance) the defender loses `1` hit point. Otherwise (about a 66% chance), the attacker loses `1` hit point.\
 "), _("\
-In this case, the odds greatly favor the attacker winning. The Battleship is 25% less likely to score a hit \
-in any given round, but the Battleship has twice as many hit points. The Battleship should expect to lose \
-about 60% of its hit points during the fight, and should expect to have no movement points left.\
+In this case, the odds greatly favor the attacker winning. The [Battleship](fch:Unit/Battleship) is 25% less \
+likely to score a hit in any given round, but the [Battleship](fch:Unit/Battleship) has twice as many hit \
+points. The [Battleship](fch:Unit/Battleship) should expect to lose about 60% of its hit points during the \
+fight, and should expect to have no movement points left.\
 ")
 
 [help_zones_of_control]
@@ -1145,8 +1161,9 @@ In the following special cases, units can move regardless of ZOC:\
 - A unit moving directly into or out of a city.\n\
 - A unit moving onto a tile already occupied by a friendly unit.\n\
 - A unit moving to or from a terrain where ZOC cannot be enforced. For instance, in the classic rules, a \
-land unit disembarking from a boat which is on an Ocean tile.\n\
-- A unit type which explicitly ignores ZOC, such as Diplomats and Spies in the classic rules.\
+land unit disembarking from a boat which is on an [Ocean](fch:Terrain/Ocean) tile.\n\
+- A unit type which explicitly ignores ZOC, such as [Diplomats](fch:Unit/Diplomat) and [Spies](fch:Unit/Spy) \
+in the classic rules.\
 "), _("\
 Notes:\
 "), _("\
@@ -1156,29 +1173,33 @@ terrain effectively cannot impose ZOC except for the special case where they are
 - An enemy city counts as an enemy occupied tile if there are any units inside the city, but not if the city \
 is empty.\
 "), _("\
-TIP: You can infiltrate enemy zones by first moving in a Diplomat (or some other unit which ignores ZOC), \
-and then moving regular units onto the tile now occupied by the Diplomat. By repeating this process (and \
-optionally leaving some units behind to keep tiles occupied), you can make a path through enemy territory.\
+*TIP:* You can infiltrate enemy zones by first moving in a [Diplomat](fch:Unit/Diplomat) (or some other unit \
+which ignores ZOC), and then moving regular units onto the tile now occupied by the \
+[Diplomat](fch:Unit/Diplomat). By repeating this process (and optionally leaving some units behind to keep }
+tiles occupied), you can make a path through enemy territory.\
 ")
 
 [help_government]
 name = _("Government")
 text = _("\
-Your form of government influences your cities' productivity and commerce, your citizens' happiness, and \
-many other game factors.\
+Your form of government influences your cities' productivity and commerce, your citizens' \
+[happiness](fch:Text/Happiness), and many other game factors.\
 "), _("\
 In the classic rules, your start out ruling your civilization through Despotism. As your technology improves, \
 you can select other forms of government (listed below). In order to change your form of government, you \
-must start a revolution. This will cause your civilization to undergo a period of Anarchy (lasting a ruleset \
-defined number of turns). At the end of this time, you will be able to choose your new government.\
+must start a revolution. This will cause your civilization to undergo a period of \
+[Anarchy](fch:Government/Anarchy) (lasting a ruleset defined number of turns). At the end of this time, you \
+will be able to choose your new government.\
 "), _("\
-TIP 1: Offensive military campaigns are difficult under Republican and Democratic governments unless you \
-give your citizens lots of luxury goods to keep them happy. When conquering other civilizations, it may be \
-helpful to switch to one of the more militant styles of government.\
+*TIP 1:* Offensive military campaigns are difficult under [Republican](fch:Government/Republic) and \
+[Democratic](fch:Government/Democracy) governments unless you give your citizens lots of luxury goods to keep \
+them happy. When conquering other civilizations, it may be helpful to switch to one of the more militant \
+styles of government.\
 "), _("\
-TIP 2: Scientific advancement requires high levels of trade, which are much easier to achieve under \
-Republican and Democratic governments. Consider switching to the Republic as soon as you can; gaining \
-advanced technology early in the game puts you at an advantage.\
+*TIP 2:* Scientific advancement requires high levels of trade, which are much easier to achieve under \
+[Republican](fch:Government/Republic) and [Democratic](fch:Government/Democracy) governments. Consider \
+switching to the [Republic](fch:Government/Republic) as soon as you can; gaining advanced technology early in \
+the game puts you at an advantage.\
 ")
 
 [help_gen_governments]
@@ -1198,11 +1219,12 @@ The capture of your capital does not always lead to Civil War. If you have treat
 you are more likely to retain their loyalty. Each city that is celebrating reduces the chance of Civil War, \
 while each city in disorder increases the likelihood.\
 "), _("\
-In addition, the form of government directly contributes to the chance of Civil War. Governments with \
-universal franchise are far less likely to revolt than those more authoritarian in nature.\
+In addition, the form of [government](fch:Text/Government) directly contributes to the chance of Civil War. \
+[Governments](fch:Text/Government) with universal franchise are far less likely to revolt than those more \
+authoritarian in nature.\
 "), _("\
 The number of cities an empire needs before it can erupt into Civil War is by default 10. That is, empires \
-with fewer than 10 cities are immune from Civil War. However, this is a server option ('civilwarsize'), and \
+with fewer than 10 cities are immune from Civil War. However, this is a server option (`civilwarsize`), and \
 may vary upwards from a minimum of 6, depending on the ruleset being played.\
 ")
 
@@ -1221,7 +1243,8 @@ generate = " Multipliers"
 [help_effects]
 name = _("Effects")
 text = _("\
-Effects specify what buildings, wonders, etc. do.\
+Effects specify what [buildings](fch:Text/City%20Improvements), \
+[wonders](fch:Text/Wonders%20of%20the%20World), etc. do.\
 ")
 
 [help_gen_effects]
@@ -1250,47 +1273,50 @@ After this, you may not move military units into the other's territory until you
 an Alliance. Breaking a Peace treaty will drop you directly back to War.\
 "), _("\
 An Alliance is the ultimate diplomatic relationship between two players. In this state, you may move units \
-into each other's cities and your units may share the same tile. Allied units no longer impose zones of \
-control. However, Alliance treaties come with obligations. You will not be able to ally with a player that \
-is at War with a current ally unless you break the first treaty. If one of your allies declares War on \
-another, the Alliance with the aggressor is automatically broken. Breaking an Alliance will drop you to an \
-Armistice treaty. An allied AI player will freely give you its world maps and Shared Vision and will \
-seriously consider trading technologies and cities, but in return will expect you to join its wars against \
-other players.\
+into each other's cities and your units may share the same tile. Allied units no longer impose \
+[zones of control](fch:Text/Zones%20of%20Control). However, Alliance treaties come with obligations. You will \
+not be able to ally with a player that is at War with a current ally unless you break the first treaty. If \
+one of your allies declares War on another, the Alliance with the aggressor is automatically broken. Breaking \
+an Alliance will drop you to an Armistice treaty. An allied AI player will freely give you its world maps and \
+Shared Vision and will seriously consider trading technologies and cities, but in return will expect you to \
+join its wars against other players.\
 ")
 
 [help_technology]
 name = _("Technology")
 text = _("\
 Research into technology is a necessity for improving the ability of your civilization to develop new \
-military units and city improvements.\
+military [units](fch:Text/Units) and [city improvements](fch:Text/City%20Improvements).\
 "), _("\
 There are a few ways to gain advances other than conducting your own research:\
 "), _("\
  - You will sometimes discover enemy technology when you capture a city.\n\
  - Your agents can steal advances.\n\
- - Wonders can provide you with technology.\n\
- - Another player might grant technology in the terms of a diplomatic pact.\n\
- - You may find scrolls of wisdom in huts.\
+ - [Wonders](fch:Text/Wonders%20of%20the%20World) can provide you with technology.\n\
+ - Another player might grant technology in the terms of a [diplomatic pact](fch:Text/Diplomacy).\n\
+ - You may find scrolls of wisdom in [huts](fch:Extra/Minor%20Tribe%20Village).\
 "), _("\
 Otherwise advances must be discovered through the efforts of your own people. Many of the mentioned methods \
 of technology transfer are also ruleset defined, meaning that they may be disabled.\
 "), _("\
-Most technological progress comes from trade (see the Trade section) and, in the classic ruleset, from \
-Scientist specialists (see the Specialists section). While it is possible to change which advance you are \
-currently researching, by default all progress is lost by doing so.\
+Most technological progress comes from trade (see the [Trade](fch:Text/Trade) section) and, in the classic \
+ruleset, from [Scientist specialists](fch:Specialist/Scientists) (see the [Specialists](fch:Text/Specialists) \
+section). While it is possible to change which advance you are currently researching, by default all progress \
+is lost by doing so.\
 "), _("\
 While the majority of the resulting research output (\"Bulbs\") usually goes toward advancing technology, in \
 some rulesets, but not the classic rules, some of it may be diverted to maintain expertise in existing \
 technologies. The quantity required for technology upkeep increases with the total research cost of all \
 advances known to you. The state of advancement at which you start paying this upkeep may depend on factors \
-such as your form of government. If research output drops below that required for upkeep, your civilization \
-will forget an advance, requiring it to be researched again.\
+such as your [form of government](fch:Text/Government). If research output drops below that required for \
+upkeep, your civilization will forget an advance, requiring it to be researched again.\
 "), _("\
-Technological advances can render units, city improvements, and wonders obsolete. While obsolete units merely \
-become impossible for you to make (leaving the ones you have already made intact), obsolete improvements \
-become redundant and should be sold (see Economy view), while obsolete wonders lose their effect. See the \
-relevant sections for more information.\
+Technological advances can render [units](fch:Text/Units), [city improvements](fch:Text/City%20Improvements), \
+and [wonders](fch:Text/Wonders%20of%20the%20World) obsolete. While obsolete [units](fch:Text/Units) merely \
+become impossible for you to make (leaving the ones you have already made intact), obsolete \
+[improvements](fch:Text/City%20Improvements) become redundant and should be sold (see *Economy view*), while \
+obsolete [wonders](fch:Text/Wonders%20of%20the%20World) lose their effect. See the relevant sections for more \
+information.\
 ")
 
 [help_gen_techs]
@@ -1303,11 +1329,12 @@ The Space Race is a second option to win the game besides eliminating all other 
 spaceship arrives first at Alpha Centauri, the game is over and you have won. However it is possible for this \
 to be disabled on the server and various rulesets.\
 "), _("\
-In the classic rules, before you can build spaceship parts, the Apollo Program Wonder must have been built by \
-any player. You also need specific technologies to build the different spaceship parts: see the help texts \
-for Space Structural, Space Component, and Space Module under City Improvements. NOTE: If there are no help \
-texts for these items, it probably means the 'SPACERACE' victory type is not enabled in the 'victories' \
-server setting for your game.\
+In the classic rules, before you can build spaceship parts, the [Apollo Program](fch:Wonder/Apollo%20Program) \
+Wonder must have been built by any player. You also need specific technologies to build the different \
+spaceship parts: see the help texts for [Space Structural](fch:Improvement/Space%20Structural), \
+[Space Component](fch:Improvement/Space%20Component), and [Space Module](fch:Improvement/Space%20Module) \
+under [City Improvements](fch:Text/City%20Improvements). *NOTE:* If there are no help texts for these items, \
+it probably means the `SPACERACE` victory type is not enabled in the `victories` server setting for your game.\
 "), _("\
 When you have started building your spaceship, you can see it with the \"Spaceship\" command in the \
 Civilization menu.\
@@ -1318,7 +1345,7 @@ This reduces the score bonus from the spaceship, but it still counts as a win.\
 If the capital of a civilization is captured a spaceship that has been launched will be lost, so defend your \
 capital well!\
 "), _("\
-TIP: If an enemy civilization has launched a spaceship, try to quickly build a light spaceship with many \
+*TIP:* If an enemy civilization has launched a spaceship, try to quickly build a light spaceship with many \
 propulsion units that will arrive earlier. The only other option is to capture their capital.\
 ")
 
@@ -1344,16 +1371,16 @@ generate = " Nations"
 [help_connecting]
 name = _("Connecting")
 text = _("\
-Before a game is started, anyone can connect to the server by supplying its hostname and port number (5556 \
-by default). If the server is started with the -m flag, it will report to the metaserver,\
+Before a game is started, anyone can connect to the server by supplying its hostname and port number (`5556` \
+by default). If the server is started with the `-m` flag, it will report to the metaserver,\
 "), "\
 $DefaultMetaserver\
 ", _("\
-The client can fetch this page, too: use the Metaserver mutton in the connection dialog. If it never shows \
+The client can fetch this page, too: use the Metaserver button in the connection dialog. If it never shows \
 any results, check whether your web browser is using a HTTP proxy. To make the client use the same proxy, \
-before starting the client, set the $http_proxy environment variable to:\
+before starting the client, set the `$http_proxy` environment variable to:\
 "), "\
-  http://proxyhost:proxyportnumber/\
+  `http://proxyhost:proxyportnumber/`\
 ", _("\
 When the game has started, everyone can connect as any player who is not already connected, including AI \
 players. Merely connecting to an AI player does not make it human controlled. This is an independent server \
@@ -1367,164 +1394,169 @@ text = _("\
 The vast majority of these options are shown next to the item/function in an appropriate menu listing. They \
 are shown here as a courtesy and may be inaccurate due to changes in code or local client option settings.\
 "), _("\
-Unit Orders:\n\
-============\n\
-  a: (a)uto-settler (Settler/Worker units)\n\
-  b: (b)uild city (Settler units)\n\
-  b: help (b)uild wonder (Caravan/Freight units)\n\
-  B: go to and (B)uild city on target tile (Settler units)\n\
-  d: (d)o an action to the selected tile (press twice to target own tile)\n\
-  d: (d)o the action to the selected tile (when in go-to mode)\n\
-  D: (D)isband unit\n\
-  E: build airbas(e) (Airbase units)\n\
-  f: (f)ortify unit (military units)\n\
-  F: build (f)ortress (Settler/Worker units)\n\
-  g: (g)o to tile (then left-click mouse to select target tile)\n\
-  g: add a (g)o-to waypoint (when in go-to mode)\n\
-  G: return unit to nearest friendly city\n\
-  h: set unit's (h)omecity (to city on current tile)\n\
-  i: build (i)rrigation or convert terrain (Settler/Worker units)\n\
-  I: change terrain by cultivating\n\
-  Ctrl+I: connect current and target tile with (I)rrigation\n\
-  Ctrl+I: set an (I)rrigation waypoint (when connecting with Irrigation)\n\
-  l: (l)oad unit on transporter\n\
-  Ctrl+L: connect current and target tile with rai(L)\n\
-  Ctrl+L: set a rai(L) waypoint (when connecting with rail)\n\
-  m: build (m)ine or convert terrain (Settler/Worker units)\n\
-  M: change terrain by planting\n\
-  n: clean (n)uclear Fallout\n\
-  N: explode (N)uclear\n\
-  o: transf(o)rm terrain (Engineer unit)\n\
-  O: c(O)nvert to another kind of unit\n\
-  p: clean (p)ollution (Settler/Worker units)\n\
-  p: drop (p)aratrooper (Paratrooper units)\n\
-  P: (P)illage (destroy terrain alteration)\n\
-  q: patrol with unit (then left-click mouse to select other endpoint)\n\
-  q: add a patrol waypoint (when in patrol mode)\n\
-  r: build (r)oad/Railroad (Settler/Worker units)\n\
-  r: establish trade (r)oute (Caravan/Freight units)\n\
-  Ctrl+R: connect current and target tile with (R)oad\n\
-  Ctrl+R: set a (R)oad waypoint (when connecting with Road)\n\
-  s: (s)entry unit\n\
-  S: un(S)entry all units on tile\n\
-  t: Unit go (t)o/airlift to city\n\
-  T: unload all units from (T)ransporter\n\
-  u: (u)nload unit from transporter\n\
-  U: (U)pgrade unit\n\
-  x: Unit auto e(x)plore\
+### Unit Orders:\n\
+| Shortcut | Function |\n\
+|----------|----------|\n\
+| `a`      | (a)uto-settler (Settler/Worker units\n\
+| `b`      | (b)uild city (Settler units)\n\
+| `b`      | help (b)uild wonder (Caravan/Freight units)\n\
+| `B`      | go to and (B)uild city on target tile (Settler units)\n\
+| `d`      | (d)o an action to the selected tile (press twice to target own tile)\n\
+| `d`      | (d)o the action to the selected tile (when in go-to mode)\n\
+| `D`      | (D)isband unit\n\
+| `E`      | build airbas(e) (Airbase units)\n\
+| `f`      | (f)ortify unit (military units)\n\
+| `F`      | build (f)ortress (Settler/Worker units)\n\
+| `g`      | (g)o to tile (then left-click mouse to select target tile)\n\
+| `g`      | add a (g)o-to waypoint (when in go-to mode)\n\
+| `G`      | return unit to nearest friendly city\n\
+| `h`      | set unit's (h)omecity (to city on current tile)\n\
+| `i`      | build (i)rrigation or convert terrain (Settler/Worker units)\n\
+| `I`      | change terrain by cultivating\n\
+| `Ctrl+I` | connect current and target tile with (I)rrigation\n\
+| `Ctrl+I` | set an (I)rrigation waypoint (when connecting with Irrigation)\n\
+| `l`      | (l)oad unit on transporter\n\
+| `Ctrl+L` | connect current and target tile with rai(L)\n\
+| `Ctrl+L` | set a rai(L) waypoint (when connecting with rail)\n\
+| `m`      | build (m)ine or convert terrain (Settler/Worker units)\n\
+| `M`      | change terrain by planting\n\
+| `n`      | clean (n)uclear Fallout\n\
+| `N`      | explode (N)uclear\n\
+| `o`      | transf(o)rm terrain (Engineer unit)\n\
+| `O`      | c(O)nvert to another kind of unit\n\
+| `p`      | clean (p)ollution (Settler/Worker units)\n\
+| `p`      | drop (p)aratrooper (Paratrooper units)\n\
+| `P`      | (P)illage (destroy terrain alteration)\n\
+| `q`      | patrol with unit (then left-click mouse to select other endpoint)\n\
+| `q`      | add a patrol waypoint (when in patrol mode)\n\
+| `r`      | build (r)oad/Railroad (Settler/Worker units)\n\
+| `r`      | establish trade (r)oute (Caravan/Freight units)\n\
+| `Ctrl+R` | connect current and target tile with (R)oad\n\
+| `Ctrl+R` | set a (R)oad waypoint (when connecting with Road)\n\
+| `s`      |(s)entry unit\n\
+| `S`      |un(S)entry all units on tile\n\
+| `t`      |Unit go (t)o/airlift to city\n\
+| `T`      |unload all units from (T)ransporter\n\
+| `u`      |(u)nload unit from transporter\n\
+| `U`      |(U)pgrade unit\n\
+| `x`      |Unit auto e(x)plore\n\
 "), _("\
-Unit Selection:\n\
-===============\n\
-  z: select only first unit of selected group\n\
-  v: select all units on tile\n\
-  V: (on tile) select all units of the same type as the active unit\n\
-  C: (on continent) select all units of the same type as the active unit\n\
-  X: (everywhere) select all units of the same type as the active unit\n\
-  w: (w)ait: focus on next unit\n\
-  5: focus on previous unit\n\
-  space: done giving orders (unit stays put)\
+### Unit Selection:\n\
+| Shortcut | Function |\n\
+|----------|---------|\n\
+| `z`      | select only first unit of selected group\n\
+| `v`      | select all units on tile\n\
+| `V`      | (on tile) select all units of the same type as the active unit\n\
+| `C`      | (on continent) select all units of the same type as the active unit\n\
+| `X`      | (everywhere) select all units of the same type as the active unit\n\
+| `w`      | (w)ait: focus on next unit\n\
+| `5`      | focus on previous unit\n\
+| `space`  | done giving orders (unit stays put)\n\
 "), _("\
-Unit Movement:\n\
-==============\n\
+### Unit Movement:\n\
 Works on a numeric keypad or regular number keys if on a laptop without a keypad.\n\n\
-  1: move south-west\n\
-  2: move south\n\
-  3: move south-east\n\
-  4: move west\n\
-  6: move east\n\
-  7: move north-west\n\
-  8: move north\n\
-  9: move north-east\
+| Shortcut | Function |\n\
+|----------|---------|\n\
+| `1`      | move south-west\n\
+| `2`      | move south\n\
+| `3`      | move south-east\n\
+| `4`      | move west\n\
+| `6`      | move east\n\
+| `7`      | move north-west\n\
+| `8`      | move north\n\
+| `9`      | move north-east\n\
 "), _("\
-Main Map (Keys):\n\
-================\n\
-  The client supports zooming/scaling the map graphics with the + and - keys.\n\
-  c: (c)enter view on active unit\n\
-  Shift-home: center view on capital\n\
-  Shift-arrows: scroll map\
+### Main Map (Keys):\n\
+The client supports zooming/scaling the map graphics with the `+` and `-` keys.\n\n\
+| Shortcut       | Function |\n\
+|----------------|----------|\n\
+| `c`            | (c)enter view on active unit\n\
+| `Shift-home`   | center view on capital\n\
+| `Shift-arrows` | scroll map\n\
+| `Ctrl-B`       | show/hide national borders\n\
+| `Ctrl-D`       | show/hide city trade routes\n\
+| `Ctrl-G`       | show/hide map grid lines\n\
+| `Ctrl-N`       | show/hide city names\n\
+| `Ctrl-P`       | show/hide city production\n\
+| `Ctrl-O`       | show/hide city growth\n\
+| `Ctrl-W`       | show/hide city output\n\
+| `Ctrl-Y`       | show/hide city outlines\n\
 "), _("\
-  Ctrl-B: show/hide national borders\n\
-  Ctrl-D: show/hide city trade routes\n\
-  Ctrl-G: show/hide map grid lines\n\
-  Ctrl-N: show/hide city names\n\
-  Ctrl-P: show/hide city production\n\
-  Ctrl-O: show/hide city growth\n\
-  Ctrl-W: show/hide city output\n\
-  Ctrl-Y: show/hide city outlines\
+### Main Map (Mouse):\n\
+| Shortcut                         | Function |\n\
+|----------------------------------|----------|\n\
+| `Left-click on city`             | Open city dialog\n\
+| `Left-click on unit`             | Select a single unit (cancels any current activity if \"clear Unit \
+                                     orders on selection\" is set)\n\
+| `Shift-left-click on unit`       | Add unit to selection\n\
+| `Left-click-and-drag on unit`    | Go-to command for unit (if \"keyboardless goto\" enabled in options)\n\
+| `Middle-click`, `Alt-left-click` | Show tile info\n\
+| `Right-click`                    | Center tile in view\n\
+| `Ctrl-center-click`              | Wake up sentried units\
 "), _("\
-Main Map (Mouse):\n\
-=================\n\
-  Left-click on city:            Open city dialog\n\
-  Left-click on unit:            Select a single unit\n\
-                                 (cancels any current activity if \"clear\n\
-                                 Unit orders on selection\" is set)\n\
-  Shift-left-click on unit:      Add unit to selection\n\
-  Left-click-and-drag on unit:   Go-to command for unit\n\
-                                 (if \"keyboardless goto\" enabled in options)\n\
-  Middle-click, Alt-left-click:  Show tile info\n\
-  Right-click:                   Center tile in view\n\
-  Ctrl-center-click:             Wake up sentried units\
-"), _("\
-  Quick Unit selection:\n\
-  =====================\n\
-  Ctrl-left-click on tile:       Select a sea unit (prefers transporters)\n\
-  Ctrl-right-click on tile:      Select a land unit (prefers military)\
+#### Quick Unit selection:\n\
+| Shortcut                   | Function |\n\
+|----------------------------|----------|\n\
+| `Ctrl-left-click on tile`  | Select a sea unit (prefers transporters)\n\
+| `Ctrl-right-click on tile` | Select a land unit (prefers military)\n\
 "), _("\
 These combinations choose and select a single unit from those on a tile. All other things being equal, units \
 which have movement points left are preferred. If keyboardless goto is enabled, dragging allows the unit to \
 be selected and moved in one gesture.\
 "), _("\
-  City manipulation:\n\
-  ==================\n\
-  Shift-Ctrl-left-click:         Adjust city workers\n\
-  Shift-Alt-right-click:         Show city workers (mouse over or near city)\n\
-  Shift-right-click:             Copy production (from city or unit)\n\
-  Shift-Ctrl-right-click:        Paste production into city\
+#### City manipulation:\n\
+| Shortcut                 | Dunction |\n\
+|--------------------------|----------|\n\
+| `Shift-Ctrl-left-click`  | Adjust city workers\n\
+| `Shift-Alt-right-click`  | Show city workers (mouse over or near city)\n\
+| `Shift-right-click`      | Copy production (from city or unit)\n\
+| `Shift-Ctrl-right-click` | Paste production into city\
 "), _("\
-Chatline:\n\
-=========\n\
-  ' (apostrophe):                Focus Chatline\n\
-  Ctrl-Alt-right-click:          Paste city or tile link into Chatline\n\
-  Shift-Ctrl-Alt-right-click:    Paste unit link into Chatline\
+### Chatline:\n\
+| Shortcut                     | Function |\n\
+|------------------------------|----------|\n\
+| `'` *(apostrophe)*           | Focus Chatline\n\
+| `Ctrl-Alt-right-click`       | Paste city or tile link into Chatline\n\
+| `Shift-Ctrl-Alt-right-click` | Paste unit link into Chatline\n\
 "), _("\
-These controls allow map elements to be referred to in chat. See the Chatline help for more details.\
+These controls allow map elements to be referred to in chat. See the [Chatline](fch:Text/Chatline) help for \
+more details.\
 "), _("\
-Overview Map (Mouse):\n\
-=====================\n\
-  Left-click, Shift-left-click, and Right-click have the same functions as they do on the main map.\
+### Overview Map (Mouse):\n\
+`Left-click`, `Shift-left-click`, and `Right-click` have the same functions as they do on the main map.\
 "), _("\
-Widgets and Views:\n\
-==================\n\
-  F1: show Map view\n\
-  F2: show Units widget (on Map view)\n\
-  F3: show Nations view\n\
-  F4: show Cities view\n\
-  F5: show Economy view\n\
-  F6: show Research view\n\
-  F7: show World Wonders widget (on Map view)\n\
-  F8: show Top Five Cities widget (on Map view)\n\
-  F9: show Messages widget (on Map view)\n\
-  F11: show Demographics widget (on Map view)\n\
-  F12: show Spaceship view\
-"), _("\
-  Ctrl-F: open find city dialog\n\
-  Ctrl-L: open worklists dialog\n\
-  Ctrl-T: open tax/lux/sci rates dialog\n\
-  Shift-Ctrl-R: open revolution dialog\
-"), _("\
-  Shift-Return: Turn done\
+### Widgets and Views:\n\
+| Shortcut        | Function |\n\
+|-----------------|----------|\n\
+| `F1`            | show Map view\n\
+| `F2`            | show Units widget (on Map view)\n\
+| `F3`            | show Nations view\n\
+| `F4`            | show Cities view\n\
+| `F5`            | show Economy view\n\
+| `F6`            | show Research view\n\
+| `F7`            | show World Wonders widget (on Map view)\n\
+| `F8`            | show Top Five Cities widget (on Map view)\n\
+| `F9`            | show Messages widget (on Map view)\n\
+| `F11`           | show Demographics widget (on Map view)\n\
+| `F12`           | show Spaceship view\
+| `Ctrl-F`        | open find city dialog\n\
+| `Ctrl-L`        | open worklists dialog\n\
+| `Ctrl-T`        | open tax/lux/sci rates dialog\n\
+| `Shift-Ctrl-R`  | open revolution dialog\
+| `Shift-Return`  | Turn done\
 ")
 
 [help_governor]
 name = _("Citizen Governor")
 text = _("\
-The Citizen Governor (formerly called the CMA) helps you manage your cities. It deploys the available workers \
-on the free tiles around the city to achieve maximal city output. It also changes workers to specialists, if \
-appropriate. The governor has another ability, whenever possible, it keeps your cities content.\
+The Citizen Governor (formerly called the CMA) helps you manage your cities. It deploys the available \
+[workers](fch:Unit/Workers) on the free tiles around the city to achieve maximal city output. It also changes \
+[workers](fch:Unit/Workers) to [specialists](fch:Text/Specialists), if appropriate. The governor has another \
+ability, whenever possible, it keeps your cities content.\
 "), _("\
 There are various means to tell the governor what kind of output you would like. Open the city dialog and \
 click on the Governor tab. There are two kinds of sliders: On the left, you can set a Minimal Surplus for \
-each kind of production. For example, gold = +3 means the city earns 3 gold more than it needs to upkeep its \
+each kind of production. For example, `gold = +3` means the city earns 3 gold more than it needs to upkeep its \
 improvements. On the right, the sliders let you define by how much you prefer one kind of production to \
 another. Setting science to 3 means you prefer a single bulb to three shields (or gold, trade, etc.). You can \
 set different factors for each kind of production, according to your needs.\
@@ -1534,13 +1566,14 @@ Whenever the governor cannot fulfill its task in the ongoing game, it passes bac
 better not define too high a surplus! Instead, use factors to achieve your goals.\
 "), _("\
 The Celebrate checkbox lets your city celebrate. This will work only with a high luxury goods rate. See help \
-about 'Happiness'.\
+about [Happiness](fch:Text/Happiness).\
 "), _("\
 Clicking on 'Enable' puts the city under control of the governor, 'Disable' passes control back to you.\
 "), _("\
 For ease of use, you can save your slider setting as a preset with a name. Click on 'Save' and enter a \
 name for your setting. You can use this preset in every city by just clicking on its name. Also, you can \
-control your setting from within the Cities view, by right-clicking on a city a looking in the 'Govenor' menu.\
+control your setting from within the Cities view, by right-clicking on a city and looking in the 'Govenor' \
+menu.\
 "), _("\
 Use 'Game' --> 'Save Options Now' to store your presets permanently.\
 "), _("\
@@ -1554,91 +1587,92 @@ text = _("\
 The client has a primitive chat interface. The lines you type are sent to all players, or only to your allies \
 if the client is configured for that, except:\
 "), _("\
-- Messages starting with '/' are interpreted as server commands and executed, if you have the required \
+- Messages starting with `/` are interpreted as server commands and executed, if you have the required \
 access level.\n\
-- Messages starting with 'John:' are private messages to 'John'. Names can be abbreviated, or surrounded \
+- Messages starting with `John:` are private messages to 'John'. Names can be abbreviated, or surrounded \
 with double-quotes if they have spaces. The server looks for players named 'John' and if that fails tries to \
 match a username beginning with 'John' (like 'Johnathan').\n\
-- Messages starting with 'John::' are private messages as above, but will match only users (not players) \
+- Messages starting with `John::` are private messages as above, but will match only users (not players) \
 named 'John'. A user name 'Johnathan' will still be matched.\n\
-- Messages starting with ':' will be sent to everyone (even if your client is configured to send only to \
+- Messages starting with `:` will be sent to everyone (even if your client is configured to send only to \
 allies by default).\n\
-- Messages starting with '.' will be sent only to all your allies (or, if you are a global observer, only to \
+- Messages starting with `.` will be sent only to all your allies (or, if you are a global observer, only to \
 other global observers).\
 "), _("\
 The client has featured text support. This feature allows users to format the chat messages they are sending \
 using boldface, italic, colors, links, etc. Such changes are performed using escape sequences.\
 "), _("\
-* Getting boldface:\n\
-    Full name sequence: '[bold] ... [/bold]'\n\
-    Abbreviation sequence: '[b] ... [/b]'\n\
-    Short cut in the entry: Ctrl-B\n\
-    Example: '[b]bold[/b]' will display the word 'bold' in bold style.\
+### Getting boldface:\n\
+* **Full name sequence:** `[bold] ... [/bold]`\n\
+* **Abbreviation sequence:** `[b] ... [/b]`\n\
+* **Short cut in the entry:** `Ctrl-B`\n\
+* **Example:** `[b]bold[/b]` will display the word 'bold' in bold style.\
 "), _("\
-* Getting colors:\n\
-    Full name sequence: '[color] ... [/color]' \n\
-    Abbreviation sequence: '[c] ... [/c]'\n\
-    Short cut in the entry: Ctrl-C (you also need to select the color in the toolbar over the entry).\n\
-    The color start sequence always takes at least one of the following parameters:\n\
-      - 'foreground' (abbreviation 'fg'): a color name such as red, or a hex specification such as #3050b2 or \
-#35b.\n\
-      - 'background' (abbreviation 'bg'): same as above.\n\
-    Example: '[c fg=\"blue\" bg=\"yellow\"]color[/c]' will display the word 'color' in blue on a yellow background.\
+### Getting colors:\n\
+* **Full name sequence:** `[color] ... [/color]` \n\
+* **Abbreviation sequence:** `[c] ... [/c]`\n\
+* **Short cut in the entry:** `Ctrl-C` (you also need to select the color in the toolbar over the entry).\n\
+* **Example:** `[c fg=\"blue\" bg=\"yellow\"]color[/c]` will display the word 'color' in blue on a yellow \
+background.\n\n\
+The color start sequence always takes at least one of the following parameters:\n\
+* `foreground` (abbreviation `fg`): a color name such as `red`, or a hex specification such as `#3050b2` or \
+`#35b`.\n\
+* `background` (abbreviation `bg`): same as above.\
 "), _("\
-* Getting italic:\n\
-    Full name sequence: '[italic] ... [/italic]'\n\
-    Abbreviation sequence: '[i] ... [/i]'\n\
-    Short cut in the entry: Ctrl-I\n\
-    Example: '[i]italic[/i]' will display the word 'italic' in italic style.\
+### Getting italic:\n\
+* **Full name sequence:** `[italic] ... [/italic]`\n\
+* **Abbreviation sequence:** `[i] ... [/i]`\n\
+* **Short cut in the entry:** `Ctrl-I`\n\
+* **Example:** `[i]italic[/i]` will display the word 'italic' in italic style.\
 "), _("\
-* Getting strikethrough:\n\
-    Full name sequence: '[strike] ... [/strike]'\n\
-    Abbreviation sequence: '[s] ... [/s]'\n\
-    Short cut in the entry: Ctrl-S\n\
-    Example: '[s]strikethrough[/s]' will display the word 'strikethrough' with a strike.\
+### Getting strikethrough:\n\
+* **Full name sequence** `[strike] ... [/strike]`\n\
+* **Abbreviation sequence:** `[s] ... [/s]`\n\
+* **Short cut in the entry:** `Ctrl-S`\n\
+* **Example:** `[s]strikethrough[/s]` will display the word 'strikethrough' with a strike.\
 "), _("\
-* Getting underline:\n\
-    Full name sequence: '[underline] ... [/underline]'\n\
-    Abbreviation sequence: '[u] ... [/u]'\n\
-    Short cut in the entry: Ctrl-U\n\
-    Example: '[u]underlined[/u]' will display the word 'underlined' with an underline.\
+### Getting underline:\n\
+* **Full name sequence:** `[underline] ... [/underline]`\n\
+* **Abbreviation sequence:** `[u] ... [/u]`\n\
+* **Short cut in the entry:** `Ctrl-U`\n\
+* **Example:** `[u]underlined[/u]` will display the word 'underlined' with an underline.\
 "), _("\
-* Getting city links:\n\
-    Full name sequence: '[link target=\"city\"] ... [/link]'\n\
-    Abbreviation sequence: '[l tgt=\"city\"] ... [/l]'\n\
-    Short cut: Control-Alt-Right-click on a city on the map.\n\
-    The 'id' parameter must be set to the id of the city you are pointing.\n\
-    An optional 'name' parameter can be set to bind the city name in case the destination users do not \
-know this city on their map. This expression can also be started and finished within the same pair of \
-brackets, like '[link target=\"city\" id=121 /]' (note the slash at the end).\n\
-    Examples: '[l tgt=\"city\" id=65]city[/l]' will make the word 'city' clickable and pointing to the city \
-id 65. Alternately, '[l tgt=\"city\" id=65 name=\"noname\" /]' will display the name of the city id 65 if \
-known, else, the word 'noname'.\
+### Getting city links:\n\
+* **Full name sequence:** `[link target=\"city\"] ... [/link]`\n\
+* **Abbreviation sequence:** `[l tgt=\"city\"] ... [/l]`\n\
+* **Short cut:** `Control-Alt-Right-click` on a city on the map.\n\
+* **Examples:** `[l tgt=\"city\" id=65]city[/l]` will make the word 'city' clickable and pointing to the city \
+id 65. Alternately, `[l tgt=\"city\" id=65 name=\"noname\" /]` will display the name of the city id 65 if \
+known, else, the word 'noname'.\n\n\
+The `id` parameter must be set to the id of the city you are pointing. An optional `name` parameter can be \
+set to bind the city name in case the destination users do not know this city on their map.\n\n\
+This expression can also be started and finished within the same pair of brackets, like \
+`[link target=\"city\" id=121 /]` (note the slash at the end).\
 "), _("\
-* Getting tile links:\n\
-    Full name sequence: '[link target=\"tile\"] ... [/link]'\n\
-    Abbreviation sequence: '[l tgt=\"tile\"] ... [/l]'\n\
-    Short cut: Control-Alt-Right-click on a tile without city on the map.\n\
-    The 'x' and 'y' parameters must be set to the tile location you are pointing.\n\
-    This expression can also be started and finished within the same pair of brackets, like '[link \
-target=\"tile\" x=5 y=36 /]' (note the slash at the end).\n\
-    Example: '[l tgt=\"tile\" x=17 y=3]this tile[/l]' will make the string 'this tile' clickable and pointing \
-to the tile (17, 3).\
+### Getting tile links:\n\
+* **Full name sequence:** `[link target=\"tile\"] ... [/link]`\n\
+* **Abbreviation sequence:** `[l tgt=\"tile\"] ... [/l]`\n\
+* **Short cut:** `Control-Alt-Right-click` on a tile without city on the map.\n\
+* **Example:** `[l tgt=\"tile\" x=17 y=3]this tile[/l]` will make the string 'this tile' clickable and pointing \
+to the tile (17, 3).\n\n\
+The `x` and `y` parameters must be set to the tile location you are pointing.\n\n\
+This expression can also be started and finished within the same pair of brackets, like `[link \
+target=\"tile\" x=5 y=36 /]` (note the slash at the end).\
 "), _("\
-* Getting unit links:\n\
-    Full name sequence: '[link target=\"unit\"] ... [/link]'\n\
-    Abbreviation sequence: '[l tgt=\"unit\"] ... [/l]'\n\
-    Short cut: Shift-Control-Alt-Right-click on a unit on the map.\n\
-    The 'id' parameter must be set to the id of the unit you are pointing to. An optional 'name' parameter \
-can be set to bind the unit name in the case the destination users do not know this unit on their map.\n\
-    This expression can also be started and finished within the same pair of brackets, like \
-'[link target=\"unit\" id=109 /]' (note the slash at the end).\n\
-    Examples: '[l tgt=\"unit\" id=235]unit[/l]' will make the word 'unit' clickable and pointing to the unit \
-id 235. Alternately, '[l tgt=\"unit\" id=235 name=\"Warrior\" /]' will display the name of the unit id 235 if \
-known, else, the word 'Warrior'.\
+### Getting unit links:\n\
+* **Full name sequence:** `[link target=\"unit\"] ... [/link]`\n\
+* **Abbreviation sequence:** `[l tgt=\"unit\"] ... [/l]`\n\
+* **Short cut:** `Shift-Control-Alt-Right-click` on a unit on the map.\n\
+* **Examples:** `[l tgt=\"unit\" id=235]unit[/l]` will make the word 'unit' clickable and pointing to the unit \
+id 235. Alternately, `[l tgt=\"unit\" id=235 name=\"Warrior\" /]` will display the name of the unit id 235 if \
+known, else, the word 'Warrior'.\n\n\
+The `id` parameter must be set to the id of the unit you are pointing to. An optional `name` parameter \
+can be set to bind the unit name in the case the destination users do not know this unit on their map.\n\n\
+This expression can also be started and finished within the same pair of brackets, like \
+`[link target=\"unit\" id=109 /]` (note the slash at the end).\
 "), _("\
-Of course, the different escape sequences can be combined in the same sentence, like '[i][c fg=\"blue\"]this \
-[b]is [s]funny[c bg=\"green\"] [u]to[/i] test[/b] this[/s] [/c]new[/u] feature[/c]'.\
+Of course, the different escape sequences can be combined in the same sentence, like `[i][c fg=\"blue\"]this \
+[b]is [s]funny[c bg=\"green\"] [u]to[/i] test[/b] this[/s] [/c]new[/u] feature[/c]`.\
 ")
 
 [help_worklist_editor]
@@ -1680,550 +1714,626 @@ or, at your option, any later version).  In short, you may copy this \
 program (including source) freely, but see the full license text \
 below for full details.\
 "), "\
-                   GNU GENERAL PUBLIC LICENSE\n\
-                     Version 3, 29 June 2007\n\
-\n\
-Copyright © 2007 Free Software Foundation, Inc. <https://fsf.org/>\
-\n\
-Everyone is permitted to copy and distribute verbatim copies of this \
-license document, but changing it is not allowed.\
-\n\n\
-Preamble\
-\n\n\
-The GNU General Public License is a free, copyleft license for \
-software and other kinds of works.\
-\n\n\
-The licenses for most software and other practical works are designed \
-to take away your freedom to share and change the works. By contrast, \
-the GNU General Public License is intended to guarantee your freedom \
-to share and change all versions of a program--to make sure it remains \
-free software for all its users. We, the Free Software Foundation, use the \
-GNU General Public License for most of our software; it applies also to \
-any other work released this way by its authors. You can apply it to \
-your programs, too.\
-\n\n\
-When we speak of free software, we are referring to freedom, not price. \
-Our General Public Licenses are designed to make sure that you have the \
-freedom to distribute copies of free software (and charge for them if \
-you wish), that you receive source code or can get it if you want it, \
-that you can change the software or use pieces of it in new free programs, \
-and that you know you can do these things.\
-\n\n\
-To protect your rights, we need to prevent others from denying you these \
-rights or asking you to surrender the rights. Therefore, you have certain \
-responsibilities if you distribute copies of the software, or if you modify \
-it: responsibilities to respect the freedom of others.\
-\
-For example, if you distribute copies of such a program, whether gratis or \
-for a fee, you must pass on to the recipients the same freedoms that you received. \
-You must make sure that they, too, receive or can get the source code. And you \
-must show them these terms so they know their rights.\
-\n\n\
-Developers that use the GNU GPL protect your rights with two steps: \
-(1) assert copyright on the software, and (2) offer you this License \
-giving you legal permission to copy, distribute and/or modify it.\
-\n\n\
-For the developers' and authors' protection, the GPL clearly explains \
-that there is no warranty for this free software. For both users' and \
-authors' sake, the GPL requires that modified versions be marked as changed, \
-so that their problems will not be attributed erroneously to authors of \
-previous versions.\
-\n\n\
-Some devices are designed to deny users access to install or run modified \
-versions of the software inside them, although the manufacturer can do so. \
-This is fundamentally incompatible with the aim of protecting users' freedom \
-to change the software. The systematic pattern of such abuse occurs in the \
-area of products for individuals to use, which is precisely where it is \
-most unacceptable. Therefore, we have designed this version of the GPL \
-to prohibit the practice for those products. If such problems arise \
-substantially in other domains, we stand ready to extend this provision \
-to those domains in future versions of the GPL, as needed to protect the \
-freedom of users.\
-\n\n\
-Finally, every program is threatened constantly by software patents. States \
-should not allow patents to restrict development and use of software on \
-general-purpose computers, but in those that do, we wish to avoid the \
-special danger that patents applied to a free program could make it \
-effectively proprietary. To prevent this, the GPL assures that patents \
-cannot be used to render the program non-free.\
-\n\n\
-The precise terms and conditions for copying, distribution and modification follow.\
-\n\n\
-TERMS AND CONDITIONS\
-0. Definitions.\
-“This License” refers to version 3 of the GNU General Public License.\
-\n\n\
-“Copyright” also means copyright-like laws that apply to other kinds of \
-works, such as semiconductor masks.\
-\n\n\
-“The Program” refers to any copyrightable work licensed under this License. \
-Each licensee is addressed as “you”. “Licensees” and “recipients” may be \
-individuals or organizations.\
-\n\n\
-To “modify” a work means to copy from or adapt all or part of the work in a \
-fashion requiring copyright permission, other than the making of an exact copy. \
-The resulting work is called a “modified version” of the earlier work or a work \
-“based on” the earlier work.\
-\n\n\
-A “covered work” means either the unmodified Program or a work based on the Program.\
-\n\n\
-To “propagate” a work means to do anything with it that, without permission, \
-would make you directly or secondarily liable for infringement under applicable \
-copyright law, except executing it on a computer or modifying a private copy. \
-Propagation includes copying, distribution (with or without modification), \
-making available to the public, and in some countries other activities as well.\
-\n\n\
-To “convey” a work means any kind of propagation that enables other parties \
-to make or receive copies. Mere interaction with a user through a computer network, \
-with no transfer of a copy, is not conveying.\
-\n\n\
-An interactive user interface displays “Appropriate Legal Notices” to the extent \
-that it includes a convenient and prominently visible feature that (1) displays \
-an appropriate copyright notice, and (2) tells the user that there is no \
-warranty for the work (except to the extent that warranties are provided), \
-that licensees may convey the work under this License, and how to view a \
-copy of this License. If the interface presents a list of user commands \
-or options, such as a menu, a prominent item in the list meets this criterion.\
-\n\n\
-1. Source Code.\
-The “source code” for a work means the preferred form of the work for making \
-modifications to it. “Object code” means any non-source form of a work.\
-\n\n\
-A “Standard Interface” means an interface that either is an official standard \
-defined by a recognized standards body, or, in the case of interfaces specified \
-for a particular programming language, one that is widely used among developers \
-working in that language.\
-\n\n\
-The “System Libraries” of an executable work include anything, other than the \
-work as a whole, that (a) is included in the normal form of packaging a Major \
-Component, but which is not part of that Major Component, and (b) serves only \
-to enable use of the work with that Major Component, or to implement a Standard \
-Interface for which an implementation is available to the public in source code \
-form. A “Major Component”, in this context, means a major essential component \
-(kernel, window system, and so on) of the specific operating system (if any) \
-on which the executable work runs, or a compiler used to produce the work, \
-or an object code interpreter used to run it.\
-\n\n\
-The “Corresponding Source” for a work in object code form means all the \
-source code needed to generate, install, and (for an executable work) \
-run the object code and to modify the work, including scripts to control \
-those activities. However, it does not include the work's System Libraries, \
-or general-purpose tools or generally available free programs which are \
-used unmodified in performing those activities but which are not part of \
-the work. For example, Corresponding Source includes interface definition \
-files associated with source files for the work, and the source code for \
-shared libraries and dynamically linked subprograms that the work is \
-specifically designed to require, such as by intimate data communication \
-or control flow between those subprograms and other parts of the work.\
-\n\n\
-The Corresponding Source need not include anything that users can regenerate \
-automatically from other parts of the Corresponding Source.\
-\n\n\
-The Corresponding Source for a work in source code form is that same work.\
-\n\n\
-2. Basic Permissions.\
-All rights granted under this License are granted for the term of copyright \
-on the Program, and are irrevocable provided the stated conditions are met. \
-This License explicitly affirms your unlimited permission to run the unmodified \
-Program. The output from running a covered work is covered by this License only \
-if the output, given its content, constitutes a covered work. This License \
-acknowledges your rights of fair use or other equivalent, as provided by copyright law.\
-\n\n\
-You may make, run and propagate covered works that you do not convey, without \
-conditions so long as your license otherwise remains in force. You may convey \
-covered works to others for the sole purpose of having them make modifications \
-exclusively for you, or provide you with facilities for running those works, \
-provided that you comply with the terms of this License in conveying all material \
-for which you do not control copyright. Those thus making or running the covered \
-works for you must do so exclusively on your behalf, under your direction and control, \
-on terms that prohibit them from making any copies of your copyrighted material outside \
-their relationship with you.\
-\n\n\
-Conveying under any other circumstances is permitted solely under the conditions \
-stated below. Sublicensing is not allowed; section 10 makes it unnecessary.\
-\n\n\
-3. Protecting Users' Legal Rights From Anti-Circumvention Law.\
-No covered work shall be deemed part of an effective Technological measure under \
-any applicable law fulfilling obligations under article 11 of the WIPO copyright \
-treaty adopted on 20 December 1996, or similar laws prohibiting or restricting \
-circumvention of such measures.\
-\n\n\
-When you convey a covered work, you waive any legal power to forbid \
-circumvention of Technological measures to the extent such circumvention \
-is effected by exercising rights under this License with respect to the covered \
-work, and you disclaim any intention to limit operation or modification of the \
-work as a means of enforcing, against the work's users, your or third parties' \
-legal rights to forbid circumvention of Technological measures.\
-\n\n\
-4. Conveying Verbatim Copies.\
-You may convey verbatim copies of the Program's source code as you receive it, \
-in any medium, provided that you conspicuously and appropriately publish on each \
-copy an appropriate copyright notice; keep intact all notices stating that this \
-License and any non-permissive terms added in accord with section 7 apply to \
-the code; keep intact all notices of the absence of any warranty; and give \
-all recipients a copy of this License along with the Program.\
-\n\n\
-You may charge any price or no price for each copy that you convey, and \
-you may offer support or warranty protection for a fee.\
-\n\n\
-5. Conveying Modified Source Versions.\
-You may convey a work based on the Program, or the modifications to \
-produce it from the Program, in the form of source code under the terms \
-of section 4, provided that you also meet all of these conditions:\
-\n\n\
-a) The work must carry prominent notices stating that you modified it, \
-and giving a relevant date.\
-b) The work must carry prominent notices stating that it is released \
-under this License and any conditions added under section 7. This \
-requirement modifies the requirement in section 4 to “keep intact all notices”.\
-c) You must license the entire work, as a whole, under this License to \
-anyone who comes into possession of a copy. This License will therefore \
-apply, along with any applicable section 7 additional terms, to the whole \
-of the work, and all its parts, regardless of how they are packaged. This \
-License gives no permission to license the work in any other way, but it \
-does not invalidate such permission if you have separately received it.\
-d) If the work has interactive user interfaces, each must display \
-Appropriate Legal Notices; however, if the Program has interactive \
-interfaces that do not display Appropriate Legal Notices, your work \
-need not make them do so.\
-A compilation of a covered work with other separate and independent \
-works, which are not by their nature extensions of the covered work, \
-and which are not combined with it such as to form a larger program, \
-in or on a volume of a storage or distribution medium, is called an \
-“aggregate” if the compilation and its resulting copyright are not \
-used to limit the access or legal rights of the compilation's users \
-beyond what the individual works permit. Inclusion of a covered work \
-in an aggregate does not cause this License to apply to the other \
-parts of the aggregate.\
-\n\n\
-6. Conveying Non-Source Forms.\
-You may convey a covered work in object code form under the terms \
-of sections 4 and 5, provided that you also convey the machine-readable \
-Corresponding Source under the terms of this License, in one of these ways:\
-\n\n\
-a) Convey the object code in, or embodied in, a physical product \
-(including a physical distribution medium), accompanied by the \
-Corresponding Source fixed on a durable physical medium customarily \
-used for software interchange.\
-b) Convey the object code in, or embodied in, a physical product \
-(including a physical distribution medium), accompanied by a written \
-offer, valid for at least three years and valid for as long as you offer \
-spare parts or customer support for that product model, to give anyone \
-who possesses the object code either (1) a copy of the Corresponding \
-Source for all the software in the product that is covered by this License, \
-on a durable physical medium customarily used for software interchange, for \
-a price no more than your reasonable cost of physically performing this \
-conveying of source, or (2) access to copy the Corresponding Source from \
-a network server at no charge.\
-c) Convey individual copies of the object code with a copy of the written \
-offer to provide the Corresponding Source. This alternative is allowed \
-only occasionally and noncommercially, and only if you received the \
-object code with such an offer, in accord with subsection 6b.\
-d) Convey the object code by offering access from a designated place \
-(gratis or for a charge), and offer equivalent access to the Corresponding \
-Source in the same way through the same place at no further charge. You \
-need not require recipients to copy the Corresponding Source along with \
-the object code. If the place to copy the object code is a network server, \
-the Corresponding Source may be on a different server (operated by you or a \
-third party) that supports equivalent copying facilities, provided you maintain \
-clear directions next to the object code saying where to find the Corresponding \
-Source. Regardless of what server hosts the Corresponding Source, you remain \
-obligated to ensure that it is available for as long as needed to satisfy these \
-requirements.\
-e) Convey the object code using peer-to-peer transmission, provided you inform \
-other peers where the object code and Corresponding Source of the work are being \
-offered to the general public at no charge under subsection 6d.\
-A separable portion of the object code, whose source code is excluded from \
-the Corresponding Source as a System Library, need not be included in conveying \
-the object code work.\
-\n\n\
-A “User Product” is either (1) a “consumer product”, which means any tangible \
-personal property which is normally used for personal, family, or household \
-purposes, or (2) anything designed or sold for incorporation into a dwelling. \
-In determining whether a product is a consumer product, doubtful cases shall \
-be resolved in favor of coverage. For a particular product received by a \
-particular user, “normally used” refers to a typical or common use of that \
-class of product, regardless of the status of the particular user or of the \
-way in which the particular user actually uses, or expects or is expected \
-to use, the product. A product is a consumer product regardless of whether \
-the product has substantial commercial, industrial or non-consumer uses, \
-unless such uses represent the only significant mode of use of the product.\
-\n\n\
-“Installation Information” for a User Product means any methods, procedures, \
-authorization keys, or other information required to install and execute \
-modified versions of a covered work in that User Product from a modified \
-version of its Corresponding Source. The information must suffice to ensure \
-that the continued functioning of the modified object code is in no case \
-prevented or interfered with solely because modification has been made.\
-\n\n\
-If you convey an object code work under this section in, or with, or \
-specifically for use in, a User Product, and the conveying occurs as \
-part of a transaction in which the right of possession and use of the \
-User Product is transferred to the recipient in perpetuity or for a \
-fixed term (regardless of how the transaction is characterized), the \
-Corresponding Source conveyed under this section must be accompanied by \
-the Installation Information. But this requirement does not apply if \
-neither you nor any third party retains the ability to install modified \
-object code on the User Product (for example, the work has been \
-installed in ROM).\
-\n\n\
-The requirement to provide Installation Information does not include a \
-requirement to continue to provide support service, warranty, or updates \
-for a work that has been modified or installed by the recipient, or for \
-the User Product in which it has been modified or installed. Access to \
-a network may be denied when the modification itself materially and \
-adversely affects the operation of the network or violates the rules \
-and protocols for communication across the network.\
-\n\n\
-Corresponding Source conveyed, and Installation Information provided, \
-in accord with this section must be in a format that is publicly \
-documented (and with an implementation available to the public in source \
-code form), and must require no special password or key for unpacking, \
-reading or copying.\
-\n\n\
-7. Additional Terms.\
-“Additional permissions” are terms that supplement the terms of this \
-License by making exceptions from one or more of its conditions. \
-Additional permissions that are applicable to the entire Program shall \
-be treated as though they were included in this License, to the extent \
-that they are valid under applicable law. If additional permissions apply \
-only to part of the Program, that part may be used separately under those \
-permissions, but the entire Program remains governed by this License without \
-regard to the additional permissions.\
-\n\n\
-When you convey a copy of a covered work, you may at your option remove \
-any additional permissions from that copy, or from any part of it. \
-(Additional permissions may be written to require their own removal \
-in certain cases when you modify the work.) You may place additional \
-permissions on material, added by you to a covered work, for which you \
-have or can give appropriate copyright permission.\
-\n\n\
-Notwithstanding any other provision of this License, for material \
-you add to a covered work, you may (if authorized by the copyright \
-holders of that material) supplement the terms of this License with terms:\
-\n\n\
-a) Disclaiming warranty or limiting liability differently from the \
-terms of sections 15 and 16 of this License; or\
-b) Requiring preservation of specified reasonable legal notices \
-or author attributions in that material or in the Appropriate Legal \
-Notices displayed by works containing it; or\
-c) Prohibiting misrepresentation of the origin of that material, \
-or requiring that modified versions of such material be marked in \
-reasonable ways as different from the original version; or\
-d) Limiting the use for publicity purposes of names of licensors \
-or authors of the material; or\
-e) Declining to grant rights under trademark law for use of some \
-trade names, trademarks, or service marks; or\
-f) Requiring indemnification of licensors and authors of that \
-material by anyone who conveys the material (or modified versions \
-of it) with contractual assumptions of liability to the recipient, \
-for any liability that these contractual assumptions directly \
-impose on those licensors and authors.\
-All other non-permissive additional terms are considered “further \
-restrictions” within the meaning of section 10. If the Program as \
-you received it, or any part of it, contains a notice stating that \
-it is governed by this License along with a term that is a further \
-restriction, you may remove that term. If a license document contains \
-a further restriction but permits relicensing or conveying under this \
-License, you may add to a covered work material governed by the terms \
-of that license document, provided that the further restriction does \
-not survive such relicensing or conveying.\
-\n\n\
-If you add terms to a covered work in accord with this section, \
-you must place, in the relevant source files, a statement of the \
-additional terms that apply to those files, or a notice indicating \
-where to find the applicable terms.\
-\n\n\
-Additional terms, permissive or non-permissive, may be stated in \
-the form of a separately written license, or stated as exceptions; \
-the above requirements apply either way.\
-\n\n\
-8. Termination.\
-You may not propagate or modify a covered work except as expressly \
-provided under this License. Any attempt otherwise to propagate or \
-modify it is void, and will automatically terminate your rights \
-under this License (including any patent licenses granted under \
-the third paragraph of section 11).\
-\n\n\
-However, if you cease all violation of this License, then your \
-license from a particular copyright holder is reinstated (a) provisionally, \
-unless and until the copyright holder explicitly and finally terminates your \
-license, and (b) permanently, if the copyright holder fails to notify you of \
-the violation by some reasonable means prior to 60 days after the cessation.\
-\n\n\
-Moreover, your license from a particular copyright holder is reinstated \
-permanently if the copyright holder notifies you of the violation by \
-some reasonable means, this is the first time you have received notice \
-of violation of this License (for any work) from that copyright holder, \
-and you cure the violation prior to 30 days after your receipt of the notice.\
-\n\n\
-Termination of your rights under this section does not terminate the \
-licenses of parties who have received copies or rights from you under \
-this License. If your rights have been terminated and not permanently \
-reinstated, you do not qualify to receive new licenses for the same material \
-under section 10.\
-\n\n\
-9. Acceptance Not Required for Having Copies.\
-You are not required to accept this License in order to receive or run a \
-copy of the Program. Ancillary propagation of a covered work occurring \
-solely as a consequence of using peer-to-peer transmission to receive a \
-copy likewise does not require acceptance. However, nothing other than \
-this License grants you permission to propagate or modify any covered \
-work. These actions infringe copyright if you do not accept this License. \
-Therefore, by modifying or propagating a covered work, you indicate your \
-acceptance of this License to do so.\
-\n\n\
-10. Automatic Licensing of Downstream Recipients.\
-Each time you convey a covered work, the recipient automatically \
-receives a license from the original licensors, to run, modify and \
-propagate that work, subject to this License. You are not responsible \
-for enforcing compliance by third parties with this License.\
-\n\n\
-An “entity transaction” is a transaction transferring control of an \
-organization, or substantially all assets of one, or subdividing an organization, \
-or merging organizations. If propagation of a covered work results from an \
-entity transaction, each party to that transaction who receives a copy of \
-the work also receives whatever licenses to the work the party's predecessor \
-in interest had or could give under the previous paragraph, plus a right to \
-possession of the Corresponding Source of the work from the predecessor in \
-interest, if the predecessor has it or can get it with reasonable efforts.\
-\n\n\
-You may not impose any further restrictions on the exercise of the rights \
-granted or affirmed under this License. For example, you may not impose a \
-license fee, royalty, or other charge for exercise of rights granted under \
-this License, and you may not initiate litigation (including a cross-claim \
-or counterclaim in a lawsuit) alleging that any patent claim is infringed \
-by making, using, selling, offering for sale, or importing the Program or \
-any portion of it.\
-\n\n\
-11. Patents.\
-A “contributor” is a copyright holder who authorizes use under this License \
-of the Program or a work on which the Program is based. The work thus licensed \
-is called the contributor's “contributor version”.\
-\n\n\
-A contributor's “essential patent claims” are all patent claims owned or \
-controlled by the contributor, whether already acquired or hereafter acquired, \
-that would be infringed by some manner, permitted by this License, of making, \
-using, or selling its contributor version, but do not include claims that would \
-be infringed only as a consequence of further modification of the contributor \
-version. For purposes of this definition, “control” includes the right to grant \
-patent sublicenses in a manner consistent with the requirements of this License.\
-\n\n\
-Each contributor grants you a non-exclusive, worldwide, royalty-free patent \
-license under the contributor's essential patent claims, to make, use, sell, \
-offer for sale, import and otherwise run, modify and propagate the contents \
-of its contributor version.\
-\n\n\
-In the following three paragraphs, a “patent license” is any express agreement \
-or commitment, however denominated, not to enforce a patent (such as an express \
-permission to practice a patent or covenant not to sue for patent infringement). \
-To “grant” such a patent license to a party means to make such an agreement \
-or commitment not to enforce a patent against the party.\
-\n\n\
-If you convey a covered work, knowingly relying on a patent license, and the \
-Corresponding Source of the work is not available for anyone to copy, free of \
-charge and under the terms of this License, through a publicly available network \
-server or other readily accessible means, then you must either (1) cause the \
-Corresponding Source to be so available, or (2) arrange to deprive yourself \
-of the benefit of the patent license for this particular work, or (3) arrange, \
-in a manner consistent with the requirements of this License, to extend the \
-patent license to downstream recipients. “Knowingly relying” means you have \
-actual knowledge that, but for the patent license, your conveying the covered \
-work in a country, or your recipient's use of the covered work in a country, \
-would infringe one or more identifiable patents in that country that you have \
-reason to believe are valid.\
-\n\n\
-If, pursuant to or in connection with a single transaction or arrangement, \
-you convey, or propagate by procuring conveyance of, a covered work, and grant \
-a patent license to some of the parties receiving the covered work authorizing \
-them to use, propagate, modify or convey a specific copy of the covered work, \
-then the patent license you grant is automatically extended to all recipients \
-of the covered work and works based on it.\
-\n\n\
-A patent license is “discriminatory” if it does not include within the scope \
-of its coverage, prohibits the exercise of, or is conditioned on the non-exercise \
-of one or more of the rights that are specifically granted under this License. \
-You may not convey a covered work if you are a party to an arrangement with a \
-third party that is in the business of distributing software, under which you \
-make payment to the third party based on the extent of your activity of conveying \
-the work, and under which the third party grants, to any of the parties who would \
-receive the covered work from you, a discriminatory patent license (a) in connection \
-with copies of the covered work conveyed by you (or copies made from those copies), \
-or (b) primarily for and in connection with specific products or compilations that \
-contain the covered work, unless you entered into that arrangement, or that patent \
-license was granted, prior to 28 March 2007.\
-\n\n\
-Nothing in this License shall be construed as excluding or limiting any implied \
-license or other defenses to infringement that may otherwise be available to \
-you under applicable patent law.\
-\n\n\
-12. No Surrender of Others' Freedom.\
-If conditions are imposed on you (whether by court order, agreement or otherwise) \
-that contradict the conditions of this License, they do not excuse you from the \
-conditions of this License. If you cannot convey a covered work so as to satisfy \
-simultaneously your obligations under this License and any other pertinent obligations, \
-then as a consequence you may not convey it at all. For example, if you agree to \
-terms that obligate you to collect a royalty for further conveying from those to \
-whom you convey the Program, the only way you could satisfy both those terms and \
-this License would be to refrain entirely from conveying the Program.\
-\n\n\
-13. Use with the GNU Affero General Public License.\
-Notwithstanding any other provision of this License, you have permission to link \
-or combine any covered work with a work licensed under version 3 of the GNU Affero \
-General Public License into a single combined work, and to convey the resulting work. \
-The terms of this License will continue to apply to the part which is the covered \
-work, but the special requirements of the GNU Affero General Public License, section \
-13, concerning interaction through a network will apply to the combination as such.\
-\n\n\
-14. Revised Versions of this License.\
-The Free Software Foundation may publish revised and/or new versions of the GNU \
-General Public License from time to time. Such new versions will be similar in \
-spirit to the present version, but may differ in detail to address new problems \
-or concerns.\
-\n\n\
-Each version is given a distinguishing version number. If the Program specifies \
-that a certain numbered version of the GNU General Public License “or any later \
-version” applies to it, you have the option of following the terms and conditions \
-either of that numbered version or of any later version published by the Free \
-Software Foundation. If the Program does not specify a version number of the GNU \
-General Public License, you may choose any version ever published by the Free \
-Software Foundation.\
-\n\n\
-If the Program specifies that a proxy can decide which future versions of the GNU \
-General Public License can be used, that proxy's public statement of acceptance of \
-a version permanently authorizes you to choose that version for the Program.\
-\n\n\
-Later license versions may give you additional or different permissions. However, \
-no additional obligations are imposed on any author or copyright holder as a result \
-of your choosing to follow a later version.\
-\n\n\
-15. Disclaimer of Warranty.\
-THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. \
-EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES \
-PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR \
-IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY \
-AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND \
-PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU \
-ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.\
-\n\n\
-16. Limitation of Liability.\
-IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL \
-ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM \
-AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, \
-INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE \
-PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE \
-OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE \
-WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE \
-POSSIBILITY OF SUCH DAMAGES.\
-\n\n\
-17. Interpretation of Sections 15 and 16.\
-If the disclaimer of warranty and limitation of liability provided above \
-cannot be given local legal effect according to their terms, reviewing courts \
-shall apply local law that most closely approximates an absolute waiver of all \
-civil liability in connection with the Program, unless a warranty or assumption \
-of liability accompanies a copy of the Program in return for a fee.\
-\n\n\
-END OF TERMS AND CONDITIONS\n"
+# GNU GENERAL PUBLIC LICENSE\n\
+\n\n\
+Version 3, 29 June 2007\n\
+\n\n\
+Copyright (C) 2007 Free Software Foundation, Inc.\n\
+<https://fsf.org/>\n\
+\n\n\
+Everyone is permitted to copy and distribute verbatim copies of this\n\
+license document, but changing it is not allowed.\n\
+\n\n\
+## Preamble\n\
+\n\n\
+The GNU General Public License is a free, copyleft license for\n\
+software and other kinds of works.\n\
+\n\n\
+The licenses for most software and other practical works are designed\n\
+to take away your freedom to share and change the works. By contrast,\n\
+the GNU General Public License is intended to guarantee your freedom\n\
+to share and change all versions of a program--to make sure it remains\n\
+free software for all its users. We, the Free Software Foundation, use\n\
+the GNU General Public License for most of our software; it applies\n\
+also to any other work released this way by its authors. You can apply\n\
+it to your programs, too.\n\
+\n\n\
+When we speak of free software, we are referring to freedom, not\n\
+price. Our General Public Licenses are designed to make sure that you\n\
+have the freedom to distribute copies of free software (and charge for\n\
+them if you wish), that you receive source code or can get it if you\n\
+want it, that you can change the software or use pieces of it in new\n\
+free programs, and that you know you can do these things.\n\
+\n\n\
+To protect your rights, we need to prevent others from denying you\n\
+these rights or asking you to surrender the rights. Therefore, you\n\
+have certain responsibilities if you distribute copies of the\n\
+software, or if you modify it: responsibilities to respect the freedom\n\
+of others.\n\
+\n\n\
+For example, if you distribute copies of such a program, whether\n\
+gratis or for a fee, you must pass on to the recipients the same\n\
+freedoms that you received. You must make sure that they, too, receive\n\
+or can get the source code. And you must show them these terms so they\n\
+know their rights.\n\
+\n\n\
+Developers that use the GNU GPL protect your rights with two steps:\n\
+(1) assert copyright on the software, and (2) offer you this License\n\
+giving you legal permission to copy, distribute and/or modify it.\n\
+\n\n\
+For the developers' and authors' protection, the GPL clearly explains\n\
+that there is no warranty for this free software. For both users' and\n\
+authors' sake, the GPL requires that modified versions be marked as\n\
+changed, so that their problems will not be attributed erroneously to\n\
+authors of previous versions.\n\
+\n\n\
+Some devices are designed to deny users access to install or run\n\
+modified versions of the software inside them, although the\n\
+manufacturer can do so. This is fundamentally incompatible with the\n\
+aim of protecting users' freedom to change the software. The\n\
+systematic pattern of such abuse occurs in the area of products for\n\
+individuals to use, which is precisely where it is most unacceptable.\n\
+Therefore, we have designed this version of the GPL to prohibit the\n\
+practice for those products. If such problems arise substantially in\n\
+other domains, we stand ready to extend this provision to those\n\
+domains in future versions of the GPL, as needed to protect the\n\
+freedom of users.\n\
+\n\n\
+Finally, every program is threatened constantly by software patents.\n\
+States should not allow patents to restrict development and use of\n\
+software on general-purpose computers, but in those that do, we wish\n\
+to avoid the special danger that patents applied to a free program\n\
+could make it effectively proprietary. To prevent this, the GPL\n\
+assures that patents cannot be used to render the program non-free.\n\
+\n\n\
+The precise terms and conditions for copying, distribution and\n\
+modification follow.\n\
+\n\n\
+## TERMS AND CONDITIONS\n\
+\n\n\
+### 0. Definitions.\n\
+\n\n\
+\"This License\" refers to version 3 of the GNU General Public License.\n\
+\n\n\
+\"Copyright\" also means copyright-like laws that apply to other kinds\n\
+of works, such as semiconductor masks.\n\
+\n\n\
+\"The Program\" refers to any copyrightable work licensed under this\n\
+License. Each licensee is addressed as \"you\". \"Licensees\" and\n\
+\"recipients\" may be individuals or organizations.\n\
+\n\n\
+To \"modify\" a work means to copy from or adapt all or part of the work\n\
+in a fashion requiring copyright permission, other than the making of\n\
+an exact copy. The resulting work is called a \"modified version\" of\n\
+the earlier work or a work \"based on\" the earlier work.\n\
+\n\n\
+A \"covered work\" means either the unmodified Program or a work based\n\
+on the Program.\n\
+\n\n\
+To \"propagate\" a work means to do anything with it that, without\n\
+permission, would make you directly or secondarily liable for\n\
+infringement under applicable copyright law, except executing it on a\n\
+computer or modifying a private copy. Propagation includes copying,\n\
+distribution (with or without modification), making available to the\n\
+public, and in some countries other activities as well.\n\
+\n\n\
+To \"convey\" a work means any kind of propagation that enables other\n\
+parties to make or receive copies. Mere interaction with a user\n\
+through a computer network, with no transfer of a copy, is not\n\
+conveying.\n\
+\n\n\
+An interactive user interface displays \"Appropriate Legal Notices\" to\n\
+the extent that it includes a convenient and prominently visible\n\
+feature that (1) displays an appropriate copyright notice, and (2)\n\
+tells the user that there is no warranty for the work (except to the\n\
+extent that warranties are provided), that licensees may convey the\n\
+work under this License, and how to view a copy of this License. If\n\
+the interface presents a list of user commands or options, such as a\n\
+menu, a prominent item in the list meets this criterion.\n\
+\n\n\
+### 1. Source Code.\n\
+\n\n\
+The \"source code\" for a work means the preferred form of the work for\n\
+making modifications to it. \"Object code\" means any non-source form of\n\
+a work.\n\
+\n\n\
+A \"Standard Interface\" means an interface that either is an official\n\
+standard defined by a recognized standards body, or, in the case of\n\
+interfaces specified for a particular programming language, one that\n\
+is widely used among developers working in that language.\n\
+\n\n\
+The \"System Libraries\" of an executable work include anything, other\n\
+than the work as a whole, that (a) is included in the normal form of\n\
+packaging a Major Component, but which is not part of that Major\n\
+Component, and (b) serves only to enable use of the work with that\n\
+Major Component, or to implement a Standard Interface for which an\n\
+implementation is available to the public in source code form. A\n\
+\"Major Component\", in this context, means a major essential component\n\
+(kernel, window system, and so on) of the specific operating system\n\
+(if any) on which the executable work runs, or a compiler used to\n\
+produce the work, or an object code interpreter used to run it.\n\
+\n\n\
+The \"Corresponding Source\" for a work in object code form means all\n\
+the source code needed to generate, install, and (for an executable\n\
+work) run the object code and to modify the work, including scripts to\n\
+control those activities. However, it does not include the work's\n\
+System Libraries, or general-purpose tools or generally available free\n\
+programs which are used unmodified in performing those activities but\n\
+which are not part of the work. For example, Corresponding Source\n\
+includes interface definition files associated with source files for\n\
+the work, and the source code for shared libraries and dynamically\n\
+linked subprograms that the work is specifically designed to require,\n\
+such as by intimate data communication or control flow between those\n\
+subprograms and other parts of the work.\n\
+\n\n\
+The Corresponding Source need not include anything that users can\n\
+regenerate automatically from other parts of the Corresponding Source.\n\
+\n\n\
+The Corresponding Source for a work in source code form is that same\n\
+work.\n\
+\n\n\
+### 2. Basic Permissions.\n\
+\n\n\
+All rights granted under this License are granted for the term of\n\
+copyright on the Program, and are irrevocable provided the stated\n\
+conditions are met. This License explicitly affirms your unlimited\n\
+permission to run the unmodified Program. The output from running a\n\
+covered work is covered by this License only if the output, given its\n\
+content, constitutes a covered work. This License acknowledges your\n\
+rights of fair use or other equivalent, as provided by copyright law.\n\
+\n\n\
+You may make, run and propagate covered works that you do not convey,\n\
+without conditions so long as your license otherwise remains in force.\n\
+You may convey covered works to others for the sole purpose of having\n\
+them make modifications exclusively for you, or provide you with\n\
+facilities for running those works, provided that you comply with the\n\
+terms of this License in conveying all material for which you do not\n\
+control copyright. Those thus making or running the covered works for\n\
+you must do so exclusively on your behalf, under your direction and\n\
+control, on terms that prohibit them from making any copies of your\n\
+copyrighted material outside their relationship with you.\n\
+\n\n\
+Conveying under any other circumstances is permitted solely under the\n\
+conditions stated below. Sublicensing is not allowed; section 10 makes\n\
+it unnecessary.\n\
+\n\n\
+### 3. Protecting Users' Legal Rights From Anti-Circumvention Law.\n\
+\n\n\
+No covered work shall be deemed part of an effective technological\n\
+measure under any applicable law fulfilling obligations under article\n\
+11 of the WIPO copyright treaty adopted on 20 December 1996, or\n\
+similar laws prohibiting or restricting circumvention of such\n\
+measures.\n\
+\n\n\
+When you convey a covered work, you waive any legal power to forbid\n\
+circumvention of technological measures to the extent such\n\
+circumvention is effected by exercising rights under this License with\n\
+respect to the covered work, and you disclaim any intention to limit\n\
+operation or modification of the work as a means of enforcing, against\n\
+the work's users, your or third parties' legal rights to forbid\n\
+circumvention of technological measures.\n\
+\n\n\
+### 4. Conveying Verbatim Copies.\n\
+\n\n\
+You may convey verbatim copies of the Program's source code as you\n\
+receive it, in any medium, provided that you conspicuously and\n\
+appropriately publish on each copy an appropriate copyright notice;\n\
+keep intact all notices stating that this License and any\n\
+non-permissive terms added in accord with section 7 apply to the code;\n\
+keep intact all notices of the absence of any warranty; and give all\n\
+recipients a copy of this License along with the Program.\n\
+\n\n\
+You may charge any price or no price for each copy that you convey,\n\
+and you may offer support or warranty protection for a fee.\n\
+\n\n\
+### 5. Conveying Modified Source Versions.\n\
+\n\n\
+You may convey a work based on the Program, or the modifications to\n\
+produce it from the Program, in the form of source code under the\n\
+terms of section 4, provided that you also meet all of these\n\
+conditions:\n\
+\n\n\
+-   a) The work must carry prominent notices stating that you modified\n\
+    it, and giving a relevant date.\n\
+-   b) The work must carry prominent notices stating that it is\n\
+    released under this License and any conditions added under\n\
+    section 7. This requirement modifies the requirement in section 4\n\
+    to \"keep intact all notices\".\n\
+-   c) You must license the entire work, as a whole, under this\n\
+    License to anyone who comes into possession of a copy. This\n\
+    License will therefore apply, along with any applicable section 7\n\
+    additional terms, to the whole of the work, and all its parts,\n\
+    regardless of how they are packaged. This License gives no\n\
+    permission to license the work in any other way, but it does not\n\
+    invalidate such permission if you have separately received it.\n\
+-   d) If the work has interactive user interfaces, each must display\n\
+    Appropriate Legal Notices; however, if the Program has interactive\n\
+    interfaces that do not display Appropriate Legal Notices, your\n\
+    work need not make them do so.\n\
+\n\n\
+A compilation of a covered work with other separate and independent\n\
+works, which are not by their nature extensions of the covered work,\n\
+and which are not combined with it such as to form a larger program,\n\
+in or on a volume of a storage or distribution medium, is called an\n\
+\"aggregate\" if the compilation and its resulting copyright are not\n\
+used to limit the access or legal rights of the compilation's users\n\
+beyond what the individual works permit. Inclusion of a covered work\n\
+in an aggregate does not cause this License to apply to the other\n\
+parts of the aggregate.\n\
+\n\n\
+### 6. Conveying Non-Source Forms.\n\
+\n\n\
+You may convey a covered work in object code form under the terms of\n\
+sections 4 and 5, provided that you also convey the machine-readable\n\
+Corresponding Source under the terms of this License, in one of these\n\
+ways:\n\
+\n\n\
+-   a) Convey the object code in, or embodied in, a physical product\n\
+    (including a physical distribution medium), accompanied by the\n\
+    Corresponding Source fixed on a durable physical medium\n\
+    customarily used for software interchange.\n\
+-   b) Convey the object code in, or embodied in, a physical product\n\
+    (including a physical distribution medium), accompanied by a\n\
+    written offer, valid for at least three years and valid for as\n\
+    long as you offer spare parts or customer support for that product\n\
+    model, to give anyone who possesses the object code either (1) a\n\
+    copy of the Corresponding Source for all the software in the\n\
+    product that is covered by this License, on a durable physical\n\
+    medium customarily used for software interchange, for a price no\n\
+    more than your reasonable cost of physically performing this\n\
+    conveying of source, or (2) access to copy the Corresponding\n\
+    Source from a network server at no charge.\n\
+-   c) Convey individual copies of the object code with a copy of the\n\
+    written offer to provide the Corresponding Source. This\n\
+    alternative is allowed only occasionally and noncommercially, and\n\
+    only if you received the object code with such an offer, in accord\n\
+    with subsection 6b.\n\
+-   d) Convey the object code by offering access from a designated\n\
+    place (gratis or for a charge), and offer equivalent access to the\n\
+    Corresponding Source in the same way through the same place at no\n\
+    further charge. You need not require recipients to copy the\n\
+    Corresponding Source along with the object code. If the place to\n\
+    copy the object code is a network server, the Corresponding Source\n\
+    may be on a different server (operated by you or a third party)\n\
+    that supports equivalent copying facilities, provided you maintain\n\
+    clear directions next to the object code saying where to find the\n\
+    Corresponding Source. Regardless of what server hosts the\n\
+    Corresponding Source, you remain obligated to ensure that it is\n\
+    available for as long as needed to satisfy these requirements.\n\
+-   e) Convey the object code using peer-to-peer transmission,\n\
+    provided you inform other peers where the object code and\n\
+    Corresponding Source of the work are being offered to the general\n\
+    public at no charge under subsection 6d.\n\
+\n\n\
+A separable portion of the object code, whose source code is excluded\n\
+from the Corresponding Source as a System Library, need not be\n\
+included in conveying the object code work.\n\
+\n\n\
+A \"User Product\" is either (1) a \"consumer product\", which means any\n\
+tangible personal property which is normally used for personal,\n\
+family, or household purposes, or (2) anything designed or sold for\n\
+incorporation into a dwelling. In determining whether a product is a\n\
+consumer product, doubtful cases shall be resolved in favor of\n\
+coverage. For a particular product received by a particular user,\n\
+\"normally used\" refers to a typical or common use of that class of\n\
+product, regardless of the status of the particular user or of the way\n\
+in which the particular user actually uses, or expects or is expected\n\
+to use, the product. A product is a consumer product regardless of\n\
+whether the product has substantial commercial, industrial or\n\
+non-consumer uses, unless such uses represent the only significant\n\
+mode of use of the product.\n\
+\n\n\
+\"Installation Information\" for a User Product means any methods,\n\
+procedures, authorization keys, or other information required to\n\
+install and execute modified versions of a covered work in that User\n\
+Product from a modified version of its Corresponding Source. The\n\
+information must suffice to ensure that the continued functioning of\n\
+the modified object code is in no case prevented or interfered with\n\
+solely because modification has been made.\n\
+\n\n\
+If you convey an object code work under this section in, or with, or\n\
+specifically for use in, a User Product, and the conveying occurs as\n\
+part of a transaction in which the right of possession and use of the\n\
+User Product is transferred to the recipient in perpetuity or for a\n\
+fixed term (regardless of how the transaction is characterized), the\n\
+Corresponding Source conveyed under this section must be accompanied\n\
+by the Installation Information. But this requirement does not apply\n\
+if neither you nor any third party retains the ability to install\n\
+modified object code on the User Product (for example, the work has\n\
+been installed in ROM).\n\
+\n\n\
+The requirement to provide Installation Information does not include a\n\
+requirement to continue to provide support service, warranty, or\n\
+updates for a work that has been modified or installed by the\n\
+recipient, or for the User Product in which it has been modified or\n\
+installed. Access to a network may be denied when the modification\n\
+itself materially and adversely affects the operation of the network\n\
+or violates the rules and protocols for communication across the\n\
+network.\n\
+\n\n\
+Corresponding Source conveyed, and Installation Information provided,\n\
+in accord with this section must be in a format that is publicly\n\
+documented (and with an implementation available to the public in\n\
+source code form), and must require no special password or key for\n\
+unpacking, reading or copying.\n\
+\n\n\
+### 7. Additional Terms.\n\
+\n\n\
+\"Additional permissions\" are terms that supplement the terms of this\n\
+License by making exceptions from one or more of its conditions.\n\
+Additional permissions that are applicable to the entire Program shall\n\
+be treated as though they were included in this License, to the extent\n\
+that they are valid under applicable law. If additional permissions\n\
+apply only to part of the Program, that part may be used separately\n\
+under those permissions, but the entire Program remains governed by\n\
+this License without regard to the additional permissions.\n\
+\n\n\
+When you convey a copy of a covered work, you may at your option\n\
+remove any additional permissions from that copy, or from any part of\n\
+it. (Additional permissions may be written to require their own\n\
+removal in certain cases when you modify the work.) You may place\n\
+additional permissions on material, added by you to a covered work,\n\
+for which you have or can give appropriate copyright permission.\n\
+\n\n\
+Notwithstanding any other provision of this License, for material you\n\
+add to a covered work, you may (if authorized by the copyright holders\n\
+of that material) supplement the terms of this License with terms:\n\
+\n\n\
+-   a) Disclaiming warranty or limiting liability differently from the\n\
+    terms of sections 15 and 16 of this License; or\n\
+-   b) Requiring preservation of specified reasonable legal notices or\n\
+    author attributions in that material or in the Appropriate Legal\n\
+    Notices displayed by works containing it; or\n\
+-   c) Prohibiting misrepresentation of the origin of that material,\n\
+    or requiring that modified versions of such material be marked in\n\
+    reasonable ways as different from the original version; or\n\
+-   d) Limiting the use for publicity purposes of names of licensors\n\
+    or authors of the material; or\n\
+-   e) Declining to grant rights under trademark law for use of some\n\
+    trade names, trademarks, or service marks; or\n\
+-   f) Requiring indemnification of licensors and authors of that\n\
+    material by anyone who conveys the material (or modified versions\n\
+    of it) with contractual assumptions of liability to the recipient,\n\
+    for any liability that these contractual assumptions directly\n\
+    impose on those licensors and authors.\n\
+\n\n\
+All other non-permissive additional terms are considered \"further\n\
+restrictions\" within the meaning of section 10. If the Program as you\n\
+received it, or any part of it, contains a notice stating that it is\n\
+governed by this License along with a term that is a further\n\
+restriction, you may remove that term. If a license document contains\n\
+a further restriction but permits relicensing or conveying under this\n\
+License, you may add to a covered work material governed by the terms\n\
+of that license document, provided that the further restriction does\n\
+not survive such relicensing or conveying.\n\
+\n\n\
+If you add terms to a covered work in accord with this section, you\n\
+must place, in the relevant source files, a statement of the\n\
+additional terms that apply to those files, or a notice indicating\n\
+where to find the applicable terms.\n\
+\n\n\
+Additional terms, permissive or non-permissive, may be stated in the\n\
+form of a separately written license, or stated as exceptions; the\n\
+above requirements apply either way.\n\
+\n\n\
+### 8. Termination.\n\
+\n\n\
+You may not propagate or modify a covered work except as expressly\n\
+provided under this License. Any attempt otherwise to propagate or\n\
+modify it is void, and will automatically terminate your rights under\n\
+this License (including any patent licenses granted under the third\n\
+paragraph of section 11).\n\
+\n\n\
+However, if you cease all violation of this License, then your license\n\
+from a particular copyright holder is reinstated (a) provisionally,\n\
+unless and until the copyright holder explicitly and finally\n\
+terminates your license, and (b) permanently, if the copyright holder\n\
+fails to notify you of the violation by some reasonable means prior to\n\
+60 days after the cessation.\n\
+\n\n\
+Moreover, your license from a particular copyright holder is\n\
+reinstated permanently if the copyright holder notifies you of the\n\
+violation by some reasonable means, this is the first time you have\n\
+received notice of violation of this License (for any work) from that\n\
+copyright holder, and you cure the violation prior to 30 days after\n\
+your receipt of the notice.\n\
+\n\n\
+Termination of your rights under this section does not terminate the\n\
+licenses of parties who have received copies or rights from you under\n\
+this License. If your rights have been terminated and not permanently\n\
+reinstated, you do not qualify to receive new licenses for the same\n\
+material under section 10.\n\
+\n\n\
+### 9. Acceptance Not Required for Having Copies.\n\
+\n\n\
+You are not required to accept this License in order to receive or run\n\
+a copy of the Program. Ancillary propagation of a covered work\n\
+occurring solely as a consequence of using peer-to-peer transmission\n\
+to receive a copy likewise does not require acceptance. However,\n\
+nothing other than this License grants you permission to propagate or\n\
+modify any covered work. These actions infringe copyright if you do\n\
+not accept this License. Therefore, by modifying or propagating a\n\
+covered work, you indicate your acceptance of this License to do so.\n\
+\n\n\
+### 10. Automatic Licensing of Downstream Recipients.\n\
+\n\n\
+Each time you convey a covered work, the recipient automatically\n\
+receives a license from the original licensors, to run, modify and\n\
+propagate that work, subject to this License. You are not responsible\n\
+for enforcing compliance by third parties with this License.\n\
+\n\n\
+An \"entity transaction\" is a transaction transferring control of an\n\
+organization, or substantially all assets of one, or subdividing an\n\
+organization, or merging organizations. If propagation of a covered\n\
+work results from an entity transaction, each party to that\n\
+transaction who receives a copy of the work also receives whatever\n\
+licenses to the work the party's predecessor in interest had or could\n\
+give under the previous paragraph, plus a right to possession of the\n\
+Corresponding Source of the work from the predecessor in interest, if\n\
+the predecessor has it or can get it with reasonable efforts.\n\
+\n\n\
+You may not impose any further restrictions on the exercise of the\n\
+rights granted or affirmed under this License. For example, you may\n\
+not impose a license fee, royalty, or other charge for exercise of\n\
+rights granted under this License, and you may not initiate litigation\n\
+(including a cross-claim or counterclaim in a lawsuit) alleging that\n\
+any patent claim is infringed by making, using, selling, offering for\n\
+sale, or importing the Program or any portion of it.\n\
+\n\n\
+### 11. Patents.\n\
+\n\n\
+A \"contributor\" is a copyright holder who authorizes use under this\n\
+License of the Program or a work on which the Program is based. The\n\
+work thus licensed is called the contributor's \"contributor version\".\n\
+\n\n\
+A contributor's \"essential patent claims\" are all patent claims owned\n\
+or controlled by the contributor, whether already acquired or\n\
+hereafter acquired, that would be infringed by some manner, permitted\n\
+by this License, of making, using, or selling its contributor version,\n\
+but do not include claims that would be infringed only as a\n\
+consequence of further modification of the contributor version. For\n\
+purposes of this definition, \"control\" includes the right to grant\n\
+patent sublicenses in a manner consistent with the requirements of\n\
+this License.\n\
+\n\n\
+Each contributor grants you a non-exclusive, worldwide, royalty-free\n\
+patent license under the contributor's essential patent claims, to\n\
+make, use, sell, offer for sale, import and otherwise run, modify and\n\
+propagate the contents of its contributor version.\n\
+\n\n\
+In the following three paragraphs, a \"patent license\" is any express\n\
+agreement or commitment, however denominated, not to enforce a patent\n\
+(such as an express permission to practice a patent or covenant not to\n\
+sue for patent infringement). To \"grant\" such a patent license to a\n\
+party means to make such an agreement or commitment not to enforce a\n\
+patent against the party.\n\
+\n\n\
+If you convey a covered work, knowingly relying on a patent license,\n\
+and the Corresponding Source of the work is not available for anyone\n\
+to copy, free of charge and under the terms of this License, through a\n\
+publicly available network server or other readily accessible means,\n\
+then you must either (1) cause the Corresponding Source to be so\n\
+available, or (2) arrange to deprive yourself of the benefit of the\n\
+patent license for this particular work, or (3) arrange, in a manner\n\
+consistent with the requirements of this License, to extend the patent\n\
+license to downstream recipients. \"Knowingly relying\" means you have\n\
+actual knowledge that, but for the patent license, your conveying the\n\
+covered work in a country, or your recipient's use of the covered work\n\
+in a country, would infringe one or more identifiable patents in that\n\
+country that you have reason to believe are valid.\n\
+\n\n\
+If, pursuant to or in connection with a single transaction or\n\
+arrangement, you convey, or propagate by procuring conveyance of, a\n\
+covered work, and grant a patent license to some of the parties\n\
+receiving the covered work authorizing them to use, propagate, modify\n\
+or convey a specific copy of the covered work, then the patent license\n\
+you grant is automatically extended to all recipients of the covered\n\
+work and works based on it.\n\
+\n\n\
+A patent license is \"discriminatory\" if it does not include within the\n\
+scope of its coverage, prohibits the exercise of, or is conditioned on\n\
+the non-exercise of one or more of the rights that are specifically\n\
+granted under this License. You may not convey a covered work if you\n\
+are a party to an arrangement with a third party that is in the\n\
+business of distributing software, under which you make payment to the\n\
+third party based on the extent of your activity of conveying the\n\
+work, and under which the third party grants, to any of the parties\n\
+who would receive the covered work from you, a discriminatory patent\n\
+license (a) in connection with copies of the covered work conveyed by\n\
+you (or copies made from those copies), or (b) primarily for and in\n\
+connection with specific products or compilations that contain the\n\
+covered work, unless you entered into that arrangement, or that patent\n\
+license was granted, prior to 28 March 2007.\n\
+\n\n\
+Nothing in this License shall be construed as excluding or limiting\n\
+any implied license or other defenses to infringement that may\n\
+otherwise be available to you under applicable patent law.\n\
+\n\n\
+### 12. No Surrender of Others' Freedom.\n\
+\n\n\
+If conditions are imposed on you (whether by court order, agreement or\n\
+otherwise) that contradict the conditions of this License, they do not\n\
+excuse you from the conditions of this License. If you cannot convey a\n\
+covered work so as to satisfy simultaneously your obligations under\n\
+this License and any other pertinent obligations, then as a\n\
+consequence you may not convey it at all. For example, if you agree to\n\
+terms that obligate you to collect a royalty for further conveying\n\
+from those to whom you convey the Program, the only way you could\n\
+satisfy both those terms and this License would be to refrain entirely\n\
+from conveying the Program.\n\
+\n\n\
+### 13. Use with the GNU Affero General Public License.\n\
+\n\n\
+Notwithstanding any other provision of this License, you have\n\
+permission to link or combine any covered work with a work licensed\n\
+under version 3 of the GNU Affero General Public License into a single\n\
+combined work, and to convey the resulting work. The terms of this\n\
+License will continue to apply to the part which is the covered work,\n\
+but the special requirements of the GNU Affero General Public License,\n\
+section 13, concerning interaction through a network will apply to the\n\
+combination as such.\n\
+\n\n\
+### 14. Revised Versions of this License.\n\
+\n\n\
+The Free Software Foundation may publish revised and/or new versions\n\
+of the GNU General Public License from time to time. Such new versions\n\
+will be similar in spirit to the present version, but may differ in\n\
+detail to address new problems or concerns.\n\
+\n\n\
+Each version is given a distinguishing version number. If the Program\n\
+specifies that a certain numbered version of the GNU General Public\n\
+License \"or any later version\" applies to it, you have the option of\n\
+following the terms and conditions either of that numbered version or\n\
+of any later version published by the Free Software Foundation. If the\n\
+Program does not specify a version number of the GNU General Public\n\
+License, you may choose any version ever published by the Free\n\
+Software Foundation.\n\
+\n\n\
+If the Program specifies that a proxy can decide which future versions\n\
+of the GNU General Public License can be used, that proxy's public\n\
+statement of acceptance of a version permanently authorizes you to\n\
+choose that version for the Program.\n\
+\n\n\
+Later license versions may give you additional or different\n\
+permissions. However, no additional obligations are imposed on any\n\
+author or copyright holder as a result of your choosing to follow a\n\
+later version.\n\
+\n\n\
+### 15. Disclaimer of Warranty.\n\
+\n\n\
+THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY\n\
+APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT\n\
+HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM \"AS IS\" WITHOUT\n\
+WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT\n\
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n\
+A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND\n\
+PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE\n\
+DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR\n\
+CORRECTION.\n\
+\n\n\
+### 16. Limitation of Liability.\n\
+\n\n\
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING\n\
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR\n\
+CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES,\n\
+INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES\n\
+ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT\n\
+NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR\n\
+LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM\n\
+TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER\n\
+PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.\n\
+\n\n\
+### 17. Interpretation of Sections 15 and 16.\n\
+\n\n\
+If the disclaimer of warranty and limitation of liability provided\n\
+above cannot be given local legal effect according to their terms,\n\
+reviewing courts shall apply local law that most closely approximates\n\
+an absolute waiver of all civil liability in connection with the\n\
+Program, unless a warranty or assumption of liability accompanies a\n\
+copy of the Program in return for a fee.\n\
+\n\n\
+END OF TERMS AND CONDITIONS\
+"
 
 [help_about]
 name = _("About Freeciv21")
@@ -2235,24 +2345,24 @@ _("\
 If you find any bugs, then please send us a bug report.  This is best done by visiting the Freeciv21 Bug \
 Tracking System, at:\
 "), "\
-  https://github.com/longturn/freeciv21/issues\
+  https://github.com/longturn/freeciv21/issues\n\
 ", _("\
 Please quote the above version information. For more information about submitting \
 bug reports see https://longturn.readthedocs.io/en/latest/Contributing/bugs.html.\
 "), _("\
 To contact the developers about anything else, contact them on discord:\
 "), _("\
-  https://discord.gg/98krqGm\
+  https://discord.gg/98krqGm\n\
 "), _("\
-  Original authors:\
+### Original authors:\
 "), "\
-    Allan Ove Kjeldbjerg\n\
-    Claus Leth Gregersen\n\
-    Peter Joachim Unold\
+* Allan Ove Kjeldbjerg\n\
+* Claus Leth Gregersen\n\
+* Peter Joachim Unold\n\
 ", _("\
-  Present administrators: \
+### Present administrators: \
 "), "\
-    Longturn developers\
+* Longturn developers\n\
 ", _("\
 For more information in general, visit the Longturn documentation website, at:\
 "), "\
