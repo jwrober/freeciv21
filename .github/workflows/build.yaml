@@ -137,6 +137,44 @@ jobs:
       #  run: |
       #    cmake --build build --target test
 
+  clang-tidy:
+    name: "Clang-Tidy on Ubuntu"
+    needs: clang-format
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:25.10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Setup mirror
+        run: |
+          sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
+          apt-get update
+      - name: Install dependencies
+        run: |
+          apt-get install -y \
+            clang \
+            clang-tidy \
+            libstdc++-15-dev \
+            cmake \
+            ninja-build \
+            python3 \
+            gettext \
+            qt6-base-dev \
+            qt6-multimedia-dev \
+            qt6-svg-dev \
+            libkf6archive-dev \
+            liblua5.3-dev \
+            libsqlite3-dev \
+            libsdl2-mixer-dev
+      - name: Configure
+        run: |
+            cmake --preset clang -S .
+      - name: Build
+        run: |
+          cmake --build build-clang
+
   windows:
     name: "Windows MSYS2 (clang)"
     runs-on: windows-latest
