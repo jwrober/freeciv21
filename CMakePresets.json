@@ -115,7 +115,7 @@
     },
     {
       "name": "clang",
-      "displayName": "Build with Clang and clang-tidy checks included at compile tile.",
+      "displayName": "Build with Clang and clang-tidy checks included at compile time.",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build-clang",
       "cacheVariables": {
