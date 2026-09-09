@@ -6,6 +6,7 @@
 #include <QObject> // Q_OBJECT
 #include <QProcess>
 #include <QString>
+#include <QStringLiteral>
 #include <QTest> // QTEST_MAIN
 
 // std
