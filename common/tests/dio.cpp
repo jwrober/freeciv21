@@ -7,10 +7,8 @@
 // Qt
 #include <QByteArray>
 #include <QByteArrayView>
-#include <QObject>        // Q_OBJECT
-#include <QTest>          // QTEST_GUILESS_MAIN
-#include <qtestcase.h>    // QCOMPARE
-#include <qtmetamacros.h> // Q_OBJECT
+#include <QObject> // Q_OBJECT
+#include <QTest>   // QTEST_GUILESS_MAIN
 
 // std
 #include <cstdint> // std::int*, std::uint*

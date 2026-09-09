@@ -63,6 +63,7 @@
 #include <QtLogging>             // qDebug, qWarning, qCritical, etc
 #include <QtPreprocessorSupport> // Q_UNUSED
 #include <QtVersion>             // qVersion
+#include <QtVersionChecks>       // QT_VERSION_STR
 
 // std
 #include <algorithm> // std::sort, std::unique
