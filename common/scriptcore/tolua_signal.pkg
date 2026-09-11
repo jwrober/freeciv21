@@ -16,8 +16,9 @@
 $#include <fc_config.h>
 
 /* dependencies */
-$#include "lauxlib.h"  
 $#include "lua.h"
+$#include "luaconf.h"
+$#include "lauxlib.h"  
 
 /* common */
 $#include "api_signal_base.h"
