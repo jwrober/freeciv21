@@ -29,6 +29,7 @@
 // Qt
 #include <QLoggingCategory> // qCDebug, qCWarning, qCCritical
 #include <QString>
+#include <QStringLiteral>
 
 Q_LOGGING_CATEGORY(ai_category, "freeciv.ai")
 
