@@ -7,7 +7,7 @@
 #
 License:        GPL-3.0
 Name:           freeciv21
-Version:        3.2
+Version:        3.2.0-4
 Release:        %autorelease -p pre -s %{__scm_source_timestamp}
 Group:          Amusements/Games/Strategy/Turn Based
 Summary:        Develop Your Civilization from Humble Roots to a Global Empire!

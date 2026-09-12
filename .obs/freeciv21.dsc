@@ -7,7 +7,7 @@
 #
 Format: 1.0
 Source: Freeciv21
-Version: 3.2
+Version: 3.2.0-4
 Binary: freeciv21
 Maintainer: Louis Moureaux <m_louis30@yahoo.com>
 Uploaders: James Robertson <jwrober@gmail.com>
