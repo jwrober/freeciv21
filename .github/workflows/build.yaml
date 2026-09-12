@@ -13,7 +13,7 @@ concurrency:
 jobs:
   ubuntu:
     name: "Ubuntu"
-    needs: clang-format
+    needs: [clang-format, clang-tidy]
     strategy:
       matrix:
         os: [ubuntu:25.10]
@@ -98,7 +98,7 @@ jobs:
 
   flagstest:
     name: "Additional compile flags in Ubuntu"
-    needs: clang-format
+    needs: [clang-format, clang-tidy]
     runs-on: ubuntu-latest
     container:
       image: ubuntu:25.10
@@ -137,48 +137,10 @@ jobs:
       #  run: |
       #    cmake --build build --target test
 
-  clang-tidy:
-    name: "Clang-Tidy on Ubuntu"
-    needs: clang-format
-    runs-on: ubuntu-latest
-    container:
-      image: ubuntu:25.10
-    steps:
-      - uses: actions/checkout@v5
-        with:
-          fetch-depth: 0
-      - name: Setup mirror
-        run: |
-          sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
-          apt-get update
-      - name: Install dependencies
-        run: |
-          apt-get install -y \
-            clang \
-            clang-tidy \
-            libstdc++-15-dev \
-            cmake \
-            ninja-build \
-            python3 \
-            gettext \
-            qt6-base-dev \
-            qt6-multimedia-dev \
-            qt6-svg-dev \
-            libkf6archive-dev \
-            liblua5.3-dev \
-            libsqlite3-dev \
-            libsdl2-mixer-dev
-      - name: Configure
-        run: |
-            cmake --preset clang -S .
-      - name: Build
-        run: |
-          cmake --build build-clang
-
   windows:
     name: "Windows MSYS2 (clang)"
     runs-on: windows-latest
-    needs: clang-format
+    needs: [clang-format, clang-tidy]
     defaults:
       run:
         shell: msys2 {0}
@@ -278,7 +240,7 @@ jobs:
   os_x_dyn:
     name: "macOS (x64-osx-custom)"
     runs-on: macos-15-intel
-    needs: clang-format
+    needs: [clang-format, clang-tidy]
     env:
       VCPKG_ROOT: ${{ github.workspace }}/vcpkg
       VCPKG_DEFAULT_BINARY_CACHE: ${{ github.workspace }}/vcpkg/bincache
@@ -526,7 +488,7 @@ jobs:
   snapcraft:
     name: "Snap Package"
     runs-on: ubuntu-latest
-    needs: clang-format
+    needs: [clang-format, clang-tidy]
     steps:
       - uses: actions/checkout@v5
         with:
@@ -547,6 +509,7 @@ jobs:
           name: snap
           path: ${{ steps.snapcraft.outputs.snap }}
 
+  # Linter checks
   clang-format:
     name: clang-format Code Formatter
     runs-on: ubuntu-latest
@@ -559,3 +522,46 @@ jobs:
       with:
         clang-format-version: '17'
         exclude-regex: 'dependencies'
+
+  clang-tidy:
+    name: "clang-tidy Code Checker"
+    runs-on: ubuntu-latest
+    container:
+      image: ubuntu:25.10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - name: Setup mirror
+        run: |
+          sed -i 's/archive\.ubuntu\.com/azure.archive.ubuntu.com/g' /etc/apt/sources.list.d/ubuntu.sources
+          apt-get update
+      - name: Install dependencies
+        run: |
+          apt-get install -y \
+            clang \
+            clang-tidy \
+            cmake \
+            ninja-build \
+            python3 \
+            gettext \
+            qt6-base-dev \
+            qt6-multimedia-dev \
+            qt6-svg-dev \
+            libkf6archive-dev \
+            liblua5.3-dev \
+            libsqlite3-dev \
+            libsdl2-mixer-dev
+      - name: Configure
+        run: |
+            cmake --preset clang -S .
+      - name: Build
+        run: |
+          cmake --build build-clang
+      - name: Tidy Check
+        run: |
+          clang-tidy \
+            $(find utility common ai -name \*.cpp -or -name \*.h) \
+            -p build-clang\compile_commands.json \
+            --checks="-*,misc-include-cleaner" \
+            --warnings-as-errors="*"
